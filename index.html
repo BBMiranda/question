@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz Salesforce AI Specialist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Coluna da Esquerda: Pontuação -->
+    <div id="leftCol">
+      <h2>Pontuação</h2>
+      <p>Corretas: <span id="correctCount">0</span></p>
+      <p>Erradas: <span id="wrongCount">0</span></p>
+      <div id="scoreButtons">
+        <button id="startQuizBtn">Inicia Quiz</button>
+        <button id="finishQuizBtn">Finalizar Quiz</button>
+        <button id="startEvalBtn">Iniciar Avaliação</button>
+      </div>
+      <div id="finalScore"></div>
+    </div>
+    <!-- Coluna Central: Quiz -->
+    <div id="quiz-area">
+      <h1>Quiz – Salesforce AI Specialist</h1>
+      <div id="quizContent"></div>
+    </div>
+    <!-- Coluna da Direita: Placar e Navegação -->
+    <div id="rightCol">
+      <h2>Placar</h2>
+      <div id="scoreEntry">
+        <input type="text" id="playerName" placeholder="Digite seu nome">
+      </div>
+      <div id="scoreboard"></div>
+      <button id="clearScoreboardBtn">Apagar Placar</button>
+      <hr>
+      <h2>Navegação das Perguntas</h2>
+      <div id="navPages"></div>
+      <div id="questionNav"></div>
+    </div>
+  </div>
+
+<!-- Modal da Avaliação -->
+<div id="evaluationModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <!-- Container para o progresso da avaliação -->
+    <div id="evalProgress" style="text-align: center; font-weight: bold; margin-bottom: 10px;"></div>
+    <!-- Container para o conteúdo do quiz de avaliação -->
+    <div id="evalQuizContent"></div>
+    <!-- Container para os botões de navegação -->
+    <div id="evalNavButtonsContainer" style="margin-top: 15px;"></div>
+    <!-- Botão Finalizar Avaliação (centralizado e com margem superior) -->
+    <div style="text-align: center; margin-top: 30px;">
+      <button id="evalFinishBtn">Finalizar Avaliação</button>
+    </div>
+    <div id="evalFeedback"></div>
+    <div id="timer"></div>
+  </div>
+</div>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
