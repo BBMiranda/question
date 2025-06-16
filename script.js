@@ -268,6 +268,237 @@ Referências:
 https://help.salesforce.com/s/articleView?id=sf.approvals_considerations.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.quick_actions_overview.htm&type=5
     `
+  },
+  {
+    number: 11,
+    question: "Cloud Kicks is working on a better way to track its product shipments utilizing Salesforce. Which field type should an administrator use to capture coordinates?",
+    options: {
+      A: "Geolocation",
+      B: "Geofence",
+      C: "Custom address",
+      D: "External lookup"
+    },
+    correct: "A",
+    explanation_en: `
+Geolocation fields allow you to store the latitude and longitude coordinates of a location. They can be used to calculate distances between records and display maps of accounts, contacts, leads, or other custom objects.
+
+Reference: https://help.salesforce.com/s/articleView?id=sf.customize_geoloc.htm&type=5
+    `,
+    explanation_pt: `
+Campos do tipo Geolocation permitem armazenar as coordenadas de latitude e longitude de um local. Eles podem ser usados para calcular distâncias entre registros e exibir mapas de contas, contatos, leads ou outros objetos personalizados.
+
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_geoloc.htm&type=5
+    `
+  },
+  {
+    number: 12,
+    question: "What are two considerations an administrator should keep in mind when working with Salesforce objects? (Choose 2)",
+    options: {
+      A: "Custom and standard objects have standard fields",
+      B: "Standard objects are included with Salesforce",
+      C: "A new standard object can be created",
+      D: "Only standard objects support master-detail relationships"
+    },
+    correct: "A, B",
+    explanation_en: `
+Custom objects and standard objects both come with a set of predefined (standard) fields such as Name, CreatedDate, etc. Standard objects (like Account, Contact, Lead) are included out of the box with Salesforce. You cannot create new standard objects via Setup, and custom objects also support master-detail relationships.
+
+Reference: https://trailhead.salesforce.com/en/content/learn/modules/data_modeling/standard_and_custom_objects
+    `,
+    explanation_pt: `
+Tanto objetos personalizados quanto objetos padrão possuem campos pré-definidos (standard), como Name, CreatedDate, etc. Objetos padrão (por exemplo, Account, Contact, Lead) são fornecidos por padrão no Salesforce. Não é possível criar novos objetos padrão via Setup, e objetos personalizados também suportam relacionamentos master-detail.
+
+Referência: https://trailhead.salesforce.com/en/content/learn/modules/data_modeling/standard_and_custom_objects
+    `
+  },
+  {
+    number: 13,
+    question: "Users have noticed that when they click on a report in a dashboard to view the report details, the values in the report are different from the values displayed on the dashboard. What are two reasons this is likely to occur? (Choose 2)",
+    options: {
+      A: "The report needs to be refreshed",
+      B: "The dashboard needs to be refreshed",
+      C: "The current user does not have access to the report folder",
+      D: "The running dashboard user and viewer have different permissions"
+    },
+    correct: "B, D",
+    explanation_en: `
+Dashboards display snapshot data based on when they were last run, so they must be refreshed manually or on a schedule to reflect recent changes (B). Additionally, dashboards run with the security context of the running user; if the viewer’s permissions differ from the running user’s, they may see different data (D).
+
+Reference: https://trailhead.salesforce.com/en/content/learn/modules/lex_implementation_dashboards_and_reports/dashboards
+    `,
+    explanation_pt: `
+Dashboards mostram dados de um snapshot de acordo com a última execução, portanto precisam ser atualizados manualmente ou por agendamento para refletir alterações recentes (B). Além disso, dashboards executam no contexto de segurança do usuário em execução; se as permissões do visualizador forem diferentes das do usuário em execução, ele poderá ver dados diferentes (D).
+
+Referência: https://trailhead.salesforce.com/en/content/learn/modules/lex_implementation_dashboards_and_reports/dashboards
+    `
+  },
+  {
+    number: 14,
+    question: "The marketing team wants a new picklist value added to the Campaign Member Status field for the upsell promotional campaign. Which two solutions should the administrator use to modify the picklist field values? (Choose 2)",
+    options: {
+      A: "Add the Campaign Member Statuses related list to the Page Layout",
+      B: "Edit the picklist values for the Campaign Status in Object Manager",
+      C: "Mass modify the Campaign Member Statuses related list",
+      D: "Modify the picklist value on the Campaign Member Statuses related list"
+    },
+    correct: "B, D",
+    explanation_en: `
+To add a new value for Campaign Status, edit the picklist values on the Campaign object in Object Manager (B). To add a new Campaign Member Status, modify the values directly on the Campaign Member Statuses related list on the Campaign page layout (D).
+
+References:
+https://help.salesforce.com/s/articleView?id=sf.campaigns_fields.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.campaigns_member_status.htm&type=5
+    `,
+    explanation_pt: `
+Para adicionar um novo valor em Campaign Status, edite os valores de picklist no objeto Campaign no Object Manager (B). Para adicionar um novo Campaign Member Status, modifique os valores diretamente na lista relacionada Campaign Member Statuses no layout de página de Campaign (D).
+
+Referências:
+https://help.salesforce.com/s/articleView?id=sf.campaigns_fields.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.campaigns_member_status.htm&type=5
+    `
+  },
+  {
+    number: 15,
+    question: "Ursa Solar Major is evaluating Salesforce for its service team and would like to know what objects were available out of the box. Which three of the standard objects are available to an administrator considering a support use case? (Choose 3)",
+    options: {
+      A: "Contract",
+      B: "Case",
+      C: "Ticket",
+      D: "Request",
+      E: "Account"
+    },
+    correct: "A, B, E",
+    explanation_en: `
+Contract, Case, and Account are standard objects included with Salesforce that are commonly used in service scenarios. “Ticket” and “Request” are not standard Salesforce objects out of the box.
+
+References:
+https://help.salesforce.com/s/articleView?id=sf.contract_fields.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.case_fields.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.account_fields.htm&type=5
+    `,
+    explanation_pt: `
+Contract, Case e Account são objetos padrão incluídos no Salesforce e comumente usados em cenários de atendimento. “Ticket” e “Request” não são objetos padrão fornecidos por padrão.
+
+Referências:
+https://help.salesforce.com/s/articleView?id=sf.contract_fields.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.case_fields.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.account_fields.htm&type=5
+    `
+  },
+  {
+    number: 16,
+    question: "The administrator at Cloud Kicks has been asked to replace two old workflow rules that are doing simple field updates when a lead is created to improve processing time. What tool should the administrator use to replace the workflow rules?",
+    options: {
+      A: "Quick Action Flow",
+      B: "Before Save Flow",
+      C: "Scheduled Flow",
+      D: "Screen Flow"
+    },
+    correct: "B",
+    explanation_en: `
+Before Save Flows are record-triggered flows that run before a record is saved and can update fields on that record without additional DML operations. They execute faster and more efficiently than workflow rules for simple field updates.
+
+Reference: https://help.salesforce.com/s/articleView?id=sf.flow_concepts_before_save_update.htm&type=5
+    `,
+    explanation_pt: `
+Before Save Flows são fluxos acionados por registro que rodam antes de salvar o registro e podem atualizar seus campos sem operações DML adicionais. Eles são mais rápidos e eficientes que workflow rules para atualizações simples de campo.
+
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_concepts_before_save_update.htm&type=5
+    `
+  },
+  {
+    number: 17,
+    question: "Ursa Major Solar uses Opportunity to track sales of solar energy products. The company has two separate sales teams that focus on different energy markets. The Services team also wants to use Opportunity to track installation. All three teams will need to use different fields and stages. How should the administrator configure this requirement?",
+    options: {
+      A: "Create three sales processes. Create three record types and one page layout",
+      B: "Create one sales process. Create three record types and three page layouts",
+      C: "Create three sales processes. Create three record types and three page layouts",
+      D: "Create one sales process. Create one record type and three page layouts"
+    },
+    correct: "C",
+    explanation_en: `
+You need three sales processes (one per team), three record types (to assign each process), and three page layouts (to surface the appropriate fields and stages). This ensures each team sees its own stages and fields.
+
+References:
+https://help.salesforce.com/s/articleView?id=sf.customize_salesprocess.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.customize_layout.htm&type=5
+    `,
+    explanation_pt: `
+Você precisa de três sales processes (um para cada equipe), três record types (para vincular cada processo) e três page layouts (para exibir os campos e estágios corretos). Isso garante que cada equipe veja seus próprios estágios e campos.
+
+Referências:
+https://help.salesforce.com/s/articleView?id=sf.customize_salesprocess.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.customize_layout.htm&type=5
+    `
+  },
+  {
+    number: 18,
+    question: "The service manager at Ursa Major Solar wants to let customers know that they have received their cases via email and their websites. Medium-priority and high-priority cases should receive different email notifications than low-priority cases. The administrator has created three email templates for this purpose. How should an administrator configure this requirement?",
+    options: {
+      A: "Include three assignment rules that fire when cases are created. Add a filter for case priority. Select the appropriate email template for each rule",
+      B: "Add three auto-response rules. Configure one rule entry criteria for each rule and set a filter for case priority. Select the appropriate email template for each rule",
+      C: "Configure one workflow rule that fires when cases are created. Add a filter for case priority. Select the appropriate email template for the rule",
+      D: "Create one auto-response rule. Configure three rule entry criteria and set a filter for case priority. Select the appropriate email template for each rule entry"
+    },
+    correct: "D",
+    explanation_en: `
+Auto-response rules allow you to send email alerts automatically based on record criteria. You create one auto-response rule for cases and within it define three rule entries—one each for low, medium, and high priority—assigning the correct email template to each.
+
+References:
+https://help.salesforce.com/s/articleView?id=sf.customize_leadsautor.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.customize_casesautor.htm&type=5
+    `,
+    explanation_pt: `
+Auto-response rules permitem enviar e-mails automaticamente com base em critérios de registro. Você cria uma auto-response rule para casos e dentro dela define três entradas de regra—uma para cada prioridade—atribuindo o template de e-mail correto a cada uma.
+
+Referências:
+https://help.salesforce.com/s/articleView?id=sf.customize_leadsautor.htm&type=5
+https://help.salesforce.com/s/articleView?id=sf.customize_casesautor.htm&type=5
+    `
+  },
+  {
+    number: 19,
+    question: "The VP of sales at Dreamhouse Realty has requested a dashboard to visualize enterprise sales across the different teams. The key place of data is the total of all sales for the year and the progress to the enterprise sales goal. What dashboard component will effectively show this number and the proximity to the total goal as a single value?",
+    options: {
+      A: "Table",
+      B: "Stacked Bar",
+      C: "Donut",
+      D: "Gauge"
+    },
+    correct: "D",
+    explanation_en: `
+A Gauge component displays a single metric value and its percentage of a target within colored ranges (e.g., red, yellow, green). It’s ideal for showing total sales and progress toward the sales goal on one dashboard.
+
+Reference: https://help.salesforce.com/s/articleView?id=sf.dashboards_gauge_component_type.htm&type=5
+    `,
+    explanation_pt: `
+O componente Gauge exibe um único valor métrico e sua porcentagem em relação a uma meta dentro de intervalos coloridos (por exemplo, vermelho, amarelo, verde). É ideal para mostrar o total de vendas e o progresso em direção à meta em um único painel.
+
+Referência: https://help.salesforce.com/s/articleView?id=sf.dashboards_gauge_component_type.htm&type=5
+    `
+  },
+  {
+    number: 20,
+    question: "A sales rep has left the company and an administrator has been asked to re-assign all their accounts and opportunities to a new sales rep and keep the teams as is. Which tool should an administrator use to accomplish this?",
+    options: {
+      A: "Data Loader",
+      B: "Mass Transfer Tool",
+      C: "Data Import Wizard",
+      D: "Dataloader.io"
+    },
+    correct: "B",
+    explanation_en: `
+The Mass Transfer Tool in Setup lets you transfer ownership of records (up to 250 at a time) from one user to another while preserving related team members. It’s the recommended way to mass reassign Accounts and Opportunities.
+
+Reference: https://help.salesforce.com/s/articleView?id=sf.mass_transfer_overview.htm&type=5
+    `,
+    explanation_pt: `
+A Mass Transfer Tool em Setup permite transferir a propriedade de registros (até 250 de cada vez) de um usuário para outro, mantendo os membros da equipe relacionados. É a forma recomendada para reatribuir em massa Contas e Oportunidades.
+
+Referência: https://help.salesforce.com/s/articleView?id=sf.mass_transfer_overview.htm&type=5
+    `
   }
 ];
             
