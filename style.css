@@ -1,174 +1,339 @@
+/* ==========================================
+   GLOBAL VARIABLES
+   ========================================== */
+:root {
+  /* Cores primárias */
+  --bg-page: #f2f2f2;
+  --bg-card: #ffffff;
+  --accent: #2f80ed;
+  --text-primary: #333;
+  --text-secondary: #555;
+  --border-radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Espaçamentos */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* Tipografia */
+  --font-base: "Inter", sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+}
+
+/* ==========================================
+   RESET & BASE
+   ========================================== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
   margin: 0;
   padding: 0;
-}
-
-/* Container com três colunas */
-.container {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background: var(--bg-page);
   display: flex;
-  max-width: 1200px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Coluna da Esquerda: Pontuação */
+/* ==========================================
+   LAYOUT: 3-COLUMN GRID
+   ========================================== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--spacing-lg);
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  width: 90%;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   LEFT COLUMN (PONTUAÇÃO)
+   ========================================== */
 #leftCol {
-  flex: 1;
-  padding: 20px;
+  padding: var(--spacing-lg);
   background-color: #fafafa;
   border-right: 1px solid #ddd;
   text-align: center;
 }
 
-/* Coluna Central: Quiz */
+/* ==========================================
+   CENTER COLUMN (QUIZ)
+   ========================================== */
 #quiz-area {
-  flex: 2;
-  padding: 20px 30px;
+  padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
 }
 
-/* Coluna da Direita: Placar e Navegação */
+/* ==========================================
+   RIGHT COLUMN (PLACAR + NAVEGAÇÃO)
+   ========================================== */
 #rightCol {
-  flex: 1;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
   background-color: #fafafa;
   border-left: 1px solid #ddd;
-  text-align: center;
+  /* garante que filhos flex cresçam corretamente */
+  height: 100%;
 }
 
-h1, h2 {
+/* quando o grid se empilha em mobile */
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   TYPOGRAPHY & HEADINGS
+   ========================================== */
+h1,
+h2 {
   margin-top: 0;
 }
 
 .question {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
   text-align: left;
 }
 
+/* ==========================================
+   PROGRESS BAR
+   ========================================== */
+#progressBar {
+  background: #e0e0e0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  height: 8px;
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-fill {
+  background: var(--accent);
+  width: 0%;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* ==========================================
+   OPTIONS LIST
+   ========================================== */
 .options {
   list-style: none;
   padding: 0;
+  margin: 0 0 var(--spacing-lg);
   text-align: left;
 }
 
 .options li {
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 4px;
+  margin-bottom: var(--spacing-sm);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  margin-top: 10px;
-}
-/* Estilos para o modal de avaliação */
-.modal {
-  display: none; /* Escondido por padrão */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
+.options li label {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 800px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
+  padding: var(--spacing-sm) var(--spacing-md);
   cursor: pointer;
 }
 
-.closeBtn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* input visível e inline */
+.options input[type="radio"],
+.options input[type="checkbox"] {
+  margin-right: var(--spacing-md);
+  width: 1.2em;
+  height: 1.2em;
   cursor: pointer;
 }
 
-.closeBtn:hover,
-.closeBtn:focus {
-  color: black;
+/* hover cinza apenas em li não respondidos */
+.options li:not(.correct):not(.wrong):hover {
+  background: #f9f9f9;
 }
 
-.error-tooltip {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-  border-radius: 4px;
-  padding: 20px;
-  z-index: 2000;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.error-tooltip p {
-  margin-bottom: 15px;
-  font-size: 1em;
-}
-
-.error-tooltip button {
-  padding: 8px 16px;
-  background-color: #f5c6cb;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.error-tooltip button:hover {
-  background-color: #f1b0b7;
-}
-
-
-
-/* Container para os botões "Responder" e "Próxima Pergunta" */
+/* ==========================================
+   RESPONDER / PRÓXIMA BUTTONS
+   ========================================== */
 #buttonContainer {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
 }
 
-/* Feedback e explicação */
-.feedback {
-  margin-top: 20px;
+button {
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+button:active {
+  transform: translateY(0);
+}
+
+#startQuizBtn,
+#responderBtn {
+  background: var(--accent);
+  color: #fff;
+}
+
+#finishQuizBtn,
+#nextBtn {
+  background: #eee;
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   FEEDBACK WRAPPER (EXPLICAÇÃO)
+   ========================================== */
+.feedback-wrapper {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  text-align: left;
+  border-left: 4px solid transparent;
+}
+
+.feedback-wrapper.correct {
+  border-left-color: #4caf50;
+}
+.feedback-wrapper.wrong {
+  border-left-color: #e74c3c;
+}
+
+.feedback-wrapper .feedback {
+  display: inline-block;
+  font-size: var(--font-size-lg);
   font-weight: bold;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  color: #fff;
+  margin-bottom: var(--spacing-sm);
 }
 
-.explanation {
-  margin-top: 10px;
+.feedback-wrapper.correct .feedback {
+  background: #4caf50;
+}
+.feedback-wrapper.wrong .feedback {
+  background: #e74c3c;
+}
+
+.feedback-wrapper .explanation {
   font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: var(--spacing-sm);
 }
 
-/* Botões de navegação das perguntas */
+/* ==========================================
+   STATE COLORS ON OPTIONS
+   ========================================== */
+.options li.correct {
+  background: #4caf50 !important;
+  border-color: #4caf50 !important;
+  color: #fff !important;
+}
+
+.options li.wrong {
+  background: #e74c3c !important;
+  border-color: #e74c3c !important;
+  color: #fff !important;
+}
+
+/* mantém o estado mesmo no hover */
+.options li.correct:hover,
+.options li.wrong:hover {
+  background: inherit;
+}
+
+/* destaca respostas corretas não marcadas */
+.options li.yellow {
+  background: yellow !important;
+}
+
+/* ==========================================
+   SCOREBOARD & NAVIGATION (DIREITA)
+   ========================================== */
+#scoreEntry {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+#scoreEntry input {
+  width: 90%;
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-base);
+}
+
+#scoreboard {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9em;
+}
+
+#scoreButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+#scoreButtons button {
+  width: 80%;
+  max-width: 200px;
+}
+
+/* ==========================================
+   QUESTION NAVIGATION BUTTONS
+   ========================================== */
+#questionNav {
+  margin-top: var(--spacing-md);
+}
+
 #questionNav button {
   margin: 2px;
   padding: 5px 10px;
@@ -176,40 +341,177 @@ button {
   cursor: pointer;
 }
 
-/* Botões para trocar a página de navegação */
+#navPages {
+  margin-top: var(--spacing-sm);
+}
+
 #navPages button {
   margin: 2px;
   padding: 3px 8px;
   font-size: 0.8em;
-  cursor: pointer;
-  background-color: #eee;
+  background: #eee;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 #navPages button.active {
-  background-color: #ccc;
+  background: #ccc;
   font-weight: bold;
 }
 
-/* Estilização do placar */
-#scoreEntry {
+/* ==========================================
+   TOASTS & MODALS
+   ========================================== */
+#toastContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  min-width: 200px;
+  max-width: 300px;
+  background: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   text-align: center;
-  margin-bottom: 10px;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-#scoreEntry input {
-  width: 90%;
-  padding: 5px;
-  font-size: 1em;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+.close,
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #000;
 }
 
-#scoreboard {
-  max-height: 150px;
-  overflow-y: auto;
-  background-color: #fff;
+/* ==========================================
+   ERROR TOOLTIP
+   ========================================== */
+.error-tooltip {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-tooltip > div {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.error-tooltip button {
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: #f5c6cb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.error-tooltip button:hover {
+  background: #f1b0b7;
+}
+/* ==========================================
+   STATS & SCOREBOARD
+   ========================================== */
+
+   /* container geral das estatísticas (coluna esquerda) */
+#stats {
+  background: var(--bg-card);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+/* cada linha de estatística */
+.stats-item {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+}
+
+/* badges coloridos */
+.badge.stat {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: var(--font-size-base);
+  color: #fff;
+  min-width: 3em;
+}
+.badge.stat.correct   { background: #4caf50; }
+.badge.stat.wrong     { background: #e74c3c; }
+
+/* placar: lista estilizada */
+#scoreboard ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#scoreboard li {
+  background: var(--bg-card);
   border: 1px solid #ddd;
-  margin-bottom: 10px;
-  padding: 5px;
+  border-radius: var(--card-radius);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+.score-name {
+  font-weight: bold;
+}
+.score-percent {
+  float: right;
+  font-weight: bold;
+}
+.score-details,
+.score-date {
   font-size: 0.9em;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  clear: both;
 }

@@ -23,6 +23,10 @@
     <!-- Coluna Central: Quiz -->
     <div id="quiz-area">
       <h1>Quiz – Salesforce Certified Administrator</h1>
+      <!-- barra de progresso (inicialmente escondida) -->
+      <div id="progressBar" style="display:none;">
+        <div class="progress-fill"></div>
+      </div>
       <div id="quizContent"></div>
     </div>
     <!-- Coluna da Direita: Placar e Navegação -->
@@ -61,7 +65,9 @@
 
 
 
-
-  <script src="script.js"></script>
+<!-- Container para todas as notificações toast -->
+<div id="confirmContainer"></div>
+<div id="toastContainer"></div>
+<script src="script.js"></script>
 </body>
 </html>

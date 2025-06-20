@@ -7,6 +7,13 @@ function shuffleArray(array) {
   return array;
 }
 
+function updateProgressBar() {
+  const bar = document.getElementById('progressBar');
+  const fill = bar.querySelector('.progress-fill');
+  const pct  = ((currentQuestion + 1) / questions.length) * 100;
+  fill.style.width = pct + '%';
+}
+
 function shuffleOptions(question) {
   const entries = Object.entries(question.options);
   const shuffled = shuffleArray(entries);
@@ -27,11 +34,11 @@ function shuffleOptions(question) {
 
 // --------------------- Quiz Normal ---------------------
 const maxNavPerPage = 50;
-let navCurrentPage = 1; // Página atual da navegação
+let navCurrentPage = 1; 
 
 let currentQuestion = 0;
-let score = 0;          // Respostas corretas
-let totalAnswered = 0;  // Total de questões respondidas
+let score = 0;          
+let totalAnswered = 0; 
 let quizStarted = false;
 const questions = [
   {
@@ -501,181 +508,253 @@ Referência: https://help.salesforce.com/s/articleView?id=sf.mass_transfer_overv
     `
   }
 ];
-            
-            function loadQuestion() {
-              const quizContent = document.getElementById("quizContent");
-              quizContent.innerHTML = "";
-              
-              if (currentQuestion >= questions.length) {
-                quizContent.innerHTML = `<h2>Você concluiu o quiz!</h2><p>Sua pontuação: ${score} de ${questions.length}</p>`;
-                return;
-              }
-              
-              const q = questions[currentQuestion];
-              
-              // Enunciado
-              const questionEl = document.createElement("div");
-              questionEl.className = "question";
-              questionEl.innerHTML = `<strong>Pergunta ${q.number}:</strong> ${q.question}`;
-              quizContent.appendChild(questionEl);
-              
-              // Lista de opções
-              const optionsList = document.createElement("ul");
-              optionsList.className = "options";
-              for (const [key, value] of Object.entries(q.options)) {
-                const li = document.createElement("li");
-                li.innerHTML = `<label><input type="radio" name="option" value="${key}"> (${key}) ${value}</label>`;
-                optionsList.appendChild(li);
-              }
-              quizContent.appendChild(optionsList);
-              
-              // Contêiner dos botões (Responder e Próxima Pergunta)
-              const buttonContainer = document.createElement("div");
-              buttonContainer.id = "buttonContainer";
-              const responderBtn = document.createElement("button");
-              responderBtn.id = "responderBtn";
-              responderBtn.textContent = "Responder";
-              responderBtn.addEventListener("click", checkAnswer);
-              const nextBtn = document.createElement("button");
-              nextBtn.id = "nextBtn";
-              nextBtn.textContent = "Próxima Pergunta";
-              nextBtn.addEventListener("click", nextQuestion);
-              buttonContainer.appendChild(responderBtn);
-              buttonContainer.appendChild(nextBtn);
-              quizContent.appendChild(buttonContainer);
-              
-              // Evento para marcar com azul a opção selecionada
-              const optionInputs = document.querySelectorAll('input[name="option"]');
-              optionInputs.forEach(input => {
-                input.addEventListener("change", () => {
-                  optionInputs.forEach(opt => { opt.parentElement.style.backgroundColor = ""; });
-                  input.parentElement.style.backgroundColor = "lightblue";
-                });
-              });
-              
-              updateSidebar();
-            }
-            
-            function checkAnswer() {
-              const q = questions[currentQuestion];
-              const selected = document.querySelector('input[name="option"]:checked');
-              const quizContent = document.getElementById("quizContent");
-              
-              if (!selected) {
-                alert("Por favor, selecione uma opção.");
-                return;
-              }
-              
-              if (q.userAnswer === undefined) {
-                q.userAnswer = selected.value;
-                totalAnswered++;
-              }
-              
-              const optionInputs = document.querySelectorAll('input[name="option"]');
-              if (selected.value === q.correct) {
-                selected.parentElement.style.backgroundColor = "lightgreen";
-                score++;
-              } else {
-                selected.parentElement.style.backgroundColor = "lightcoral";
-                optionInputs.forEach(input => {
-                  if (input.value === q.correct) {
-                    input.parentElement.style.backgroundColor = "yellow";
-                  }
-                });
-              }
-              
-              const feedbackDiv = document.createElement("div");
-              feedbackDiv.className = "feedback";
-              feedbackDiv.textContent = (selected.value === q.correct) ? "Correto!" : `Incorreto! A resposta correta é (${q.correct}) ${q.options[q.correct]}.`;
-              quizContent.appendChild(feedbackDiv);
-              
-              const explanationDiv = document.createElement("div");
-              explanationDiv.className = "explanation";
-              explanationDiv.innerHTML = `<em>Explicação:</em> ${q.explanation_pt}`;
-              quizContent.appendChild(explanationDiv);
-              
-              optionInputs.forEach(input => input.disabled = true);
-              updateSidebar();
-            }
-            
-            function nextQuestion() {
-              if (currentQuestion < questions.length - 1) {
-                currentQuestion++;
-                loadQuestion();
-              }
-            }
-            
-            function updateSidebar() {
-              document.getElementById("correctCount").textContent = score;
-              document.getElementById("wrongCount").textContent = totalAnswered - score;
-              updateNavigation();
-              updateScoreboardDisplay();
-            }
-            
-            // Suas funções updateNavigation() e renderQuestionNav() para o quiz normal
-            // (Mantenha as mesmas implementações já existentes para o quiz normal)
-            
-            function startQuiz() {
-              const name = document.getElementById("playerName").value.trim();
-              if (name === "") {
-                alert("Por favor, insira seu nome para iniciar o quiz.");
-                return;
-              }
-              quizStarted = true;
-              currentQuestion = 0;
-              score = 0;
-              totalAnswered = 0;
-              questions.forEach(q => { delete q.userAnswer; shuffleOptions(q); });
-              document.getElementById("finalScore").innerHTML = "";
-              loadQuestion();
-            }
-            
-            function finishQuiz() {
-              if (!quizStarted) {
-                alert("Você precisa iniciar o quiz primeiro!");
-                return;
-              }
-              const grade = totalAnswered === 0 ? 0 : Math.round((score / totalAnswered) * 100);
-              const finalScoreDiv = document.getElementById("finalScore");
-              finalScoreDiv.innerHTML = `<h3>Sua nota: ${grade}%</h3>
+
+function loadQuestion() {
+  const quizContent = document.getElementById("quizContent");
+  quizContent.innerHTML = "";
+
+  // Atualiza barra de progresso
+  const pct = ((currentQuestion + 1) / questions.length) * 100;
+  const fill = document.querySelector('.progress-fill');
+  if (fill) fill.style.width = `${pct}%`;
+
+  // Se acabou o quiz
+  if (currentQuestion >= questions.length) {
+    quizContent.innerHTML = `
+      <h2>Você concluiu o quiz!</h2>
+      <p>Sua pontuação: ${score} de ${questions.length}</p>
+    `;
+    return;
+  }
+
+  const q = questions[currentQuestion];
+  const isMultiple = q.correct.includes(',');
+
+  // 1) Enunciado
+  const questionEl = document.createElement("div");
+  questionEl.className = "question";
+  questionEl.innerHTML = `<strong>Pergunta ${q.number}:</strong> ${q.question}`;
+  quizContent.appendChild(questionEl);
+
+  // 2) Lista de opções (checkbox ou radio)
+  const optionsList = document.createElement("ul");
+  optionsList.className = "options";
+  const type = isMultiple ? 'checkbox' : 'radio';
+
+  for (const [key, value] of Object.entries(q.options)) {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <label>
+        <input type="${type}" name="option" value="${key}">
+        ${value}
+      </label>
+    `;
+    optionsList.appendChild(li);
+  }
+  quizContent.appendChild(optionsList);
+
+  // 3) Botões
+  const buttonContainer = document.createElement("div");
+  buttonContainer.id = "buttonContainer";
+  const responderBtn = document.createElement("button");
+  responderBtn.id = "responderBtn";
+  responderBtn.textContent = "Responder";
+  responderBtn.addEventListener("click", checkAnswer);
+  const nextBtn = document.createElement("button");
+  nextBtn.id = "nextBtn";
+  nextBtn.textContent = "Próxima Pergunta";
+  nextBtn.addEventListener("click", nextQuestion);
+  buttonContainer.append(responderBtn, nextBtn);
+  quizContent.appendChild(buttonContainer);
+
+  // 5) Se já respondeu, reaplica estado
+  if (q.userAnswer !== undefined) {
+    const answered = Array.isArray(q.userAnswer) ? q.userAnswer : [q.userAnswer];
+    const correctList = q.correct.split(',').map(s => s.trim());
+
+    inputs.forEach(input => {
+      const li = input.parentElement;
+      // marca seleção anterior
+      if (answered.includes(input.value)) {
+        input.checked = true;
+        li.classList.add(
+          isMultiple
+            ? (correctList.includes(input.value) ? 'correct' : 'wrong')
+            : (input.value === q.correct ? 'correct' : 'wrong')
+        );
+      }
+      // destaca em amarelo as corretas não marcadas
+      if (!answered.includes(input.value) && correctList.includes(input.value)) {
+        li.style.backgroundColor = 'yellow';
+      }
+      input.disabled = true;
+    });
+  }
+
+  // atualiza sidebar
+  updateSidebar();
+}
+
+
+
+function checkAnswer() {
+  const q = questions[currentQuestion];
+  const lis = Array.from(document.querySelectorAll('#quizContent .options li'));
+  const inputs = lis.map(li => li.querySelector('input[name="option"]'));
+  const selected = inputs.filter(i => i.checked).map(i => i.value);
+
+  // 1) valida seleção
+  if (selected.length === 0) {
+    showToast("Por favor, selecione ao menos uma opção.", 2500);
+    return;
+  }
+  // evita reprocessar
+  if (q.userAnswer !== undefined) {
+    displayErrorTooltip(q);
+    return;
+  }
+
+  // 2) registra
+  q.userAnswer = selected.length > 1 ? selected : selected[0];
+  totalAnswered++;
+
+  // prepara listas
+  const correctList = q.correct.split(',').map(s => s.trim());
+  const isMultiple = correctList.length > 1;
+  // para single choice, só um certo
+  const isCorrect = isMultiple
+    ? (correctList.length === selected.length && correctList.every(c => selected.includes(c)))
+    : selected[0] === q.correct;
+
+  if (!isMultiple && isCorrect) score++;
+  if (isMultiple && isCorrect) score++;
+
+  // 3) limpa azul e aplica classes
+  lis.forEach(li => {
+    li.style.backgroundColor = '';        // limpa qualquer inline anterior
+    li.classList.remove('correct','wrong');
+  });
+
+  lis.forEach(li => {
+    const val = li.querySelector('input').value;
+    const wasChecked = selected.includes(val);
+
+    if (wasChecked) {
+      // se marcou, pinta de verde ou vermelho
+      li.classList.add(isCorrect ? 'correct' : 'wrong');
+    }
+    // se não marcou, mas é uma resposta correta, pinta de amarelo
+    if (!wasChecked && correctList.includes(val)) {
+      li.style.backgroundColor = 'yellow';
+    }
+    // desabilita sempre
+    li.querySelector('input').disabled = true;
+  });
+
+  // 4) monta o feedback-wrapper
+  const wrapper = document.createElement('div');
+  wrapper.className = `feedback-wrapper ${isCorrect ? 'correct' : 'wrong'}`;
+
+  const badge = document.createElement('div');
+  badge.className = `feedback ${isCorrect ? 'correct' : 'wrong'}`;
+  badge.textContent = isCorrect ? 'Correto!' : 'Incorreto';
+
+  const explanation = document.createElement('div');
+  explanation.className = 'explanation';
+  explanation.innerHTML = `<em>Explicação:</em> ${q.explanation_pt}`;
+
+  wrapper.append(badge, explanation);
+  document.getElementById('quizContent').appendChild(wrapper);
+
+  // 5) atualiza placar/navegação
+  updateSidebar();
+}
+
+function nextQuestion() {
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion++;
+    loadQuestion();
+  }
+}
+
+function updateSidebar() {
+  document.getElementById("correctCount").textContent = score;
+  document.getElementById("wrongCount").textContent = totalAnswered - score;
+  updateNavigation();
+  updateScoreboardDisplay();
+}
+
+// Suas funções updateNavigation() e renderQuestionNav() para o quiz normal
+// (Mantenha as mesmas implementações já existentes para o quiz normal)
+
+function startQuiz() {
+  const name = document.getElementById("playerName").value.trim();
+  if (name === "") {
+    //alert("Por favor, insira seu nome para iniciar o quiz.");
+    showToast("Por favor, insira seu nome para iniciar o quiz.", 2500);
+    return;
+  }
+  quizStarted = true;
+  currentQuestion = 0;
+  score = 0;
+  totalAnswered = 0;
+  const bar = document.getElementById('progressBar');
+    bar.style.display = 'block';
+    updateProgressBar();
+  questions.forEach(q => { delete q.userAnswer; shuffleOptions(q); });
+  document.getElementById("finalScore").innerHTML = "";
+  loadQuestion();
+}
+
+function finishQuiz() {
+  if (!quizStarted) {
+    //alert("Você precisa iniciar o quiz primeiro!");
+    showToast("Você precisa iniciar o quiz primeiro!", 2500);
+    return;
+  }
+  const grade = totalAnswered === 0 ? 0 : Math.round((score / totalAnswered) * 100);
+  const finalScoreDiv = document.getElementById("finalScore");
+  finalScoreDiv.innerHTML = `<h3>Sua nota: ${grade}%</h3>
                                          <p>Total respondido: ${totalAnswered} | Corretas: ${score} | Erradas: ${totalAnswered - score}</p>`;
-              const name = document.getElementById("playerName").value.trim();
-              if (name !== "") {
-                saveScore(name, grade, score, totalAnswered - score);
-              }
-            }
-            
-            function saveScore(name, grade, correct, wrong) {
-              let scoreboard = JSON.parse(localStorage.getItem("quizScoreboard")) || [];
-              scoreboard.push({ name, grade, correct, wrong, date: new Date().toLocaleString() });
-              localStorage.setItem("quizScoreboard", JSON.stringify(scoreboard));
-              updateScoreboardDisplay();
-            }
-            
-            function updateScoreboardDisplay() {
-              const scoreboardDiv = document.getElementById("scoreboard");
-              scoreboardDiv.innerHTML = "";
-              const scoreboard = JSON.parse(localStorage.getItem("quizScoreboard")) || [];
-              if (scoreboard.length === 0) {
-                scoreboardDiv.textContent = "Sem pontuações salvas.";
-                return;
-              }
-              const list = document.createElement("ol");
-              scoreboard.forEach(entry => {
-                const li = document.createElement("li");
-                li.textContent = `${entry.name} - ${entry.grade}% (Corretas: ${entry.correct}, Erradas: ${entry.wrong}) em ${entry.date}`;
-                list.appendChild(li);
-              });
-              scoreboardDiv.appendChild(list);
-            }
-            
-            function clearScoreboard() {
-              if (confirm("Tem certeza que deseja apagar todas as pontuações?")) {
-                localStorage.removeItem("quizScoreboard");
-                updateScoreboardDisplay();
-              }
-            }
-            
+  const name = document.getElementById("playerName").value.trim();
+  if (name !== "") {
+    saveScore(name, grade, score, totalAnswered - score);
+  }
+}
+
+function saveScore(name, grade, correct, wrong) {
+  let scoreboard = JSON.parse(localStorage.getItem("quizScoreboard")) || [];
+  scoreboard.push({ name, grade, correct, wrong, date: new Date().toLocaleString() });
+  localStorage.setItem("quizScoreboard", JSON.stringify(scoreboard));
+  updateScoreboardDisplay();
+}
+
+function updateScoreboardDisplay() {
+  const scoreboardDiv = document.getElementById("scoreboard");
+  scoreboardDiv.innerHTML = "";
+  const scoreboard = JSON.parse(localStorage.getItem("quizScoreboard")) || [];
+  if (scoreboard.length === 0) {
+    scoreboardDiv.textContent = "Sem pontuações salvas.";
+    return;
+  }
+  const list = document.createElement("ol");
+  scoreboard.forEach(entry => {
+    const li = document.createElement("li");
+    li.textContent = `${entry.name} - ${entry.grade}% (Corretas: ${entry.correct}, Erradas: ${entry.wrong}) em ${entry.date}`;
+    list.appendChild(li);
+  });
+  scoreboardDiv.appendChild(list);
+}
+
+async function clearScoreboard() {
+  const ok = await showConfirm("Tem certeza que deseja apagar todas as pontuações?");
+  if (!ok) return;
+
+  localStorage.removeItem("quizScoreboard");
+  updateScoreboardDisplay();
+  showToast("Placar apagado com sucesso!", 2500);
+}
+
 // --------------------- Modal de Avaliação ---------------------
 let evaluationQuestions = []; // 60 questões sorteadas
 let evaluationCurrentQuestion = 0;
@@ -696,7 +775,8 @@ function generateEvaluationQuestions() {
 function startEvaluation() {
   const name = document.getElementById("playerName").value.trim();
   if (name === "") {
-    alert("Por favor, insira seu nome para iniciar a avaliação.");
+    //alert("Por favor, insira seu nome para iniciar a avaliação.");
+    showToast("Por favor, insira seu nome para iniciar a avaliação.", 2500);
     return;
   }
   evaluationQuestions = generateEvaluationQuestions();
@@ -713,20 +793,20 @@ function startEvaluation() {
 function loadEvaluationQuestion() {
   const evalContent = document.getElementById("evalQuizContent");
   evalContent.innerHTML = "";
-  
+
   if (evaluationCurrentQuestion >= evaluationQuestions.length) {
     evalContent.innerHTML = `<h2>Avaliação finalizada!</h2>`;
     return;
   }
-  
+
   const q = evaluationQuestions[evaluationCurrentQuestion];
-  
+
   // Cria o enunciado sem o número da pergunta
   const questionEl = document.createElement("div");
   questionEl.className = "question";
   questionEl.innerHTML = `<strong>${q.question}</strong>`;
   evalContent.appendChild(questionEl);
-  
+
   // Cria a lista de opções
   const optionsList = document.createElement("ul");
   optionsList.className = "options";
@@ -736,7 +816,7 @@ function loadEvaluationQuestion() {
     optionsList.appendChild(li);
   }
   evalContent.appendChild(optionsList);
-  
+
   // Cria o contêiner para os botões "Voltar", "Responder" e "Próxima Questão"
   // Cria o botão "Responder" abaixo das alternativas
   const responderBtn = document.createElement("button");
@@ -773,7 +853,7 @@ function loadEvaluationQuestion() {
   navBtnContainer.appendChild(nextBtn);
 
   evalContent.appendChild(navBtnContainer);
-  
+
   // Evento para marcar com azul a opção selecionada
   const optionInputs = document.querySelectorAll('input[name="evalOption"]');
   optionInputs.forEach(input => {
@@ -795,35 +875,33 @@ function checkEvaluationAnswer() {
   const q = evaluationQuestions[evaluationCurrentQuestion];
   const selected = document.querySelector('input[name="evalOption"]:checked');
   const evalContent = document.getElementById("evalQuizContent");
-  
+
   if (!selected) {
-    alert("Por favor, selecione uma opção.");
+    //alert("Por favor, selecione uma opção.");
+    showToast("Por favor, selecione uma opção.", 2500);
     return;
   }
-  
+
   if (q.userAnswer === undefined) {
     q.userAnswer = selected.value;
     evaluationTotalAnswered++;
   }
-  
+
   const optionInputs = document.querySelectorAll('input[name="evalOption"]');
-  if (selected.value === q.correct) {
-    selected.parentElement.style.backgroundColor = "lightgreen";
-    evaluationScore++;
-  } else {
-    selected.parentElement.style.backgroundColor = "lightcoral";
-    optionInputs.forEach(input => {
-      if (input.value === q.correct) {
-        input.parentElement.style.backgroundColor = "yellow";
-      }
-    });
-  }
   
+  // encontra o <li> que contém o input
+const li = selected.closest('li');
+
+// marca a classe correta ou errada
+li.classList.add(selected.value === q.correct ? 'correct' : 'wrong');
+
+quizContent.appendChild(wrapper);
+
   const feedbackDiv = document.createElement("div");
   feedbackDiv.className = "feedback";
   feedbackDiv.textContent = (selected.value === q.correct) ? "Correto!" : `Incorreto! A resposta correta é (${q.correct}) ${q.options[q.correct]}.`;
   evalContent.appendChild(feedbackDiv);
-  
+
   optionInputs.forEach(input => input.disabled = true);
 }
 
@@ -864,18 +942,19 @@ function startEvaluationTimer() {
 function startEvaluation() {
   const name = document.getElementById("playerName").value.trim();
   if (name === "") {
-    alert("Por favor, insira seu nome para iniciar a avaliação.");
+    //alert("Por favor, insira seu nome para iniciar a avaliação.");
+    showToast("Por favor, insira seu nome para iniciar a avaliação.", 2500);
     return;
   }
   // Reseta o feedback do modal
   document.getElementById("evalFeedback").innerHTML = "";
-  
+
   evaluationQuestions = generateEvaluationQuestions();
   evaluationCurrentQuestion = 0;
   evaluationScore = 0;
   evaluationTotalAnswered = 0;
   evaluationTimeLeft = evaluationDuration;
-  
+
   // Exibe o modal de avaliação (o modal não contém os elementos de navegação)
   document.getElementById("evaluationModal").style.display = "block";
   loadEvaluationQuestion();
@@ -912,7 +991,7 @@ function updateNavigation() {
   } else {
     numNavPages = Math.ceil(total / maxNavPerPage);
   }
-  
+
   const navPagesDiv = document.getElementById("navPages");
   navPagesDiv.innerHTML = "";
   for (let p = 1; p <= numNavPages; p++) {
@@ -934,7 +1013,7 @@ function renderQuestionNav() {
   const total = questions.length;
   const questionNavDiv = document.getElementById("questionNav");
   questionNavDiv.innerHTML = "";
-  
+
   let start, end;
   if (total <= maxNavPerPage) {
     start = 1;
@@ -943,21 +1022,21 @@ function renderQuestionNav() {
     start = (navCurrentPage - 1) * maxNavPerPage + 1;
     end = Math.min(start + maxNavPerPage - 1, total);
   }
-  
+
   for (let i = start; i <= end; i++) {
     const btn = document.createElement("button");
     btn.textContent = String(i).padStart(2, "0");
-    
+
     const q = questions[i - 1];
     if (q.userAnswer !== undefined) {
       btn.style.backgroundColor = (q.userAnswer === q.correct) ? "lightgreen" : "lightcoral";
     }
-    
+
     if (i === questions[currentQuestion].number) {
       btn.style.fontWeight = "bold";
       btn.style.border = "2px solid #000";
     }
-    
+
     btn.addEventListener("click", () => {
       currentQuestion = i - 1;
       loadQuestion();
@@ -970,18 +1049,33 @@ const errorMessages = [
   "Bruno, você já respondeu essa pergunta.",
   "Bruno, já foi respondido, por favor prossiga.",
   "Ei Bruno, essa resposta já foi registrada. Presta atenção.",
+  "Bruno larga o tapioca; essa resposta já foi confirmada.",
   "É serio isso? Bruno a resposta já foi dada mano.",
+  "olha aí Leandrão, tá difícil pro Bruno entender que essa pergunta já foi respondida? Foco Bruno",
+  "Tá vendo Adriel, ele fez outra vez, essa já foi respondida Bruno",
+  "Sério, sai da porra do Whatsapp Bruno, depois você responde. Foque na próxima.",
+  "Agora é serio, desamarra a faxineira da cama e presta atenção, essa questão já foi respondida!",
+  "Caralho mano, como o Dudu apareceu no seu colo do nada? Tira ele daí e responde outra pergunta.",
   "Mim vai inscrevinha erado; sô pa ve si vc para di fase iço, essa questão já foi respondida.",
   "Bruno, como nada até aqui resolveu, vou deixar o chatgpt te responder!",
-  "Bruno, caralho, tu tá de sacanagem? Essa pergunta já foi respondida mil vezes, presta atenção!",
+  "Bruno, caralho, tu tá de sacanagem? Essa pergunta já foi respondida mil vezes, presta atenção, porra!",
   "Ô Bruno, tu tá num universo paralelo? Só pode... Vê se acorda, pô, já tá tudo anotado, não enche mais!",
   "Tá de zoeira comigo, Bruno? Nem a porra do Google aguenta mais tu repetindo a mesma pergunta, meu irmão!",
   "Bruno, larga essa punheta aí, caralho, e presta atenção! A pergunta já tá respondida faz meia hora!",
-  "Tá ocupado lambendo o teclado, Bruno? Porque não é possível tu clicar sempre na mesma pergunta! Bora seguir!",
-  "Porra, Bruno, tu tá competindo pra ver quem consegue ser mais tapado hoje? Para de repetir essa pergunta!",
-  "Ô Bruno, cê tem problema de memória ou tá só testando minha paciência? A mesma pergunta de novo não, né?!",
-  "Puta que pariu, Bruno! Eu já expliquei, já desenhei, já fiz mímica! Essa já foi respondida!",
-  "Bruno, se tu insistir nessa questão mais uma vez, eu vou mandar teu nome pro Procon das Perguntas Repetidas!",
+  "Ô Bruno, para de enfiar o dedo onde não deve e volta pro questionário, porra! Não é difícil entender que isso já foi respondido.",
+  "Tá ocupado lambendo o teclado, Bruno? Porque não é possível tu clicar sempre na mesma porra de pergunta! Bora seguir, cacete!",
+  "Porra, Bruno, se continuar assim vou achar que tu tá transando com essa pergunta de tanto que tu repete! Larga isso e vai pra próxima!",
+  "Bruno, sai do Xvideos e olha pra gente aqui, inferno! Já respondi essa merda umas mil vezes!",
+  "Caralho, Bruno, quantos contatinhos tu tem pra ficar distraído assim? Fecha esse Tinder safado e segue a porra do formulário!",
+  "Meu Deus, Bruno! Toda vez que tu repete essa pergunta eu imagino que tu tá enfiando algo no cu em vez de prestar atenção! Larga mão dessa ideia e bora pra outra!",
+  "Bruno, segura essa libido aí, meu parceiro! Para de ficar se alisando enquanto repete a pergunta — já foi respondida, diabo!",
+  "Porra, Bruno, até minha avó com tesão entende que isso já foi respondido! Foca, inferno!",
+  "Bruno, larga essa macumba que tu tá fazendo e olha pro que a gente já respondeu! É sério, cara, tá enchendo o saco!",
+  "Porra, Bruno, tu tá competindo pra ver quem consegue ser mais tapado hoje? Para de repetir essa merda de pergunta!",
+  "Caramba, Bruno, tá achando que a gente é teu diarista mental, pra ficar repetindo resposta toda hora? Se liga, porra!",
+  "Ô Bruno, cê tem problema de memória ou tá só testando minha paciência, desgraça? A mesma pergunta de novo não, né?!",
+  "Puta que pariu, Bruno! Eu já expliquei, já desenhei, já fiz mímica! Essa porra já foi respondida, porra!",
+  "Bruno, se tu insistir nessa questão mais uma vez, eu vou mandar teu nome pro Procon das Perguntas Repetidas, caralho!",
   "Caralho, Bruno, é sério, se você clicar de novo nesse botão, eu mesmo vou aí te dar um puxão de orelha, porque tá f... já!"
 ];
 
@@ -999,7 +1093,7 @@ function displayErrorTooltip(q) {
   // Cria o tooltip (div com overlay)
   const tooltip = document.createElement("div");
   tooltip.className = "error-tooltip";
-  
+
   // Conteúdo do tooltip
   tooltip.innerHTML = `
     <p>${message}</p>
@@ -1016,54 +1110,6 @@ function displayErrorTooltip(q) {
   });
 }
 
-// Atualize a função checkAnswer para usar a função de tooltip se a pergunta já tiver sido respondida.
-function checkAnswer() {
-  const q = questions[currentQuestion];
-  const selected = document.querySelector('input[name="option"]:checked');
-  const quizContent = document.getElementById("quizContent");
-  
-  if (!selected) {
-    alert("Por favor, selecione uma opção.");
-    return;
-  }
-  
-  // Se a pergunta já foi respondida, exibe o tooltip de erro e não processa novamente.
-  if (q.userAnswer !== undefined) {
-    displayErrorTooltip(q);
-    return;
-  }
-  
-  // Registra a resposta e processa normalmente
-  q.userAnswer = selected.value;
-  totalAnswered++;
-  
-  const optionInputs = document.querySelectorAll('input[name="option"]');
-  
-  if (selected.value === q.correct) {
-    selected.parentElement.style.backgroundColor = "lightgreen";
-    score++;
-  } else {
-    selected.parentElement.style.backgroundColor = "lightcoral";
-    optionInputs.forEach(input => {
-      if (input.value === q.correct) {
-        input.parentElement.style.backgroundColor = "yellow";
-      }
-    });
-  }
-  
-  const feedbackDiv = document.createElement("div");
-  feedbackDiv.className = "feedback";
-  feedbackDiv.textContent = (selected.value === q.correct) ? "Correto!" : `Incorreto! A resposta correta é (${q.correct}) ${q.options[q.correct]}.`;
-  quizContent.appendChild(feedbackDiv);
-  
-  const explanationDiv = document.createElement("div");
-  explanationDiv.className = "explanation";
-  explanationDiv.innerHTML = `<em>Explicação:</em> ${q.explanation_pt}`;
-  quizContent.appendChild(explanationDiv);
-  
-  optionInputs.forEach(input => input.disabled = true);
-  updateSidebar();
-}
 function updateEvaluationProgress() {
   const progressEl = document.getElementById("evalProgress");
   // Exibe "Questão X de Y" onde X = avaliação atual + 1 e Y = total de questões (60)
@@ -1073,7 +1119,7 @@ function updateEvaluationProgress() {
 function loadEvaluationQuestion() {
   const evalContent = document.getElementById("evalQuizContent");
   evalContent.innerHTML = "";
-  
+
   // Atualiza o progresso (ex.: "Questão 3 de 60")
   updateEvaluationProgress();
 
@@ -1081,15 +1127,15 @@ function loadEvaluationQuestion() {
     evalContent.innerHTML = `<h2>Avaliação finalizada!</h2>`;
     return;
   }
-  
+
   const q = evaluationQuestions[evaluationCurrentQuestion];
-  
+
   // Cria o enunciado (sem número da questão)
   const questionEl = document.createElement("div");
   questionEl.className = "question";
   questionEl.innerHTML = `${q.question}`;
   evalContent.appendChild(questionEl);
-  
+
   // Cria a lista de alternativas
   const optionsList = document.createElement("ul");
   optionsList.className = "options";
@@ -1099,14 +1145,14 @@ function loadEvaluationQuestion() {
     optionsList.appendChild(li);
   }
   evalContent.appendChild(optionsList);
-  
+
   // Cria o botão "Responder" abaixo das alternativas
   const responderBtn = document.createElement("button");
   responderBtn.id = "evalResponderBtn";
   responderBtn.textContent = "Responder";
   responderBtn.addEventListener("click", checkEvaluationAnswer);
   evalContent.appendChild(responderBtn);
-  
+
   // Cria um container para os botões "Voltar" e "Próxima Questão" com espaçamento
   const navBtnContainer = document.createElement("div");
   navBtnContainer.id = "evalNavButtons";
@@ -1114,7 +1160,7 @@ function loadEvaluationQuestion() {
   navBtnContainer.style.justifyContent = "center";
   navBtnContainer.style.gap = "20px";
   navBtnContainer.style.marginTop = "15px";
-  
+
   // Botão Voltar
   const backBtn = document.createElement("button");
   backBtn.id = "evalBackBtn";
@@ -1126,23 +1172,74 @@ function loadEvaluationQuestion() {
     }
   });
   navBtnContainer.appendChild(backBtn);
-  
+
   // Botão Próxima Questão
   const nextBtn = document.createElement("button");
   nextBtn.id = "evalNextBtn";
   nextBtn.textContent = "Próxima Questão";
   nextBtn.addEventListener("click", nextEvaluationQuestion);
   navBtnContainer.appendChild(nextBtn);
-  
+
   // Adiciona o container de navegação logo abaixo do botão "Responder"
   evalContent.appendChild(navBtnContainer);
-  
+
   // Registra a marcação em azul quando o usuário seleciona uma opção
   const optionInputs = document.querySelectorAll('input[name="evalOption"]');
   optionInputs.forEach(input => {
     input.addEventListener("change", () => {
       optionInputs.forEach(opt => { opt.parentElement.style.backgroundColor = ""; });
       input.parentElement.style.backgroundColor = "lightblue";
+    });
+  });
+}
+
+/**
+ * Exibe uma notificação toast com a mensagem informada.
+ * @param {string} message – Texto a exibir.
+ * @param {number} duration – Tempo em ms até sumir (padrão: 3000).
+ */
+function showToast(message, duration = 3000) {
+  const container = document.getElementById('toastContainer');
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  container.appendChild(toast);
+
+  // Força reflow p/ ativar a transição
+  requestAnimationFrame(() => {
+    toast.classList.add('show');
+  });
+
+  // Após duration, remove a classe e o elemento
+  setTimeout(() => {
+    toast.classList.remove('show');
+    toast.addEventListener('transitionend', () => {
+      toast.remove();
+    });
+  }, duration);
+}
+
+function showConfirm(message) {
+  return new Promise(resolve => {
+    const container = document.getElementById('confirmContainer');
+    const modal = document.createElement('div');
+    modal.className = 'confirm-modal';
+    modal.innerHTML = `
+      <p>${message}</p>
+      <div class="btn-group">
+        <button class="yes">Sim</button>
+        <button class="no">Não</button>
+      </div>
+    `;
+    container.appendChild(modal);
+
+    modal.querySelector('button.yes').addEventListener('click', () => {
+      resolve(true);
+      container.removeChild(modal);
+    });
+    modal.querySelector('button.no').addEventListener('click', () => {
+      resolve(false);
+      container.removeChild(modal);
     });
   });
 }
