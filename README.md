@@ -13,7 +13,7 @@
 * [🧰 Tecnologias](#-tecnologias)
 * [⚙️ Instalação](#️-instalação)
 * [▶️ Uso](#️-uso)
-* [🗂️ Estrutura de Dados](#️-estrutura-de-dados)
+* [🗂️ Estrutura de Arquivos](#️-estrutura-de-arquivos)
 * [🎨 Customização](#-customização)
 * [🤝 Contribuição](#-contribuição)
 * [📄 Licença](#-licença)
@@ -22,34 +22,32 @@
 
 ## 🌟 Visão Geral
 
-Este projeto é um **quiz interativo** de perguntas sobre Salesforce Certified Administrator. Ele foi desenvolvido para:
+Este projeto é um **quiz interativo** de perguntas sobre Salesforce Certified Administrator. Foi desenvolvido em **JavaScript puro** (ES6), sem frameworks, e utiliza apenas três arquivos principais:
 
-* Permitir ao usuário praticar questões em formato de quiz livre.
-* Oferecer um **modo avaliação** de 60 perguntas com timer de 105 minutos.
-* Registrar e salvar pontuações locais no `localStorage`.
-* Navegar entre perguntas respondidas, mantendo marcações e feedback.
+* `index.html` — marcação básica e containers de quiz, placar e avaliação.
+* `style.css` — estilos modernos com CSS Grid, variáveis e animações.
+* `script.js` — lógica de quiz livre, avaliação cronometrada, navegação, toasts e armazenamento no `localStorage`.
 
-O HTML, CSS e JavaScript foram escritos em ES6, sem frameworks externos, facilitando o entendimento e a manutenção.
+O conteúdo das questões está diretamente no `script.js`, facilitando a edição e manutenção sem configurações extra.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* ✅ **Quiz livre**: iniciar, responder, finalizar e visualizar pontuação.
-* ✅ **Avaliação cronometrada**: 60 questões sorteadas, sem feedback imediato.
+* ✅ **Quiz livre**: iniciar, responder, finalizar e visualizar pontuação imediata.
+* ✅ **Avaliação cronometrada**: 60 perguntas sorteadas, sem feedback visual até o fim.
 * ✅ **Barra de progresso** dinâmica.
 * ✅ **Navegação** por número de questão, com destaque de respondidas.
-* ✅ **Salvamento local** de placar (nome, porcentagem, corretas e erradas).
-* ✅ **Toasts** e **modais** customizados para confirmações e erros.
-* ✅ **JSON externo** (`questions.json`) para facilitar manutenção de questões.
+* ✅ **Salvamento local** de placar (nome, porcentagem, corretas e erradas) via `localStorage`.
+* ✅ **Toasts** e **modais** customizados para confirmações e notificações.
 
 ---
 
 ## 🧰 Tecnologias
 
 * **HTML5**
-* **CSS3** (Grid Layout, variáveis CSS)
-* **JavaScript ES6+** (módulos, `fetch`, `async/await`)
+* **CSS3** (Grid Layout, variáveis CSS, animações)
+* **JavaScript ES6+** (módulos, arrow functions, `fetch` removido)
 * **LocalStorage** API
 
 ---
@@ -62,67 +60,50 @@ O HTML, CSS e JavaScript foram escritos em ES6, sem frameworks externos, facilit
    git clone https://github.com/seu-usuario/quiz-salesforce-admin.git
    cd quiz-salesforce-admin
    ```
-2. Inicie um servidor local (ex.: Live Server, VSCode ou Python):
+2. Abra `index.html` diretamente no navegador ou via servidor HTTP:
 
    ```bash
-   # Python 3
+   # Opcional: usar Python
    python -m http.server 8000
    ```
-3. Acesse no navegador:
+3. Acesse:
 
    ```
+   http://localhost:8000/index.html
    ```
 
-[http://localhost:8000](http://localhost:8000)
-
-````
-
-> **Importante:** O quiz carrega as questões de `questions.json` via `fetch`, então é necessário rodar via HTTP.
+> **Obs.:** Não há necessidade de arquivos JSON externos. Todas as questões estão no `script.js`.
 
 ---
 
 ## ▶️ Uso
-- **Iniciar Quiz**: preencha seu nome e clique em **Inicia Quiz**.
-- **Responder**: selecione opção(s) e envie. Feedback imediato no modo livre.
-- **Próxima Pergunta**: navegue entre questões.
-- **Finalizar Quiz**: veja nota final e salve no placar.
-- **Iniciar Avaliação**: modo cronometrado, sem feedback de acerto até o fim.
-- **Apagar Placar**: limpa todas as pontuações salvas localmente.
+
+1. Insira seu nome no campo **Placar**.
+2. Clique em **Inicia Quiz**.
+3. Selecione a opção correta e pressione **Responder**.
+4. Navegue entre as perguntas com **Próxima Pergunta** ou pelo menu lateral.
+5. Ao finalizar, clique em **Finalizar Quiz** para ver sua nota.
+6. Em **Iniciar Avaliação**, responda 60 perguntas cronômetradas; o resultado aparece ao fim.
+7. Use **Apagar Placar** para limpar todas as pontuações salvas.
 
 ---
 
-## 🗂️ Estrutura de Dados
+## 🗂️ Estrutura de Arquivos
+
 ```bash
-├── index.html
-├── style.css
-├── script.js
-└── questions.json
-````
-
-O arquivo **questions.json** contém um array de objetos:
-
-```jsonc
-[
-  {
-    "number": 1,
-    "question": "Texto da pergunta...",
-    "options": { "A": "Opção A", "B": "Opção B", ... },
-    "correct": "C",
-    "explanation_pt": "Texto explicativo com \n para quebras de linha",
-    "explanation_en": "..."
-  },
-  // ... mais questões
-]
+├── index.html      # Conteúdo e estrutura do quiz
+├── style.css       # Estilos e tema responsivo
+└── script.js       # Lógica de quiz, avaliação e armazenamento
 ```
 
 ---
 
 ## 🎨 Customização
 
-* **Adicionar/editar questões**: abra e edite `questions.json` no formato JSON.
-* **Temas e cores**: ajuste as variáveis CSS em `:root` no `style.css`.
-* **Tempo de avaliação**: modifique `evaluationDuration` em segundos no `script.js`.
-* **Limite de questões**: altere `slice(0, 60)` em `generateEvaluationQuestions()`.
+* **Editar questões:** abra `script.js` e localize o array `questions` no topo. Adicione, remova ou modifique objetos de questão.
+* **Temas e cores:** altere variáveis CSS em `:root` no `style.css`.
+* **Tempo de avaliação:** ajuste `evaluationDuration` (em segundos) em `script.js`.
+* **Número de questões:** modifique `slice(0, 60)` na função `generateEvaluationQuestions()`.
 
 ---
 
@@ -131,10 +112,10 @@ O arquivo **questions.json** contém um array de objetos:
 Contribuições são bem-vindas! 🎉
 
 1. Faça um *fork* do repositório.
-2. Crie uma branch feature: `git checkout -b feature/nova-questao`.
-3. Faça commit das alterações: `git commit -m "Adiciona nova questão X"`.
-4. Envie para o branch original: `git push origin feature/nova-questao`.
-5. Abra um *Pull Request*.
+2. Crie uma branch: `git checkout -b feature/minha-melhoria`.
+3. Faça commit das alterações: `git commit -m "Minha melhoria no quiz"`.
+4. Envie para o branch original: `git push origin feature/minha-melhoria`.
+5. Abra um *Pull Request* e descreva suas mudanças.
 
 Por favor, siga as convenções de código e mantenha o estilo consistente.
 
@@ -146,4 +127,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
-> Divirta-se e bons estudos! 🚀
+> Desenvolvido com ❤️ por Bruno. Bons estudos e sucesso na certificação! 🚀
