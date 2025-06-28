@@ -22,6 +22,15 @@
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.5rem;
+
+  /* Variáveis de cor Salesforce (Brand Blue) */
+  --slds-brand:   #1589ee;
+  --slds-brand-hover:   #1070d3;
+  --slds-brand-active:  #005fb2;
+  --slds-neutral: #f3f2f2;
+  --slds-neutral-hover: #e0e1e2;
+  --slds-neutral-border: #dddbda;
+  --slds-text-default: #080707;
 }
 
 /* ==========================================
@@ -87,6 +96,7 @@ body {
 #quiz-area {
   padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
+  position: relative;
 }
 
 /* ==========================================
@@ -155,12 +165,13 @@ h2 {
   margin-bottom: var(--spacing-sm);
   border: 1px solid #ccc;
   border-radius: var(--border-radius);
+  overflow: hidden;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
 }
 
 .options li label {
-  display: flex;
+  display: block;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -220,6 +231,69 @@ button:active {
   color: var(--text-secondary);
 }
 
+/* Botão primário (brand) */
+button.slds-brand,
+button#startQuizBtn,
+button#responderBtn {
+  background-color: var(--slds-brand);
+  color: #fff;
+  border: none;
+}
+button.slds-brand:hover,
+button#startQuizBtn:hover,
+button#responderBtn:hover {
+  background-color: var(--slds-brand-hover);
+}
+button.slds-brand:active,
+button#startQuizBtn:active,
+button#responderBtn:active {
+  background-color: var(--slds-brand-active);
+}
+
+/* Botão secundário (neutral) */
+button.slds-neutral,
+button#finishQuizBtn,
+button#nextBtn,
+button#startEvalBtn,
+button#clearScoreboardBtn {
+  background-color: var(--slds-neutral);
+  color: var(--slds-text-default);
+  border: 1px solid var(--slds-neutral-border);
+}
+button.slds-neutral:hover,
+button#finishQuizBtn:hover,
+button#nextBtn:hover,
+button#startEvalBtn:hover,
+button#clearScoreboardBtn:hover {
+  background-color: var(--slds-neutral-hover);
+}
+
+/* Disabled state */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Verde “success” padrão Salesforce */
+button#startEvalBtn {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+}
+button#startEvalBtn:hover {
+  background-color: #27ae60;
+}
+
+/* Vermelho “destructive” padrão Salesforce */
+button#clearScoreboardBtn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+}
+button#clearScoreboardBtn:hover {
+  background-color: #c0392b;
+}
+
 /* ==========================================
    FEEDBACK WRAPPER (EXPLICAÇÃO)
    ========================================== */
@@ -267,6 +341,9 @@ button:active {
 /* ==========================================
    STATE COLORS ON OPTIONS
    ========================================== */
+
+.options li.selected { background: lightblue; }
+
 .options li.correct {
   background: #4caf50 !important;
   border-color: #4caf50 !important;
@@ -363,36 +440,133 @@ button:active {
 /* ==========================================
    TOASTS & MODALS
    ========================================== */
+/* container dos toasts */
 #toastContainer {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2000;
+  position: absolute;      
+  top: 50%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);  
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  pointer-events: none;
+  gap: var(--spacing-sm);
+  z-index: 9999;
 }
 
+/* caixa do toast genérico */
 .toast {
-  pointer-events: auto;
-  min-width: 200px;
-  max-width: 300px;
-  background: #333;
+  position: relative;
+  background: var(--accent);
   color: #fff;
-  padding: 12px 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 12px 40px 12px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
+  max-width: 300px;
   text-align: center;
 }
 .toast.show {
   opacity: 1;
   transform: translateY(0);
 }
+/* botão de fechar genérico */
+.toast-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* variante default (azul) */
+.toast-default {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* variante success (verde) */
+.toast-success {
+  background: #4caf50;
+  color: #fff;
+}
+
+/* variante error (vermelho) */
+.toast-error {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* ==========================================
+   CONFIRM-TOAST (SIM / NÃO)
+   ========================================== */
+.toast-confirm {
+  /* fundo azul sólido (sem transparência) */
+  background: #eaf4ff;            /* ou outra cor opaca de sua preferência */
+  border: 1px solid var(--accent);
+  color: var(--text-primary);
+
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-width: 320px;
+  text-align: left;
+  opacity: 1;                     /* garante full opacity */
+  transform: none;   
+}
+
+/* reaproveita animação do .toast */
+.toast-confirm.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* separa a mensagem dos botões */
+.toast-confirm .toast-message {
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+}
+
+/* container dos botões */
+.toast-confirm-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+/* estilo dos botões */
+.toast-confirm-buttons .btn-no,
+.toast-confirm-buttons .btn-yes {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* botões “Não” e “Sim” */
+.toast-confirm-buttons .btn-no {
+  background: #eee;
+  color: var(--text-secondary);
+}
+.toast-confirm-buttons .btn-yes {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* hover states (opcional) */
+.toast-confirm-buttons .btn-no:hover {
+  background: #ddd;
+}
+.toast-confirm-buttons .btn-yes:hover {
+  filter: brightness(1.1);
+}
+
 
 .modal {
   display: none;
@@ -430,31 +604,44 @@ button:active {
 .error-tooltip {
   position: fixed;
   inset: 0;
+  background: rgba(0,0,0,0.4);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
-.error-tooltip > div {
-  background: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-  border-radius: 4px;
-  padding: var(--spacing-lg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+/* --- Caixa interna: onde fica texto + botão --- */
+.error-tooltip-box {
+  background: #f8d7da;             /* leve rosa para erro */
+  color: #721c24;                  /* texto vinho */
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 90%;
   text-align: center;
 }
-.error-tooltip button {
-  margin-top: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
+
+/* Parágrafo dentro da caixa */
+.error-tooltip-box p {
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+/* Botão de OK */
+.error-tooltip-box .tooltip-ok-btn {
+  padding: 8px 16px;
   background: #f5c6cb;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
 }
-.error-tooltip button:hover {
-  background: #f1b0b7;
+.error-tooltip-box .tooltip-ok-btn:hover {
+  background: #e1aeb4;
 }
+
+
 /* ==========================================
    STATS & SCOREBOARD
    ========================================== */
@@ -514,4 +701,15 @@ button:active {
   color: var(--text-secondary);
   margin-top: 4px;
   clear: both;
+}
+
+.question-progress {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feedback-wrapper .explanation a {
+  color: var(--accent);
+  text-decoration: underline;
 }
