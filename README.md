@@ -127,4 +127,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
-> Desenvolvido com ❤️ por Bruno. Bons estudos e sucesso na certificação! 🚀
+>Bons estudos e sucesso na certificação! 🚀
