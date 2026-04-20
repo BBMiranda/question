@@ -2,35 +2,48 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quiz - Salesforce Certified Administrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Platform Administrator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <!-- Coluna da Esquerda: Pontuação -->
-    <div id="leftCol">
+    <header class="quiz-header">
+      <h1>Quiz - Platform Administrator</h1>
+      <div id="progressBar">
+        <div class="progress-fill"></div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="leftCol">
       <h2>Pontuação</h2>
-      <p>Corretas: <span id="correctCount">0</span></p>
-      <p>Erradas: <span id="wrongCount">0</span></p>
+      <div class="exam-select">
+        <label for="examSelect">Prova</label>
+        <select id="examSelect">
+          <option value="admin" selected>Platform Administrator</option>
+          <option value="developer">Platform Developer</option>
+          <option value="appbuilder">Platform App Builder</option>
+        </select>
+      </div>
+      <div class="score-stats">
+        <p class="stat-item stat-correct">Corretas <span id="correctCount">0</span></p>
+        <p class="stat-item stat-wrong">Erradas <span id="wrongCount">0</span></p>
+      </div>
       <div id="scoreButtons">
-        <button id="startQuizBtn" class="slds-button slds-button_brand">Inicia Quiz</button>
-        <button id="finishQuizBtn"class="slds-button slds-button_neutral">Finalizar Quiz</button>
+        <button id="startQuizBtn">Iniciar Quiz</button>
+        <button id="finishQuizBtn">Finalizar Quiz</button>
         <button id="startEvalBtn">Iniciar Avaliação</button>
       </div>
       <div id="finalScore"></div>
-    </div>
-    <!-- Coluna Central: Quiz -->
-    <div id="quiz-area">
-      <h1>Quiz – Salesforce Certified Administrator</h1>
-      <!-- barra de progresso (inicialmente escondida) -->
-      <div id="progressBar" style="display:none;">
-        <div class="progress-fill"></div>
+    </aside>
+
+    <main id="quiz-area">
+      <div id="quizContent">
+        <!-- O conteúdo do quiz será inserido aqui -->
       </div>
-      <div id="quizContent"></div>
-    </div>
-    <!-- Coluna da Direita: Placar e Navegação -->
-    <div id="rightCol">
+    </main>
+
+    <aside class="sidebar" id="rightCol">
       <h2>Placar</h2>
       <div id="scoreEntry">
         <input type="text" id="playerName" placeholder="Digite seu nome">
@@ -38,36 +51,34 @@
       <div id="scoreboard"></div>
       <button id="clearScoreboardBtn">Apagar Placar</button>
       <hr>
-      <h2>Navegação das Perguntas</h2>
-      <div id="navPages"></div>
+      <h2>Navegação</h2>
       <div id="questionNav"></div>
+      <div id="navPages"></div>
+    </aside>
+  </div>
+
+  <!-- Modal da Avaliação -->
+  <div id="evaluationModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <div id="evalProgress"></div>
+      <div id="evalQuizContent"></div>
+      <div id="evalNavButtonsContainer"></div>
+      <div class="modal-footer">
+        <button id="evalFinishBtn">Finalizar Avaliação</button>
+      </div>
+      <div id="evalFeedback"></div>
+      <div id="timer"></div>
     </div>
   </div>
 
-<!-- Modal da Avaliação -->
-<div id="evaluationModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <!-- Container para o progresso da avaliação -->
-    <div id="evalProgress" style="text-align: center; font-weight: bold; margin-bottom: 10px;"></div>
-    <!-- Container para o conteúdo do quiz de avaliação -->
-    <div id="evalQuizContent"></div>
-    <!-- Container para os botões de navegação -->
-    <div id="evalNavButtonsContainer" style="margin-top: 15px;"></div>
-    <!-- Botão Finalizar Avaliação (centralizado e com margem superior) -->
-    <div style="text-align: center; margin-top: 30px;">
-      <button id="evalFinishBtn">Finalizar Avaliação</button>
-    </div>
-    <div id="evalFeedback"></div>
-    <div id="timer"></div>
-  </div>
-</div>
+  <!-- Containers de Notificação -->
+  <div id="confirmContainer"></div>
+  <div id="toastContainer"></div>
 
-
-
-<!-- Container para todas as notificações toast -->
-<div id="confirmContainer"></div>
-<div id="toastContainer"></div>
-<script src="script.js"></script>
+  <script src="questions-admin.js"></script>
+  <script src="questions-developer.js"></script>
+  <script src="questions-appbuilder.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
