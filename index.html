@@ -16,6 +16,21 @@
     </header>
 
     <aside class="sidebar" id="leftCol">
+      <h2>Placar</h2>
+      <div id="scoreEntry">
+        <input type="text" id="playerName" placeholder="Digite seu nome">
+      </div>
+      <div id="scoreboard"></div>
+      <button id="clearScoreboardBtn">Apagar Placar</button>
+    </aside>
+
+    <main id="quiz-area">
+      <div id="quizContent">
+        <!-- O conteúdo do quiz será inserido aqui -->
+      </div>
+    </main>
+
+    <aside class="sidebar" id="rightCol">
       <h2>Pontuação</h2>
       <div class="exam-select">
         <label for="examSelect">Prova</label>
@@ -29,31 +44,17 @@
         <p class="stat-item stat-correct">Corretas <span id="correctCount">0</span></p>
         <p class="stat-item stat-wrong">Erradas <span id="wrongCount">0</span></p>
       </div>
+      <div id="finalScore"></div>
       <div id="scoreButtons">
-        <button id="startQuizBtn">Iniciar Quiz</button>
         <button id="finishQuizBtn">Finalizar Quiz</button>
         <button id="startEvalBtn">Iniciar Avaliação</button>
       </div>
-      <div id="finalScore"></div>
-    </aside>
-
-    <main id="quiz-area">
-      <div id="quizContent">
-        <!-- O conteúdo do quiz será inserido aqui -->
+      <div id="navSection">
+        <hr>
+        <h2>Navegação</h2>
+        <div id="questionNav"></div>
+        <div id="navPages"></div>
       </div>
-    </main>
-
-    <aside class="sidebar" id="rightCol">
-      <h2>Placar</h2>
-      <div id="scoreEntry">
-        <input type="text" id="playerName" placeholder="Digite seu nome">
-      </div>
-      <div id="scoreboard"></div>
-      <button id="clearScoreboardBtn">Apagar Placar</button>
-      <hr>
-      <h2>Navegação</h2>
-      <div id="questionNav"></div>
-      <div id="navPages"></div>
     </aside>
   </div>
 

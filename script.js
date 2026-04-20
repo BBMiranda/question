@@ -100,6 +100,50 @@ function updateQuizTitle(examKey = getSelectedExamKey()) {
 
 setActiveQuestionsByKey("admin");
 
+function renderWelcomeState() {
+    const quizContent = document.getElementById("quizContent");
+    if (!quizContent) return;
+
+    const select = document.getElementById("examSelect");
+    const selectedExamName = select
+        ? select.options[select.selectedIndex].textContent.trim()
+        : "Platform Administrator";
+
+    quizContent.innerHTML = `
+        <section class="quiz-welcome">
+            <div class="welcome-card">
+                <span class="welcome-badge">Prova selecionada: ${selectedExamName}</span>
+                <h2 class="welcome-title">Pronto para começar?</h2>
+                <p class="welcome-text">Digite seu nome, revise a prova selecionada e inicie quando quiser. O quiz foi organizado para manter foco, ritmo e clareza durante toda a jornada.</p>
+                <ul class="welcome-list">
+                    <li>Questões embaralhadas automaticamente para treino mais realista.</li>
+                    <li>Feedback imediato e placar atualizado em tempo real.</li>
+                    <li>Avaliação com tempo para simular o contexto de certificação.</li>
+                </ul>
+                <button class="welcome-start-btn" type="button">Iniciar Quiz</button>
+            </div>
+        </section>
+    `;
+
+    const startBtn = quizContent.querySelector(".welcome-start-btn");
+    if (startBtn) {
+        startBtn.addEventListener("click", startQuiz);
+    }
+}
+
+function setNavigationVisibility(visible) {
+    const leftCol = document.getElementById("leftCol");
+    const navSection = document.getElementById("navSection");
+    if (!navSection || !leftCol) return;
+
+    // Garante que a navegacao fique sempre na coluna da esquerda.
+    if (navSection.parentElement !== leftCol) {
+        leftCol.appendChild(navSection);
+    }
+
+    navSection.style.display = visible ? "" : "none";
+}
+
 function loadQuestion() {
     const quizContent = document.getElementById("quizContent");
     quizContent.innerHTML = "";
@@ -307,6 +351,7 @@ function startQuiz() {
     totalAnswered = 0;
     const bar = document.getElementById('progressBar');
     bar.style.display = 'block';
+    setNavigationVisibility(true);
     updateProgressBar();
     questions.forEach(q => { delete q.userAnswer; shuffleOptions(q); });
     document.getElementById("finalScore").innerHTML = "";
@@ -611,6 +656,13 @@ function startEvaluation() {
     evaluationTotalAnswered = 0;
     evaluationTimeLeft = evaluationDuration;
 
+    // Durante a avaliacao, oculta navegacao lateral e limpa a area central.
+    setNavigationVisibility(false);
+    const quizContent = document.getElementById("quizContent");
+    if (quizContent) {
+        quizContent.innerHTML = "";
+    }
+
     // Exibe o modal de avaliação (o modal não contém os elementos de navegação)
     document.getElementById("evaluationModal").style.display = "block";
     loadEvaluationQuestion();
@@ -627,6 +679,8 @@ document.getElementById("evalFinishBtn").addEventListener("click", finishEvaluat
 closeModalBtn.addEventListener("click", () => {
     evaluationModal.style.display = "none";
     clearInterval(evaluationInterval);
+    renderWelcomeState();
+    setNavigationVisibility(false);
 });
 
 const examSelect = document.getElementById("examSelect");
@@ -639,20 +693,26 @@ if (examSelect) {
         setActiveQuestionsByKey(examSelect.value);
         updateQuizTitle(examSelect.value);
         document.getElementById("finalScore").innerHTML = "";
-        document.getElementById("quizContent").innerHTML = "";
+        renderWelcomeState();
         const bar = document.getElementById("progressBar");
         if (bar) bar.style.display = "none";
+        setNavigationVisibility(false);
         updateSidebar();
     });
 }
 
 // --------------------- Ouvintes do Quiz Normal ---------------------
 // (Mantém os ouvintes já existentes para o quiz normal)
-document.getElementById("startQuizBtn").addEventListener("click", startQuiz);
+const startQuizBtn = document.getElementById("startQuizBtn");
+if (startQuizBtn) {
+    startQuizBtn.addEventListener("click", startQuiz);
+}
 document.getElementById("finishQuizBtn").addEventListener("click", finishQuiz);
 document.getElementById("clearScoreboardBtn").addEventListener("click", clearScoreboard);
 
 updateQuizTitle();
+renderWelcomeState();
+setNavigationVisibility(false);
 updateSidebar();
 updateScoreboardDisplay();
 
