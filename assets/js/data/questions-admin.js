@@ -1,4 +1,4 @@
-﻿window.questionBanks = window.questionBanks || {};
+window.questionBanks = window.questionBanks || {};
 window.questionBanks.admin = [
     {
         number: 1,
@@ -203,7 +203,7 @@ https://help.salesforce.com/s/articleView?id=sf.flow_builder_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_distribute_button.htm&type=5
     `,
         explanation_pt: `
-Flow Builder suporta a criação de Screen Flows que podem ser iniciados a partir de um botao em uma página de registro. Você pode construir uma interface simples para cálculo de desconto e invocá-la via botao ou ação personalizada na Oportunidade.
+Flow Builder suporta a criação de Screen Flows que podem ser iniciados a partir de um botão em uma página de registro. Você pode construir uma interface simples para cálculo de desconto e invocá-la via botão ou ação personalizada na Oportunidade.
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_builder_overview.htm&type=5
@@ -272,7 +272,7 @@ Custom objects and standard objects both come with a set of predefined (standard
 Reference: https://trailhead.salesforce.com/en/content/learn/modules/data_modeling/standard_and_custom_objects
     `,
         explanation_pt: `
-Tanto objetos personalizados quanto objetos padrão possuem campos predefinidos (standard), como Name, CreatedDate, etc. Objetos padrão (por exemplo, Account, Contact, Lead) são fornecidos por padrão no Salesforce. Não e possível criar novos objetos padrão via Setup, e objetos personalizados também suportam relacionamentos master-detail.
+Tanto objetos personalizados quanto objetos padrão possuem campos predefinidos (standard), como Name, CreatedDate, etc. Objetos padrão (por exemplo, Account, Contact, Lead) são fornecidos por padrão no Salesforce. Não é possível criar novos objetos padrão via Setup, e objetos personalizados também suportam relacionamentos master-detail.
 
 Referência: https://trailhead.salesforce.com/en/content/learn/modules/data_modeling/standard_and_custom_objects
     `
@@ -440,7 +440,7 @@ A Gauge component displays a single metric value and its percentage of a target 
 Reference: https://help.salesforce.com/s/articleView?id=sf.dashboards_gauge_component_type.htm&type=5
     `,
         explanation_pt: `
-O componente Gauge exibe um único valor metrico e sua porcentagem em relação a uma meta dentro de intervalos coloridos (por exemplo, vermelho, amarelo, verde). E ideal para mostrar o total de vendas e o progresso em direção a meta em um único painel.
+O componente Gauge exibe um único valor métrico e sua porcentagem em relação a uma meta dentro de intervalos coloridos (por exemplo, vermelho, amarelo, verde). É ideal para mostrar o total de vendas e o progresso em direção a meta em um único painel.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.dashboards_gauge_component_type.htm&type=5
     `
@@ -461,7 +461,7 @@ The Mass Transfer Tool in Setup lets you transfer ownership of records (up to 25
 Reference: https://help.salesforce.com/s/articleView?id=sf.mass_transfer_overview.htm&type=5
     `,
         explanation_pt: `
-A ferramenta Mass Transfer Tool no Setup permite transferir a propriedade de registros (até 250 de cada vez) de um usuário para outro, mantendo os membros da equipe relacionados. E a forma recomendada para reatribuir em massa Contas e Oportunidades.
+A ferramenta Mass Transfer Tool no Setup permite transferir a propriedade de registros (até 250 de cada vez) de um usuário para outro, mantendo os membros da equipe relacionados. É a forma recomendada para reatribuir em massa Contas e Oportunidades.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.mass_transfer_overview.htm&type=5
     `
@@ -484,7 +484,7 @@ https://www.salesforceben.com/salesforce-record-types/
 https://trailhead.salesforce.com/content/learn/projects/create-an-opportunity-record-type-for-npsp/create-and-manage-stages-and-sales-processes
     `,
         explanation_pt: `
-Record Types e Sales Processes permitem oferecer diferentes layouts de página, campos obrigatorios e valores de picklist para cada tipo de oportunidade. Criando record types separados e associando cada um ao seu próprio sales process, você atende aos requisitos de layout e valores de estágio.
+Record Types e Sales Processes permitem oferecer diferentes layouts de página, campos obrigatórios e valores de picklist para cada tipo de oportunidade. Criando record types separados e associando cada um ao seu próprio sales process, você atende aos requisitos de layout e valores de estágio.
 
 Referências:
 https://www.salesforceben.com/salesforce-record-types/
@@ -507,7 +507,7 @@ Muting Permission Sets let you remove specific permissions granted by a Permissi
 Reference: https://help.salesforce.com/s/articleView?id=sf.perm_sets_muting.htm&type=5
     `,
         explanation_pt: `
-Muting Permission Sets permitem remover permissões especificas concedidas por um Permission Set Group sem alterar o grupo em si. Criando um muting set que silencie o Delete nesses objetos, você impede deleções mantendo o restante das permissões do pacote.
+Muting Permission Sets permitem remover permissões específicas concedidas por um Permission Set Group sem alterar o grupo em si. Criando um muting set que silencie o Delete nesses objetos, você impede deleções mantendo o restante das permissões do pacote.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.perm_sets_muting.htm&type=5
     `
@@ -528,7 +528,7 @@ Roll-up Summary Fields on the Campaign object can calculate sums (e.g., Total Op
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
     `,
         explanation_pt: `
-Roll-up Summary Fields no objeto Campaign podem calcular somas (por exemplo, Total Opportunity Amount) a partir dos registros de Oportunidade relacionados. Isso fornece totais de receita por campanha de forma automatica e atualizada.
+Roll-up Summary Fields no objeto Campaign podem calcular somas (por exemplo, Total Opportunity Amount) a partir dos registros de Oportunidade relacionados. Isso fornece totais de receita por campanha de forma automática e atualizada.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
     `
@@ -549,7 +549,7 @@ Web-to-Case generates HTML form code you can embed on your website so visitors c
 Reference: https://help.salesforce.com/s/articleView?id=sf.customizesupport_web_to_case.htm&type=5
     `,
         explanation_pt: `
-Web-to-Case gera código de formulário HTML que você pode incorporar em seu site para que visitantes enviem casos diretamente ao Salesforce. E a solucao padrão para criação de casos em site publico.
+Web-to-Case gera código de formulário HTML que você pode incorporar em seu site para que visitantes enviem casos diretamente ao Salesforce. É a solução padrão para criação de casos em site público.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.customizesupport_web_to_case.htm&type=5
     `
@@ -635,7 +635,7 @@ https://help.salesforce.com/s/articleView?id=sf.path_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.kanban_overview.htm&type=5
     `,
         explanation_pt: `
-Paths em paginas de registro permitem que usuários atualizem estágios inline com orientação visual (A). Kanban list views permitem arrastar cards entre colunas para alterar estágio rapidamente (B). Ambos simplificam atualizações de estágio.
+Paths em páginas de registro permitem que usuários atualizem estágios inline com orientação visual (A). Kanban list views permitem arrastar cards entre colunas para alterar estágio rapidamente (B). Ambos simplificam atualizações de estágio.
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.path_overview.htm&type=5
@@ -658,7 +658,7 @@ The Data Import Wizard supports up to 50,000 records in one batch and is user-fr
 Reference: https://help.salesforce.com/s/articleView?id=sf.data_importer.htm&type=5
     `,
         explanation_pt: `
-O Data Import Wizard suporta até 50.000 registros em um único lote e e facil de usar para importar Contas com Contatos relacionados (via mapeamento). E ideal para este caso.
+O Data Import Wizard suporta até 50.000 registros em um único lote e é fácil de usar para importar Contas com Contatos relacionados (via mapeamento). É ideal para este caso.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.data_importer.htm&type=5
     `
@@ -679,7 +679,7 @@ The $Record global variable provides access to all field values of the record th
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_ref_global_variables.htm&type=5
     `,
         explanation_pt: `
-A variável global $Record fornece acesso a todos os valores de campo do registro que acionou o fluxo. E a forma padrão de referenciar o registro ativo em um fluxo acionado por registro.
+A variável global $Record fornece acesso a todos os valores de campo do registro que acionou o fluxo. É a forma padrão de referenciar o registro ativo em um fluxo acionado por registro.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.flow_ref_global_variables.htm&type=5
     `
@@ -700,7 +700,7 @@ Freezing a user immediately prevents them from logging in without deactivating t
 Reference: https://help.salesforce.com/s/articleView?id=sf.users_freeze.htm&type=5
     `,
         explanation_pt: `
-Freezar um usuário impede imediatamente que ele faca login sem desativar o registro de usuário. Isso da tempo para atualizar ou remover referencias—neste caso, limpar o campo Direct Manager—antes da desativacao.
+Freezar um usuário impede imediatamente que ele faça login sem desativar o registro de usuário. Isso dá tempo para atualizar ou remover referências—neste caso, limpar o campo Direct Manager—antes da desativação.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.users_freeze.htm&type=5
     `
@@ -721,7 +721,7 @@ Contacts to Multiple Accounts allows a single Contact record to be associated wi
 Reference: https://help.salesforce.com/s/articleView?id=sf.contacts_multiple_accounts.htm&type=5
     `,
         explanation_pt: `
-Contacts to Multiple Accounts permite que um único registro de Contact seja associado a varias Accounts (empresariais e pessoas). Isso preserva o histórico de um registro de Contact enquanto o vincula a cada agência.
+Contacts to Multiple Accounts permite que um único registro de Contact seja associado a várias Accounts (empresariais e pessoas). Isso preserva o histórico de um registro de Contact enquanto o vincula a cada agência.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.contacts_multiple_accounts.htm&type=5
     `
@@ -765,7 +765,7 @@ https://help.salesforce.com/s/articleView?id=sf.forecasting3_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_opptystages.htm&type=5
     `,
         explanation_pt: `
-Forecasting fornece previsões de receita e acompanhamento de cotas ao longo dos períodos fiscais (C). Opportunity Stages determinam probabilidades e categorias de previsao usadas nos cálculos de forecast (D).
+Forecasting fornece previsões de receita e acompanhamento de cotas ao longo dos períodos fiscais (C). Opportunity Stages determinam probabilidades e categorias de previs\u00e3o usadas nos cálculos de forecast (D).
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.forecasting3_overview.htm&type=5
@@ -790,7 +790,7 @@ https://help.salesforce.com/s/articleView?id=sf.lightning_page_overview.htm&type
 https://help.salesforce.com/s/articleView?id=sf.lightning_page_assignments.htm&type=5
     `,
         explanation_pt: `
-Lightning Page Assignments permitem especificar diferentes templates de página por app. Atribuindo uma Lightning Record Page como padrão para o app Sales Console e outra para o Service Console, você exibe layouts diferentes conforme necessario.
+Lightning Page Assignments permitem especificar diferentes templates de página por app. Atribuindo uma Lightning Record Page como padrão para o app Sales Console e outra para o Service Console, você exibe layouts diferentes conforme necessário.
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.lightning_page_overview.htm&type=5
@@ -815,7 +815,7 @@ https://help.salesforce.com/s/articleView?id=sf.opportunity_fields.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_layoutedit.htm&type=5
     `,
         explanation_pt: `
-Probability e um campo percentual padrão que e somente leitura por padrão e derivado do picklist Stage. Para permitir edições, basta torna-lo editável nos page layouts de Opportunity.
+Probability é um campo percentual padrão que é somente leitura por padrão e derivado do picklist Stage. Para permitir edições, basta torná-lo editável nos page layouts de Opportunity.
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.opportunity_fields.htm&type=5
@@ -884,7 +884,7 @@ Inactive flows cannot run. If the flow is deployed but marked inactive, none of 
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_activate.htm&type=5
     `,
         explanation_pt: `
-Fluxos inativos não podem ser executados. Se o fluxo estiver implantado mas inativo, nenhum de seus elementos sera executado e nenhum novo registro sera criado até que seja ativado.
+Fluxos inativos não podem ser executados. Se o fluxo estiver implantado mas inativo, nenhum de seus elementos será executado e nenhum novo registro será criado até que seja ativado.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_activate.htm&type=5
     `
@@ -906,7 +906,7 @@ Referência: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_act
 Reference: https://help.salesforce.com/s/articleView?id=sf.approvals_getting_started.htm&type=5
     `,
         explanation_pt: `
-1. A Opportunity não inclui um campo padrão de Discount, entao você deve criar um campo personalizado para capturar as porcentagens de desconto (A).
+1. A Opportunity não inclui um campo padrão de Discount, então você deve criar um campo personalizado para capturar as porcentagens de desconto (A).
 2. Para rotear com base em dois limites (10% e 30%), configure dois Approval Processes separados com critérios de entrada e aprovadores distintos (C).
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.approvals_getting_started.htm&type=5
@@ -934,7 +934,7 @@ https://www.forcetalks.com/blog/master-detail-relationship-in-salesforce/
 https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
     `,
         explanation_pt: `
-Uma relação master-detail e um vinculo forte pai-filho onde o mestre controla comportamentos.
+Uma relação master-detail é um vínculo forte pai-filho onde o mestre controla comportamentos.
 - O mestre pode ser objeto padrão ou personalizado (A).
 - Roll-up summaries no mestre permitem agregar dados dos filhos (D).
 - Filhos herdam o proprietário do mestre; o campo Owner fica oculto (E).
@@ -993,9 +993,9 @@ https://help.salesforce.com/s/articleView?id=sf.approvals_automated_actions.htm&
 https://help.salesforce.com/s/articleView?id=sf.approvals_creating_approval_actions.htm&type=5
     `,
         explanation_pt: `
-Dentro de um processo de aprovação, você pode adicionar estas ações automaticas:
+Dentro de um processo de aprovação, você pode adicionar estas ações automáticas:
 - Field Updates (A) para alterar valores de registro na submissão/aprovação/rejeição.
-- Email Alerts (D) para notificar usuários quando o registro e submetido, aprovado ou rejeitado.
+- Email Alerts (D) para notificar usuários quando o registro é submetido, aprovado ou rejeitado.
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.approvals_automated_actions.htm&type=5
@@ -1072,7 +1072,7 @@ A Bucket Column in a report lets you define ranges (e.g., small, medium, large) 
 Reference: https://help.salesforce.com/s/articleView?id=sf.reports_bucketing_overview.htm&type=5
     `,
         explanation_pt: `
-Uma Bucket Column em relatórios permite definir intervalos (por exemplo, small, medium, large) em um campo numerico sem criar formulas ou campos personalizados adicionais.
+Uma Bucket Column em relatórios permite definir intervalos (por exemplo, small, medium, large) em um campo numérico sem criar formulas ou campos personalizados adicionais.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.reports_bucketing_overview.htm&type=5
     `
@@ -1124,7 +1124,7 @@ https://help.salesforce.com/s/articleView?id=sf.identity_2fa_login_flow.htm&type
         explanation_pt: `
 Com 2FA ativado para UI e API:
 - Usuários devem registrar um aplicativo autenticador ou outro método 2FA (A).
-- No login, serao solicitados a inserir um código de verificação enviado pelo método configurado (email/SMS) (D).
+- No login, serão solicitados a inserir um código de verificação enviado pelo método configurado (email/SMS) (D).
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.identity_2fa_overview.htm&type=5
@@ -1207,7 +1207,7 @@ https://help.salesforce.com/s/articleView?id=sf.reports_folders.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.reports_dashboard_folder_access.htm&type=5
     `,
         explanation_pt: `
-Crie uma pasta dedicada para relatórios-fonte com acesso somente Leitura para que usuários não possam edita-los (A). Em seguida, mova os relatórios usados pelos dashboards para essa pasta de visualizacao apenas (C).
+Crie uma pasta dedicada para relatórios-fonte com acesso somente Leitura para que usuários não possam editá-los (A). Em seguida, mova os relatórios usados pelos dashboards para essa pasta de visualização apenas (C).
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.reports_folders.htm&type=5
@@ -1230,7 +1230,7 @@ When you delete a custom field, Salesforce retains its data for 20 days in case 
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_del_field.htm&type=5
     `,
         explanation_pt: `
-Ao excluir um campo personalizado, o Salesforce mantem os dados por 20 dias para possível restauracao. Após 20 dias, os dados são permanentemente removidos.
+Ao excluir um campo personalizado, o Salesforce mantém os dados por 20 dias para possível restauração. Após 20 dias, os dados são permanentemente removidos.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.customize_del_field.htm&type=5
     `
@@ -1253,7 +1253,7 @@ https://help.salesforce.com/s/articleView?id=sf.accountteam.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.accountteam_default.htm&type=5
     `,
         explanation_pt: `
-Account Teams permitem definir funcoes (por exemplo, manager, engineer, assistant) e configurar equipes padrão que se anexam automaticamente as contas. Habilite Account Teams e ensine os usuários a configurar sua Account Team padrão.
+Account Teams permitem definir funções (por exemplo, manager, engineer, assistant) e configurar equipes padrão que se anexam automaticamente às contas. Habilite Account Teams e ensine os usuários a configurar sua Account Team padrão.
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.accountteam.htm&type=5
@@ -1306,8 +1306,8 @@ https://help.salesforce.com/s/articleView?id=sf.security_2fa_perm_ui_logins.htm&
     `,
         explanation_pt: `
 Para logins pela interface, o Salesforce verifica:
-- Horario de login definido no perfil—usuários so podem acessar no período permitido (C).
-- Permissao de 2FA para UI se configurada por perfis ou permission sets (D).
+- Horário de login definido no perfil—usuários só podem acessar no período permitido (C).
+- Permissão de 2FA para UI se configurada por perfis ou permission sets (D).
 
 Referências:
 https://help.salesforce.com/s/articleView?id=sf.users_profiles_loginhours.htm&type=5
@@ -1401,7 +1401,7 @@ Knowledge Articles let you author and maintain troubleshooting tips. You can att
 Reference: https://help.salesforce.com/s/articleView?id=sf.knowledge_article_types.htm&type=5
     `,
         explanation_pt: `
-Knowledge Articles permitem criar e manter dicas de solucao de problemas. Você pode anexar ou referenciar as cinco principais dicas diretamente nas respostas por e-mail ou comentários de caso.
+Knowledge Articles permitem criar e manter dicas de solução de problemas. Você pode anexar ou referenciar as cinco principais dicas diretamente nas respostas por e-mail ou comentários de caso.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.knowledge_article_types.htm&type=5
     `
@@ -1422,7 +1422,7 @@ Permission Sets allow you to grant edit access on Campaigns to selected users wi
 Reference: https://help.salesforce.com/s/articleView?id=sf.perm_sets_overview.htm&type=5
     `,
         explanation_pt: `
-Permission Sets permitem conceder acesso de edicao em Campaigns a usuários especificos sem alterar o perfil. Crie um permission set com permissão de edicao e atribua aos usuários.
+Permission Sets permitem conceder acesso de edição em Campaigns a usuários específicos sem alterar o perfil. Crie um permission set com permissão de edição e atribua aos usuários.
 
 Referência: https://help.salesforce.com/s/articleView?id=sf.perm_sets_overview.htm&type=5
     `
@@ -1447,7 +1447,7 @@ https://help.salesforce.com/s/articleView?id=sf.flow_builder_overview.htm&type=5
         explanation_pt: `
 Para exibir um Screen Flow na página de registro de Case, adicione-o como componente de Fluxo em uma Lightning Record Page. Use o Lightning App Builder para arrastar o componente de Fluxo para a página de Case e selecionar o fluxo de tela.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_distribute_lightning_page.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_builder_overview.htm&type=5
     `
@@ -1470,9 +1470,9 @@ https://help.salesforce.com/s/articleView?id=sf.actions_in_lex.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_page_layouts.htm&type=5
     `,
         explanation_pt: `
-Para disponibilizar uma acao rapida no aplicativo movel, adicione-a na secao "Salesforce Mobile and Lightning Experience Actions" do layout de página. Use o Page Layout Editor para arrastar a acao rapida ate essa secao.
+Para disponibilizar uma ação rápida no aplicativo móvel, adicione-a na seção "Salesforce Mobile and Lightning Experience Actions" do layout de página. Use o Page Layout Editor para arrastar a ação rápida até essa seção.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.actions_in_lex.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_page_layouts.htm&type=5
     `
@@ -1493,9 +1493,9 @@ Email-to-Case must be enabled for email quick actions on cases to function prope
 Reference: https://help.salesforce.com/s/articleView?id=sf.customizesupport_email_to_case.htm&type=5
     `,
         explanation_pt: `
-E necessario habilitar o Email-to-Case para que ações rapidas de email em casos sejam exibidas e funcionem corretamente. Isso permite criar e gerenciar casos via email.
+É necessário habilitar o Email-to-Case para que ações rápidas de email em casos sejam exibidas e funcionem corretamente. Isso permite criar e gerenciar casos via email.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customizesupport_email_to_case.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customizesupport_email_to_case.htm&type=5
     `
     },
     {
@@ -1514,9 +1514,9 @@ Best practice is to first activate and test critical updates in a sandbox to ver
 Reference: https://help.salesforce.com/s/articleView?id=sf.admin_critical_updates.htm&type=5
     `,
         explanation_pt: `
-A pratica recomendada e ativar e testar atualizações criticas primeiro em um sandbox para verificar seu impacto nas customizacoes antes de habilita-las em producao.
+A prática recomendada é ativar e testar atualizações críticas primeiro em um sandbox para verificar seu impacto nas customizações antes de habilitá-las em produção.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.admin_critical_updates.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.admin_critical_updates.htm&type=5
     `
     },
     {
@@ -1537,9 +1537,9 @@ https://help.salesforce.com/s/articleView?id=sf.customizesupport_web_to_case.htm
 https://help.salesforce.com/s/articleView?id=sf.customizesupport_email_to_case.htm&type=5
     `,
         explanation_pt: `
-Web-to-Case permite que clientes enviem casos via formulario na web (A). Email-to-Case converte emails recebidos em casos (D). Ambas fornecem criacao de casos self-service.
+Web-to-Case permite que clientes enviem casos via formulário na web (A). Email-to-Case converte emails recebidos em casos (D). Ambas fornecem criação de casos self-service.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.customizesupport_web_to_case.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customizesupport_email_to_case.htm&type=5
     `
@@ -1560,9 +1560,9 @@ AppExchange offers prebuilt dashboard solutions and components that can be insta
 Reference: https://appexchange.salesforce.com/
     `,
         explanation_pt: `
-O AppExchange oferece solucoes de dashboard pre-construidas e componentes que podem ser instalados e rapidamente adaptados, economizando tempo e orcamento.
+O AppExchange oferece soluções de dashboard pré-construídas e componentes que podem ser instalados e rapidamente adaptados, economizando tempo e orçamento.
 
-Referencia: https://appexchange.salesforce.com/
+Referência: https://appexchange.salesforce.com/
     `
     },
     {
@@ -1583,9 +1583,9 @@ https://trailhead.salesforce.com/content/learn/modules/screen-flows/get-started-
 https://help.salesforce.com/s/articleView?id=sf.flow_builder_overview.htm&type=5
     `,
         explanation_pt: `
-Screen Flows podem ser incorporados em paginas Experience Cloud para exibir formularios interativos para entrada de dados e, em seguida, criar ou atualizar registros com base nessas entradas.
+Screen Flows podem ser incorporados em páginas Experience Cloud para exibir formulários interativos para entrada de dados e, em seguida, criar ou atualizar registros com base nessas entradas.
 
-Referencias:
+Referências:
 https://trailhead.salesforce.com/content/learn/modules/screen-flows/get-started-with-screen-flows
 https://help.salesforce.com/s/articleView?id=sf.flow_builder_overview.htm&type=5
     `
@@ -1606,9 +1606,9 @@ Case Escalation Rules allow you to define time-based criteria (e.g., 5 hours) to
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_escalation.htm&type=5
     `,
         explanation_pt: `
-Case Escalation Rules permitem definir criterios baseados em tempo (por exemplo, 5 horas) para reatribuir ou notificar usuários quando casos atendem a condicoes e excedem periodos de tempo.
+Case Escalation Rules permitem definir critérios baseados em tempo (por exemplo, 5 horas) para reatribuir ou notificar usuários quando casos atendem a condições e excedem períodos de tempo.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_escalation.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_escalation.htm&type=5
     `
     },
     {
@@ -1629,9 +1629,9 @@ https://help.salesforce.com/s/articleView?id=sf.workflow_om_considerations.htm&t
 https://help.salesforce.com/s/articleView?id=sf.workflow_om_define.htm&type=5
     `,
         explanation_pt: `
-Outbound Messages em Workflow Rules ou Approval Processes enviam mensagens SOAP com dados de campos para um endpoint externo especificado, ideal para integracoes.
+Outbound Messages em Workflow Rules ou Approval Processes enviam mensagens SOAP com dados de campos para um endpoint externo especificado, ideal para integrações.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.workflow_om_considerations.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.workflow_om_define.htm&type=5
     `
@@ -1652,9 +1652,9 @@ Dynamic Dashboards run as the viewing user or the dashboard running user. If set
 Reference: https://help.salesforce.com/s/articleView?id=sf.dashboards_dynamic.htm&type=5
     `,
         explanation_pt: `
-Dynamic Dashboards são executados no contexto do usuario em execução ou logado. Se configurados para "Run as logged-in user," podem exibir dados alem do permitido pela visibilidade de registros.
+Dynamic Dashboards são executados no contexto do usuário em execução ou logado. Se configurados para "Run as logged-in user," podem exibir dados além do permitido pela visibilidade de registros.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.dashboards_dynamic.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.dashboards_dynamic.htm&type=5
     `
     },
     {
@@ -1677,7 +1677,7 @@ https://help.salesforce.com/s/articleView?id=sf.workflow_time_action_considerati
         explanation_pt: `
 Use Process Builder para detectar Stage = Closed Won e criar imediatamente a primeira tarefa de follow-up (A). Use um Field Update para preencher um campo de data que disparara uma Workflow Rule dependente de tempo para criar a segunda tarefa após 60 dias (C).
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.process_which_tool.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.workflow_time_action_considerations.htm&type=5
     `
@@ -1698,9 +1698,9 @@ Compact Layouts determine which fields display in the Highlights Panel. Create o
 Reference: https://help.salesforce.com/s/articleView?id=sf.compact_layouts_create.htm&type=5
     `,
         explanation_pt: `
-Compact Layouts definem quais campos aparecem no Highlights Panel. Crie ou edite um Compact Layout no Account Object Manager e adicione o campo de area de texto.
+Compact Layouts definem quais campos aparecem no Highlights Panel. Crie ou edite um Compact Layout no Account Object Manager e adicione o campo de área de texto.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.compact_layouts_create.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.compact_layouts_create.htm&type=5
     `
     },
     {
@@ -1719,9 +1719,9 @@ Permission Sets allow granting Lead object and field permissions to specific use
 Reference: https://help.salesforce.com/s/articleView?id=sf.perm_sets_overview.htm&type=5
     `,
         explanation_pt: `
-Permission Sets permitem conceder permissões de objeto e campo Lead a usuários especificos sem alterar o perfil.
+Permission Sets permitem conceder permissões de objeto e campo Lead a usuários específicos sem alterar o perfil.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.perm_sets_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.perm_sets_overview.htm&type=5
     `
     },
     {
@@ -1742,9 +1742,9 @@ https://help.salesforce.com/s/articleView?id=sf.admin_supported_currencies.htm&t
 https://help.salesforce.com/s/articleView?id=sf.admin_supported_languages.htm&type=5
     `,
         explanation_pt: `
-Company Settings incluem Currency Locale (formatacao/exibicao de moeda) (A) e Default Language (idioma da interface) (B). Password Policy e Login Hours são configurações de segurança de perfil ou org-wide.
+Company Settings incluem Currency Locale (formatação/exibição de moeda) (A) e Default Language (idioma da interface) (B). Password Policy e Login Hours são configurações de segurança de perfil ou org-wide.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.admin_supported_currencies.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.admin_supported_languages.htm&type=5
     `
@@ -1765,9 +1765,9 @@ The Utility Bar is supported in Lightning Apps configured only for Salesforce Mo
 Reference: https://help.salesforce.com/s/articleView?id=sf.app_builder_utility_bar.htm&type=5
     `,
         explanation_pt: `
-O Utility Bar e suportado em Lightning Apps configurados apenas para Salesforce Mobile. Ele fornece ferramentas persistentes acessiveis de qualquer página movel.
+O Utility Bar é suportado em Lightning Apps configurados apenas para Salesforce Mobile. Ele fornece ferramentas persistentes acessíveis de qualquer página móvel.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.app_builder_utility_bar.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.app_builder_utility_bar.htm&type=5
     `
     },
     {
@@ -1786,9 +1786,9 @@ Campaign Influence tracks which campaigns contributed to won Opportunities and l
 Reference: https://help.salesforce.com/s/articleView?id=sf.campaigns_influence.htm&type=5
     `,
         explanation_pt: `
-Campaign Influence rastreia quais campanhas contribuiram para Oportunidades fechadas como ganhas e permite aplicar modelos de atribuicao para medir o ROI dos esforcos de marketing.
+Campaign Influence rastreia quais campanhas contribuiram para Oportunidades fechadas como ganhas e permite aplicar modelos de atribuição para medir o ROI dos esforços de marketing.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.campaigns_influence.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.campaigns_influence.htm&type=5
     `
     },
     {
@@ -1809,7 +1809,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.
         explanation_pt: `
 Record Types permitem atribuir diferentes layouts de página (e valores de picklist) por tipo. Crie um record type para customer accounts e outro para partner accounts, e atribua o layout correto.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `
     },
     {
@@ -1828,9 +1828,9 @@ Component Visibility filters in Lightning App Builder let you show or hide compo
 Reference: https://help.salesforce.com/s/articleView?id=sf.app_builder_component_visibility.htm&type=5
     `,
         explanation_pt: `
-Filtros de Component Visibility no Lightning App Builder permitem mostrar ou ocultar componentes com base em perfil de usuario, tipo de registro ou valores de campos, tornando as paginas dinamicas e especificas por funcao.
+Filtros de Component Visibility no Lightning App Builder permitem mostrar ou ocultar componentes com base em perfil de usuário, tipo de registro ou valores de campos, tornando as páginas dinâmicas e específicas por função.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.app_builder_component_visibility.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.app_builder_component_visibility.htm&type=5
     `
     },
     {
@@ -1849,9 +1849,9 @@ Case Escalation Rules let you define time-based criteria (e.g., >2 hours unassig
 Reference: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `,
         explanation_pt: `
-Case Escalation Rules permitem definir criterios baseados em tempo (por exemplo, >2 horas sem atribuicao) para reatribuir casos a uma fila e enviar notificacoes por e-mail.
+Case Escalation Rules permitem definir critérios baseados em tempo (por exemplo, >2 horas sem atribuição) para reatribuir casos a uma fila e enviar notificações por e-mail.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `
     },
     {
@@ -1889,9 +1889,9 @@ Manual Sharing lets record owners (or admins) share individual records with spec
 Reference: https://help.salesforce.com/s/articleView?id=sf.sharing_overview.htm&type=5
     `,
         explanation_pt: `
-Manual Sharing permite que proprietarios de registros (ou administradores) compartilhem registros individuais com usuários ou grupos especificos - incluindo membros da equipe de vendas B.
+Manual Sharing permite que proprietários de registros (ou administradores) compartilhem registros individuais com usuários ou grupos específicos - incluindo membros da equipe de vendas B.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.sharing_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.sharing_overview.htm&type=5
     `
     },
     {
@@ -1910,9 +1910,9 @@ Use the Data Export Wizard in Setup to schedule or run an ad-hoc export of selec
 Reference: https://help.salesforce.com/s/articleView?id=sf.data_export.htm&type=5
     `,
         explanation_pt: `
-Use o Data Export Wizard em Setup para agendar ou executar uma exportacao ad-hoc de objetos (Oportunidades) e campos selecionados para CSV.
+Use o Data Export Wizard em Setup para agendar ou executar uma exportação ad-hoc de objetos (Oportunidades) e campos selecionados para CSV.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.data_export.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.data_export.htm&type=5
     `
     },
     {
@@ -1931,9 +1931,9 @@ Email-to-Case lets you define routing addresses that automatically create cases 
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_email2case.htm&type=5
     `,
         explanation_pt: `
-Email-to-Case permite definir enderecos de roteamento que criam automaticamente casos a partir de emails recebidos e os atribuem a filas especificadas com base no endereco de email usado.
+Email-to-Case permite definir endereços de roteamento que criam automaticamente casos a partir de emails recebidos e os atribuem a filas especificadas com base no endereço de email usado.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_email2case.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_email2case.htm&type=5
     `
     },
     {
@@ -1954,7 +1954,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.forecasts3_big_deal_a
         explanation_pt: `
 Big Deal Alerts notificam usuários quando o Amount ou Probability de uma Oportunidade atinge limites definidos (por exemplo, > $1M).
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.forecasts3_big_deal_alerts.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.forecasts3_big_deal_alerts.htm&type=5
     `
     },
     {
@@ -1973,9 +1973,9 @@ Configure minimum password length (C) and enable complexity requirements (mixed-
 Reference: https://help.salesforce.com/s/articleView?id=sf.admin_password_policies.htm&type=5
     `,
         explanation_pt: `
-Configure o comprimento minimo da senha (C) e habilite requisitos de complexidade (letras maiusculas/minusculas, numeros, caracteres especiais) (D) em Password Policies.
+Configure o comprimento mínimo da senha (C) e habilite requisitos de complexidade (letras maiúsculas/minúsculas, números, caracteres especiais) (D) em Password Policies.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.admin_password_policies.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.admin_password_policies.htm&type=5
     `
     },
     {
@@ -1994,9 +1994,9 @@ The standard Opportunity Stage Duration report shows how long Opportunities spen
 Reference: https://help.salesforce.com/s/articleView?id=sf.reports_opportunity_stage_duration_report.htm&type=5
     `,
         explanation_pt: `
-O relatório padrão Opportunity Stage Duration mostra quanto tempo as Oportunidades passam em cada estágio. Você pode agrupar e resumir para obter duracoes medias.
+O relatório padrão Opportunity Stage Duration mostra quanto tempo as Oportunidades passam em cada estágio. Você pode agrupar e resumir para obter durações médias.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.reports_opportunity_stage_duration_report.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.reports_opportunity_stage_duration_report.htm&type=5
     `
     },
     {
@@ -2015,9 +2015,9 @@ A Validation Rule comparing PRIORVALUE(Status) to Status can block transitions b
 Reference: https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&type=5
     `,
         explanation_pt: `
-Uma Validation Rule que compara PRIORVALUE(Status) com Status pode impedir transicoes para estágios anteriores - impedindo que usuários salvem o caso em um status anterior.
+Uma Validation Rule que compara PRIORVALUE(Status) com Status pode impedir transições para estágios anteriores - impedindo que usuários salvem o caso em um status anterior.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&type=5
     `
     },
     {
@@ -2036,17 +2036,17 @@ A: Guided Selling adds prompts and guidance per Path stage.
 B: Validation Rules enforce entry of key fields before save.
 E: Marking fields required on the layout ensures users must populate them.
 
-Referencia:
+Referência:
 https://help.salesforce.com/s/articleView?id=sf.path_guided_selling.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.fields_defining_field_properties.htm&type=5
     `,
         explanation_pt: `
-A: Guided Selling adiciona orientacoes por estágio do Path.
+A: Guided Selling adiciona orientações por estágio do Path.
 B: Validation Rules garantem entrada de campos-chave antes do salvamento.
-E: Campos obrigatorios no layout forcam os usuários a preenche-los.
+E: Campos obrigatórios no layout forcam os usuários a preenche-los.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.path_guided_selling.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.fields_defining_field_properties.htm&type=5
@@ -2068,9 +2068,9 @@ The User Licenses related list on the Company Information page shows each licens
 Reference: https://help.salesforce.com/s/articleView?id=sf.users_understanding_license_types.htm&type=5
     `,
         explanation_pt: `
-A lista relacionada User Licenses na página Company Information mostra cada tipo de licenca adquirido e a quantidade disponivel.
+A lista relacionada User Licenses na página Company Information mostra cada tipo de licença adquirido e a quantidade disponível.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.users_understanding_license_types.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.users_understanding_license_types.htm&type=5
     `
     },
     {
@@ -2089,9 +2089,9 @@ Auto-Response Rules send customized email templates based on lead criteria (e.g.
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_leadsautoresponse.htm&type=5
     `,
         explanation_pt: `
-Auto-Response Rules enviam templates de e-mail personalizados com base em criterios do lead (por exemplo, Industry) imediatamente após envios via Web-to-Lead.
+Auto-Response Rules enviam templates de e-mail personalizados com base em critérios do lead (por exemplo, Industry) imediatamente após envios via Web-to-Lead.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_leadsautoresponse.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_leadsautoresponse.htm&type=5
     `
     },
     {
@@ -2113,10 +2113,10 @@ https://help.salesforce.com/s/articleView?id=sf.case_change_owner.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.admin_userperms.htm&type=5
     `,
         explanation_pt: `
-B: Gerentes acima do usuario na hierarquia de funcoes podem reatribuir casos de seus subordinados.
+B: Gerentes acima do usuário na hierarquia de funções podem reatribuir casos de seus subordinados.
 C: Administradores do sistema podem alterar a propriedade de qualquer registro.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.case_change_owner.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.admin_userperms.htm&type=5
     `
@@ -2137,9 +2137,9 @@ A Validation Rule on Lead can enforce that if Status = 'Qualified', then Budget_
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
     `,
         explanation_pt: `
-Uma Validation Rule em Lead pode impor que, se Status = 'Qualified', entao Budget__c não seja nulo, impedindo o salvamento caso contrario.
+Uma Validation Rule em Lead pode impor que, se Status = 'Qualified', então Budget__c não seja nulo, impedindo o salvamento caso contrário.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
     `
     },
     {
@@ -2161,10 +2161,10 @@ https://help.salesforce.com/s/articleView?id=sf.customize_layoutoverview.htm&typ
 https://help.salesforce.com/s/articleView?id=sf.admin_fls.htm&type=5
     `,
         explanation_pt: `
-A: Confirme se o campo esta no layout de página atribuido ao perfil do usuario.
-D: Verifique se a Segurança em Nivel de Campo concede ao perfil acesso de visualizacao/edicao ao campo.
+A: Confirme se o campo está no layout de página atribuído ao perfil do usuário.
+D: Verifique se a Segurança em Nível de Campo concede ao perfil acesso de visualização/edição ao campo.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.customize_layoutoverview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.admin_fls.htm&type=5
     `
@@ -2191,7 +2191,7 @@ https://help.salesforce.com/s/articleView?id=sf.customize_recordtype_pagelayouta
 A: Atribua o record type aos perfis apropriados.
 D: Configure cada record type no layout de página para cada perfil em Page Layout Assignment.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.customize_recordtype_assign.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_recordtype_pagelayoutassign.htm&type=5
     `
@@ -2212,9 +2212,9 @@ Lead Conversion can create an Account (A) and a Contact (D), and optionally an O
 Reference: https://help.salesforce.com/s/articleView?id=sf.convert_lead.htm&type=5
     `,
         explanation_pt: `
-A conversao de Lead pode criar uma Conta (A) e um Contato (D), e opcionalmente uma Oportunidade.
+A conversão de Lead pode criar uma Conta (A) e um Contato (D), e opcionalmente uma Oportunidade.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.convert_lead.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.convert_lead.htm&type=5
     `
     },
     {
@@ -2237,9 +2237,9 @@ https://help.salesforce.com/s/articleView?id=sf.customize_queues.htm&type=5
     `,
         explanation_pt: `
 B: Assignment Rules podem atribuir automaticamente novos Cases a fila existente.
-C: Verifique se a configuracao da fila inclui Case como Available Object para poder ser proprietário de Cases.
+C: Verifique se a configuração da fila inclui Case como Available Object para poder ser proprietário de Cases.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.case_assignment_rules.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_queues.htm&type=5
     `
@@ -2260,9 +2260,9 @@ Process Builder can create follow-up Tasks and send Email Alerts when an Opportu
 Reference: https://help.salesforce.com/s/articleView?id=sf.process_which_tool.htm&type=5
     `,
         explanation_pt: `
-Process Builder pode criar Tarefas de boas-vindas e enviar Email Alerts quando uma Oportunidade e marcada como Closed Won, executando múltiplas ações em um processo.
+Process Builder pode criar Tarefas de boas-vindas e enviar Email Alerts quando uma Oportunidade é marcada como Closed Won, executando múltiplas ações em um processo.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.process_which_tool.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.process_which_tool.htm&type=5
     `
     },
     {
@@ -2283,9 +2283,9 @@ https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_connector_faul
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screencmp_display_text.htm&type=5
     `,
         explanation_pt: `
-Adicione um conector de falha na acao do fluxo e use um componente de Tela para exibir uma mensagem de erro clara e instrucoes sobre os dados necessarios antes de continuar.
+Adicione um conector de falha na ação do fluxo e use um componente de Tela para exibir uma mensagem de erro clara e instruções sobre os dados necessários antes de continuar.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_connector_fault.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screencmp_display_text.htm&type=5
     `
@@ -2306,9 +2306,9 @@ A Master-Detail relationship enforces that child (Shoe) records require a parent
 Reference: https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm&type=5
     `,
         explanation_pt: `
-Uma relacao Master-Detail garante que registros filho (Shoe) exijam um pai (Account) e sejam excluidos se o pai for removido, evitando orfaos.
+Uma relação Master-Detail garante que registros filho (Shoe) exijam um pai (Account) e sejam excluídos se o pai for removido, evitando órfãos.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm&type=5
     `
     },
     {
@@ -2327,9 +2327,9 @@ A Validation Rule can enforce that when Stage = 'Closed Lost', the Loss_Reason__
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
     `,
         explanation_pt: `
-Uma Validation Rule pode impor que, quando Stage = 'Closed Lost', o campo rich text Loss_Reason__c não esteja em branco, impedindo o salvamento ate ser preenchido.
+Uma Validation Rule pode impor que, quando Stage = 'Closed Lost', o campo rich text Loss_Reason__c não esteja em branco, impedindo o salvamento até ser preenchido.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
     `
     },
     {
@@ -2348,9 +2348,9 @@ Enable the "Enable Creation of Recurring Tasks" permission in profiles or permis
 Reference: https://help.salesforce.com/s/articleView?id=sf.tasks_recurring.htm&type=5
     `,
         explanation_pt: `
-Habilite a permissao "Enable Creation of Recurring Tasks" em perfis ou permission sets para que usuários possam criar tarefas que se repetem em intervalos definidos (por exemplo, a cada duas semanas).
+Habilite a permissão "Enable Creation of Recurring Tasks" em perfis ou permission sets para que usuários possam criar tarefas que se repetem em intervalos definidos (por exemplo, a cada duas semanas).
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.tasks_recurring.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.tasks_recurring.htm&type=5
     `
     },
     {
@@ -2369,9 +2369,9 @@ Create a Custom Fiscal Year and specify February as the start month. This allows
 Reference: https://help.salesforce.com/s/articleView?id=sf.admin_fiscal_year.htm&type=5
     `,
         explanation_pt: `
-Crie um Fiscal Year Customizado e defina fevereiro como mes de inicio. Isso permite um calendario fiscal de 1 de fevereiro a 31 de janeiro.
+Crie um Fiscal Year Customizado e defina fevereiro como mês de início. Isso permite um calendário fiscal de 1 de fevereiro a 31 de janeiro.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.admin_fiscal_year.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.admin_fiscal_year.htm&type=5
     `
     },
     {
@@ -2391,10 +2391,10 @@ C: Use the Debug option in Flow Builder to step through logic and inspect variab
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_test.htm&type=5
     `,
         explanation_pt: `
-B: Execute o fluxo na pratica para verificar se os Contatos são criados corretamente.
-C: Utilize a opcao Debug no Flow Builder para percorrer a logica e inspecionar variaveis.
+B: Execute o fluxo na prática para verificar se os Contatos são criados corretamente.
+C: Utilize a opção Debug no Flow Builder para percorrer a lógica e inspecionar variáveis.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_test.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_test.htm&type=5
     `
     },
     {
@@ -2413,9 +2413,9 @@ Enable Multi-Factor Authentication (MFA) across the org to require users to pres
 Reference: https://help.salesforce.com/s/articleView?id=sf.security_mfa.htm&type=5
     `,
         explanation_pt: `
-Habilite a Autenticacao de Multiplos Fatores (MFA) em toda a org para exigir multiplos fatores de verificacao no login, reduzindo substancialmente o risco de acesso não autorizado.
+Habilite a Autenticação de Múltiplos Fatores (MFA) em toda a org para exigir múltiplos fatores de verificação no login, reduzindo substancialmente o risco de acesso não autorizado.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.security_mfa.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.security_mfa.htm&type=5
     `
     },
     {
@@ -2434,9 +2434,9 @@ Use an "ID" variable to hold a Salesforce record or record type ID, ensuring pro
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_variables.htm&type=5
     `,
         explanation_pt: `
-Use uma variavel do tipo "ID" para armazenar o ID de um registro ou record type no fluxo, garantindo o tipo correto.
+Use uma variável do tipo "ID" para armazenar o ID de um registro ou record type no fluxo, garantindo o tipo correto.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_variables.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_variables.htm&type=5
     `
     },
     {
@@ -2457,7 +2457,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.flow_concepts_schedul
         explanation_pt: `
 Scheduled Flows podem ser executados semanalmente (toda sexta-feira a noite), agregando Cases abertos por Conta e atualizando um campo em cada Conta.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_concepts_scheduled.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_concepts_scheduled.htm&type=5
     `
     },
     {
@@ -2478,7 +2478,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type
         explanation_pt: `
 Use o Flow Builder para criar um Screen Flow guiado que exiba apenas os campos essenciais e oculte os demais, agilizando a entrada de dados.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type=5
     `
     },
     {
@@ -2499,7 +2499,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.custom_field_attribut
         explanation_pt: `
 Crie um campo personalizado marcado como External ID para corresponder e atualizar registros pelo identificador exclusivo do sistema externo.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5
     `
     },
     {
@@ -2518,9 +2518,9 @@ If the next approver's user record is inactive or missing, the approval process 
 Reference: https://help.salesforce.com/s/articleView?id=sf.approvals_considerations.htm&type=5
     `,
         explanation_pt: `
-Se o usuario do proximo aprovador estiver inativo ou ausente, o processo de aprovacao não conseguira atribuir o registro. Verifique se o usuario esta ativo.
+Se o usuário do próximo aprovador estiver inativo ou ausente, o processo de aprovação não conseguirá atribuir o registro. Verifique se o usuário está ativo.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.approvals_considerations.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.approvals_considerations.htm&type=5
     `
     },
     {
@@ -2564,7 +2564,7 @@ https://help.salesforce.com/s/articleView?id=sf.customize_fields_number.htm&type
         explanation_pt: `
 Campos padrão permitem personalizar seus valores de picklist (A), texto de ajuda (B) e casas decimais (D).
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.customize_picklists.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_fields_edit.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_fields_number.htm&type=5
@@ -2586,9 +2586,9 @@ The Setup Audit Trail logs up to 180 days of setup changes (who, when, what), he
 Reference: https://help.salesforce.com/s/articleView?id=sf.monitorsetup.htm&type=5
     `,
         explanation_pt: `
-O Setup Audit Trail registra ate 180 dias de alterações de configuracao (quem, quando, o que), auxiliando no rastreamento de modificacoes.
+O Setup Audit Trail registra até 180 dias de alterações de configuração (quem, quando, o que), auxiliando no rastreamento de modificações.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.monitorsetup.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.monitorsetup.htm&type=5
     `
     },
     {
@@ -2609,7 +2609,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.customize_salesproces
         explanation_pt: `
 Defina um novo Sales Process (estágios) correspondente ao modelo de concierge e associe via record type.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_salesprocess.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_salesprocess.htm&type=5
     `
     },
     {
@@ -2628,9 +2628,9 @@ Roll-Up Summary fields depend on master-detail. If any exist on the master, you 
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
     `,
         explanation_pt: `
-Roll-Up Summary fields dependem de master-detail. Se existirem no mestre, não e possível converter para lookup ate remove-los.
+Roll-Up Summary fields dependem de master-detail. Se existirem no mestre, não é possível converter para lookup até removê-los.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
     `
     },
     {
@@ -2651,7 +2651,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.dashboards_running_us
         explanation_pt: `
 Dashboards executam no contexto de permissões do Running User. Defina um admin ou gerente com acesso a todas as Oportunidades para exibir dados enterprise-wide.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.dashboards_running_user.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.dashboards_running_user.htm&type=5
     `
     },
     {
@@ -2672,7 +2672,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.app_builder_mobile_pa
         explanation_pt: `
 App Pages (abas independentes) e Record Pages podem ser criadas no Lightning App Builder para mobile. User Pages e Dashboard Pages não são tipos suportados para o App Builder mobile.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.app_builder_mobile_pages.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.app_builder_mobile_pages.htm&type=5
     `
     },
     {
@@ -2691,9 +2691,9 @@ Users assigned in Territory models or referenced in active Workflow Email Alerts
 Reference: https://help.salesforce.com/s/articleView?id=sf.users_deactivate_considerations.htm&type=5
     `,
         explanation_pt: `
-Usuários atribuidos em Territory Hierarchies ou referenciados em Workflow Email Alerts ativos não podem ser desativados ate serem removidos dessas atribuicoes.
+Usuários atribuídos em Territory Hierarchies ou referenciados em Workflow Email Alerts ativos não podem ser desativados até serem removidos dessas atribuições.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.users_deactivate_considerations.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.users_deactivate_considerations.htm&type=5
     `
     },
     {
@@ -2712,9 +2712,9 @@ Salesforce prevents changing an Auto-Number field to Text because it would break
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_auto_number.htm&type=5
     `,
         explanation_pt: `
-O Salesforce impede a conversao de um campo Auto-Number para Texto, pois quebraria a sequencia automatica e causaria inconsistencias.
+O Salesforce impede a conversão de um campo Auto-Number para Texto, pois quebraria a sequência automática e causaria inconsistências.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_auto_number.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_auto_number.htm&type=5
     `
     },
     {
@@ -2733,9 +2733,9 @@ A Cross-Object Formula on Opportunity referencing Account.Industry displays that
 Reference: https://help.salesforce.com/s/articleView?id=sf.cross_object_formulas.htm&type=5
     `,
         explanation_pt: `
-Uma formula Cross-Object em Opportunity que referencia Account.Industry exibe esse valor sem criar relacionamentos adicionais.
+Uma formula Cross-Object em Opportunity que referência Account.Industry exibe esse valor sem criar relacionamentos adicionais.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.cross_object_formulas.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.cross_object_formulas.htm&type=5
     `
     },
     {
@@ -2758,7 +2758,7 @@ https://help.salesforce.com/s/articleView?id=sf.email_templates_use.htm&type=5
         explanation_pt: `
 Use Email Templates - categorias pesquisaveis que garantem mensagens consistentes. Os agentes selecionam o template adequado ao responder casos por email.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.email_templates_prebuilt.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.email_templates_use.htm&type=5
     `
@@ -2779,9 +2779,9 @@ Edit the existing custom Event report type and, in its layout, include fields fr
 Reference: https://help.salesforce.com/s/articleView?id=sf.reports_builder_create_report_type.htm&type=5
     `,
         explanation_pt: `
-Edite o report type personalizado de Event e, no layout, adicione campos do objeto Contact relacionado por lookup. Isso torna os campos de Contact disponiveis nos relatórios de Event.
+Edite o report type personalizado de Event e, no layout, adicione campos do objeto Contact relacionado por lookup. Isso torna os campos de Contact disponíveis nos relatórios de Event.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.reports_builder_create_report_type.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.reports_builder_create_report_type.htm&type=5
     `
     },
     {
@@ -2804,9 +2804,9 @@ https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm
     `,
         explanation_pt: `
 A: Crie um objeto personalizado "Shoe Design".
-C: Crie uma relacao master-detail em Shoe Design apontando para Product - isso impede a exclusao de designs orfaos e permite multiplos designs por produto.
+C: Crie uma relação master-detail em Shoe Design apontando para Product - isso impede a exclusão de designs órfãos e permite múltiplos designs por produto.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.customize_customobjects.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm&type=5
     `
@@ -2827,9 +2827,9 @@ Use "Login As" to assume the user's profile and permissions and reproduce the er
 Reference: https://help.salesforce.com/s/articleView?id=sf.admin_login.htm&type=5
     `,
         explanation_pt: `
-Use "Login As" para assumir o perfil e permissões do usuario e reproduzir o erro exatamente como ele ve.
+Use "Login As" para assumir o perfil e permissões do usuário e reproduzir o erro exatamente como ele vê.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.admin_login.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.admin_login.htm&type=5
     `
     },
     {
@@ -2851,10 +2851,10 @@ https://help.salesforce.com/s/articleView?id=sf.admin_sharing.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.security_sharing_rules.htm&type=5
     `,
         explanation_pt: `
-Role Hierarchy (B) concede acesso aos superiores na hierarquia de funcoes.
-Sharing Rules (D) permitem compartilhamento baseado em criterios ou proprietário para grupos publicos, funcoes ou territorios.
+Role Hierarchy (B) concede acesso aos superiores na hierarquia de funções.
+Sharing Rules (D) permitem compartilhamento baseado em critérios ou proprietário para grupos públicos, funções ou territórios.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.admin_sharing.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.security_sharing_rules.htm&type=5
     `
@@ -2879,7 +2879,7 @@ https://help.salesforce.com/s/articleView?id=sf.app_builder_tabs.htm&type=5
         explanation_pt: `
 Crie uma Lightning Record Page para Account e use o componente Tabs no App Builder para colocar detalhes, listas relacionadas e Chatter em abas separadas.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.app_builder_record_page.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.app_builder_tabs.htm&type=5
     `
@@ -2903,10 +2903,10 @@ https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.process_overview.htm&type=5
     `,
         explanation_pt: `
-B: Use o Flow Builder para definir logica e ações que copiem ou criem uma Opportunity de renovacao.
+B: Use o Flow Builder para definir lógica e ações que copiem ou criem uma Opportunity de renovação.
 D: Use o Process Builder para acionar esse fluxo quando o Stage mudar para Closed Won.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.process_overview.htm&type=5
     `
@@ -2927,9 +2927,9 @@ Opportunity Splits let you allocate revenue or overlay credit percentages to eac
 Reference: https://help.salesforce.com/s/articleView?id=sf.forecasts3_splits_overview.htm&type=5
     `,
         explanation_pt: `
-Opportunity Splits permitem alocar porcentagens de receita ou overlay para cada membro da equipe com base no esforco.
+Opportunity Splits permitem alocar porcentagens de receita ou overlay para cada membro da equipe com base no esforço.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.forecasts3_splits_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.forecasts3_splits_overview.htm&type=5
     `
     },
     {
@@ -2948,9 +2948,9 @@ Use the Flow Builder's Debug mode to step through the flow, inspect input/output
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_debug.htm&type=5
     `,
         explanation_pt: `
-Use o modo Debug no Flow Builder para percorrer o fluxo passo a passo, inspecionar entradas/saidas em cada elemento e ver detalhes de erro.
+Use o modo Debug no Flow Builder para percorrer o fluxo passo a passo, inspecionar entradas/saídas em cada elemento e ver detalhes de erro.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_debug.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_debug.htm&type=5
     `
     },
     {
@@ -2969,9 +2969,9 @@ Delegated Approver lets the Sales Manager temporarily assign their approval requ
 Reference: https://help.salesforce.com/s/articleView?id=sf.approvals_delegate.htm&type=5
     `,
         explanation_pt: `
-Delegated Approver permite que o Sales Manager delegue temporariamente suas aprovacoes a outro usuario durante ausencias.
+Delegated Approver permite que o Sales Manager delegue temporariamente suas aprovações a outro usuário durante ausências.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.approvals_delegate.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.approvals_delegate.htm&type=5
     `
     },
     {
@@ -2990,9 +2990,9 @@ A Broadcast Group restricts posting to owners/managers only - everyone else can 
 Reference: https://help.salesforce.com/s/articleView?id=sf.collab_groups_create.htm&type=5
     `,
         explanation_pt: `
-Um Broadcast Group restringe postagens apenas a proprietarios/gerentes - todos os demais podem ver e comentar.
+Um Broadcast Group restringe postagens apenas a proprietários/gerentes - todos os demais podem ver e comentar.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.collab_groups_create.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.collab_groups_create.htm&type=5
     `
     },
     {
@@ -3011,9 +3011,9 @@ Set up a parent Campaign for the series and child Campaigns for each monthly eve
 Reference: https://help.salesforce.com/s/articleView?id=sf.campaigns_hierarchy.htm&type=5
     `,
         explanation_pt: `
-Crie uma Campaign pai para a serie e Campaigns filhas para cada evento mensal - Campaign Hierarchy permite agregacao de metricas.
+Crie uma Campaign pai para a série e Campaigns filhas para cada evento mensal - Campaign Hierarchy permite agregação de métricas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.campaigns_hierarchy.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.campaigns_hierarchy.htm&type=5
     `
     },
     {
@@ -3032,9 +3032,9 @@ A Lookup relationship from Shipment to Account displays related shipments on the
 Reference: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
     `,
         explanation_pt: `
-Uma relacao Lookup de Shipment para Account exibe remessas relacionadas na página de Account e não exclui Shipments quando a Account e excluida.
+Uma relação Lookup de Shipment para Account exibe remessas relacionadas na página de Account e não exclui Shipments quando a Account é excluída.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
     `
     },
     {
@@ -3053,9 +3053,9 @@ Mark the Billing System field as universally required in field settings - this e
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_fields.htm&type=5
     `,
         explanation_pt: `
-Marque o campo Billing System como obrigatório universalmente nas configurações de campo - isso forca o preenchimento em todos os registros na UI.
+Marque o campo Billing System como obrigatório universalmente nas configurações de campo - isso força o preenchimento em todos os registros na UI.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_fields.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_fields.htm&type=5
     `
     },
     {
@@ -3076,7 +3076,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.collab_groups_overvie
         explanation_pt: `
 Um Chatter Private Group restringe postagens e membros apenas a usuários convidados - ideal para feedback confidencial de produto.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.collab_groups_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.collab_groups_overview.htm&type=5
     `
     },
     {
@@ -3095,9 +3095,9 @@ Create a custom profile granting Read, Create, and Edit on needed objects - expl
 Reference: https://help.salesforce.com/s/articleView?id=sf.users_profiles.htm&type=5
     `,
         explanation_pt: `
-Crie um perfil personalizado concedendo Read, Create e Edit nos objetos necessarios - desmarque explicitamente a permissao Delete para bloquear exclusao.
+Crie um perfil personalizado concedendo Read, Create e Edit nos objetos necessários - desmarque explicitamente a permissão Delete para bloquear exclusão.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.users_profiles.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.users_profiles.htm&type=5
     `
     },
     {
@@ -3116,9 +3116,9 @@ When Data Protection and Privacy is enabled, the Individual lookup appears on Co
 Reference: https://help.salesforce.com/s/articleView?id=sf.individual_object.htm&type=5
     `,
         explanation_pt: `
-Quando Data Protection and Privacy esta habilitado, o lookup Individual aparece nos layouts de Contact, Lead e Person Account para vincular registros ao objeto Individual.
+Quando Data Protection and Privacy está habilitado, o lookup Individual aparece nos layouts de Contact, Lead e Person Account para vincular registros ao objeto Individual.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.individual_object.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.individual_object.htm&type=5
     `
     },
     {
@@ -3141,9 +3141,9 @@ https://help.salesforce.com/s/articleView?id=sf.perm_set_groups_overview.htm&typ
     `,
         explanation_pt: `
 C: Crie um Permission Set concedendo acesso ao objeto e campos personalizados.
-B: Agrupe esse Permission Set em um Permission Set Group e atribua a varios usuários de uma vez.
+B: Agrupe esse Permission Set em um Permission Set Group e atribua a vários usuários de uma vez.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.perm_sets_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.perm_set_groups_overview.htm&type=5
     `
@@ -3166,9 +3166,9 @@ https://help.salesforce.com/s/articleView?id=sf.flow_ref_operators.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_decision.htm&type=5
     `,
         explanation_pt: `
-No elemento Decision, configure a condicao: {!High_Value_Customer__c} equals {!$GlobalConstant.True} para detectar quando a caixa esta marcada.
+No elemento Decision, configure a condição: {!High_Value_Customer__c} equals {!$GlobalConstant.True} para detectar quando a caixa está marcada.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_operators.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_decision.htm&type=5
     `
@@ -3193,9 +3193,9 @@ https://help.salesforce.com/s/articleView?id=sf.data_loader.htm&type=5
     `,
         explanation_pt: `
 B: Use Mass Delete Records para objetos suportados e excluir rapidamente os registros importados por engano.
-C: Use a operacao delete do Data Loader com um CSV de IDs de registro para remover em massa os registros importados.
+C: Use a operação delete do Data Loader com um CSV de IDs de registro para remover em massa os registros importados.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.admin_massdelete.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.data_loader.htm&type=5
     `
@@ -3220,9 +3220,9 @@ https://help.salesforce.com/s/articleView?id=sf.approvals_considerations.htm&typ
     `,
         explanation_pt: `
 B: Use o Flow Builder para criar um Screen Flow que guie os usuários na entrada de despesas.
-C: Use um Approval Process para rotear e autorizar relatórios de despesas após a submissao.
+C: Use um Approval Process para rotear e autorizar relatórios de despesas após a submissão.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.approvals_considerations.htm&type=5
     `
@@ -3243,9 +3243,9 @@ Process Builder can trigger on Contact creation when Title = 'CEO' and update th
 Reference: https://help.salesforce.com/s/articleView?id=sf.process_overview.htm&type=5
     `,
         explanation_pt: `
-Process Builder pode disparar na criacao de Contact quando Title = 'CEO' e atualizar o campo de nome do CEO no objeto Account pai.
+Process Builder pode disparar na criação de Contact quando Title = 'CEO' e atualizar o campo de nome do CEO no objeto Account pai.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.process_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.process_overview.htm&type=5
     `
     },
     {
@@ -3264,9 +3264,9 @@ Lead Assignment Rules route new leads automatically to users or queues based on 
 Reference: https://help.salesforce.com/s/articleView?id=sf.leads_assignment_rules.htm&type=5
     `,
         explanation_pt: `
-Lead Assignment Rules roteiam leads automaticamente para usuários ou filas com base em criterios de endereco.
+Lead Assignment Rules roteiam leads automaticamente para usuários ou filas com base em critérios de endereço.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.leads_assignment_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.leads_assignment_rules.htm&type=5
     `
     },
     {
@@ -3285,9 +3285,9 @@ Path lets you add stage-specific guidance text and highlight key fields per stag
 Reference: https://help.salesforce.com/s/articleView?id=sf.path_overview.htm&type=5
     `,
         explanation_pt: `
-Path permite adicionar texto de orientação especifico por estágio e destacar campos-chave em cada estágio para guiar os usuários.
+Path permite adicionar texto de orientação específico por estágio e destacar campos-chave em cada estágio para guiar os usuários.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.path_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.path_overview.htm&type=5
     `
     },
     {
@@ -3306,9 +3306,9 @@ Security Health Check analyzes org security settings against a baseline and high
 Reference: https://help.salesforce.com/s/articleView?id=sf.security_health_check.htm&type=5
     `,
         explanation_pt: `
-Security Health Check analisa configurações de segurança da org em comparacao a um padrão e destaca vulnerabilidades e etapas de correcao.
+Security Health Check analisa configurações de segurança da org em comparação a um padrão e destaca vulnerabilidades e etapas de correção.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.security_health_check.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.security_health_check.htm&type=5
     `
     },
     {
@@ -3328,9 +3328,9 @@ Mobile navigation supports Lightning App Pages, Chatter, and Dashboards. Utility
 Reference: https://help.salesforce.com/s/articleView?id=sf.app_nav_setup.htm&type=5
     `,
         explanation_pt: `
-A navegacao mobile suporta Lightning App Pages, Chatter e Dashboards. Utility Bar e Lightning Home Page não são itens diretos no menu mobile.
+A navegação mobile suporta Lightning App Pages, Chatter e Dashboards. Utility Bar e Lightning Home Page não são itens diretos no menu mobile.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.app_nav_setup.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.app_nav_setup.htm&type=5
     `
     },
     {
@@ -3351,9 +3351,9 @@ https://help.salesforce.com/s/articleView?id=sf.knowledge_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.knowledge_categories.htm&type=5
     `,
         explanation_pt: `
-O Salesforce Knowledge permite criar e categorizar artigos, e exibir a documentacao relevante e artigos semelhantes diretamente no registro de Case por meio de data categories e listas relacionadas.
+O Salesforce Knowledge permite criar e categorizar artigos, e exibir a documentação relevante e artigos semelhantes diretamente no registro de Case por meio de data categories e listas relacionadas.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.knowledge_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.knowledge_categories.htm&type=5
     `
@@ -3376,9 +3376,9 @@ https://help.salesforce.com/s/articleView?id=sf.picklist_global_picklists.htm&ty
 https://help.salesforce.com/s/articleView?id=sf.fields_about_dependent_picklists.htm&type=5
     `,
         explanation_pt: `
-Use um Global Picklist (Value Set) para valores compartilhados em objetos, e Dependent Picklists para ajustar valores disponiveis por record type.
+Use um Global Picklist (Value Set) para valores compartilhados em objetos, e Dependent Picklists para ajustar valores disponíveis por record type.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.picklist_global_picklists.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.fields_about_dependent_picklists.htm&type=5
     `
@@ -3399,9 +3399,9 @@ Case Escalation Rules allow time-based criteria (e.g., >2 hours unassigned) to r
 Reference: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `,
         explanation_pt: `
-Case Escalation Rules permitem criterios baseados em tempo (por exemplo, >2 horas sem atribuicao) para reatribuir casos a uma fila e enviar notificacoes automaticamente.
+Case Escalation Rules permitem critérios baseados em tempo (por exemplo, >2 horas sem atribuição) para reatribuir casos a uma fila e enviar notificações automaticamente.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `
     },
     {
@@ -3422,9 +3422,9 @@ https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_concepts_delete.htm&type=5
     `,
         explanation_pt: `
-O Flow Builder pode criar um Schedule ou Record-Triggered Flow que busca registros que atendem aos criterios e usa o elemento Delete Records para remove-los.
+O Flow Builder pode criar um Schedule ou Record-Triggered Flow que busca registros que atendem aos critérios e usa o elemento Delete Records para removê-los.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_builder.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_concepts_delete.htm&type=5
     `
@@ -3445,9 +3445,9 @@ With "Grant Access Using Hierarchies" unchecked on a custom object, role hierarc
 Reference: https://help.salesforce.com/s/articleView?id=sf.security_sharing_owd_custom_objects.htm&type=5
     `,
         explanation_pt: `
-Com "Grant Access Using Hierarchies" desmarcado em um objeto personalizado, a hierarquia de funcoes não concede acesso ascendente, impedindo que gerentes vejam registros de subordinados, a menos que sejam compartilhados explicitamente.
+Com "Grant Access Using Hierarchies" desmarcado em um objeto personalizado, a hierarquia de funções não concede acesso ascendente, impedindo que gerentes vejam registros de subordinados, a menos que sejam compartilhados explicitamente.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.security_sharing_owd_custom_objects.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.security_sharing_owd_custom_objects.htm&type=5
     `
     },
     {
@@ -3468,9 +3468,9 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.customize_picklists.h
     `,
         explanation_pt: `
 D: Altere o campo de Multi-Select Picklist para Picklist padrão.
-B: Marque "Choose only one value" (ou equivalente) para forcar selecao unica.
+B: Marque "Choose only one value" (ou equivalente) para forçar seleção única.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_picklists.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_picklists.htm&type=5
     `
     },
     {
@@ -3490,10 +3490,10 @@ B: On that junction object, create two Master-Detail relationships - one to each
 Reference: https://help.salesforce.com/s/articleView?id=sf.relationships_manytomany.htm&type=5
     `,
         explanation_pt: `
-A: Crie um objeto de juncao (junction) para atuar como ponto de conexao.
-B: Nesse objeto de juncao, crie duas master-detail - uma para cada objeto pai.
+A: Crie um objeto de junção (junction) para atuar como ponto de conexão.
+B: Nesse objeto de junção, crie duas master-detail - uma para cada objeto pai.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.relationships_manytomany.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.relationships_manytomany.htm&type=5
     `
     },
     {
@@ -3512,9 +3512,9 @@ Deactivating a user frees up their license while preserving their activity histo
 Reference: https://help.salesforce.com/s/articleView?id=sf.admin_usermgmt_licensing.htm&type=5
     `,
         explanation_pt: `
-Desativar um usuario libera a licenca dele e preserva o historico de atividade. Excluir ou congelar não libera a licenca.
+Desativar um usuário libera a licença dele e preserva o histórico de atividade. Excluir ou congelar não libera a licença.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.admin_usermgmt_licensing.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.admin_usermgmt_licensing.htm&type=5
     `
     },
     {
@@ -3533,9 +3533,9 @@ Converting the lead from the Campaign Member detail page preserves campaign memb
 Reference: https://help.salesforce.com/s/articleView?id=sf.campaigns_leads.htm&type=5
     `,
         explanation_pt: `
-Converter o lead na página de detalhes do Campaign Member preserva o historico de participacao na campanha e cria Conta, Contato e Oportunidade.
+Converter o lead na página de detalhes do Campaign Member preserva o histórico de participação na campanha e cria Conta, Contato e Oportunidade.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.campaigns_leads.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.campaigns_leads.htm&type=5
     `
     },
     {
@@ -3563,7 +3563,7 @@ A: Garanta que um Custom Report Type inclua os campos de Shoe.
 B: Conceda ao Sales Manager acesso a pasta para visualizar/executar o relatório.
 D: Confirme se a Field-Level Security permite visibilidade dos campos de Shoe.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.reports_builder_create_report_type.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.reports_manage_folders.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.admin_fls.htm&type=5
@@ -3587,9 +3587,9 @@ https://help.salesforce.com/s/articleView?id=sf.workflow_define.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.workflow_action_outboundmessaging.htm&type=5
     `,
         explanation_pt: `
-Workflow Rules oferecem a acao Outbound Message para enviar mensagens SOAP a endpoints externos quando criterios são atendidos.
+Workflow Rules oferecem a ação Outbound Message para enviar mensagens SOAP a endpoints externos quando critérios são atendidos.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.workflow_define.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.workflow_action_outboundmessaging.htm&type=5
     `
@@ -3610,9 +3610,9 @@ Path Key Fields let you highlight stage-specific fields and guidance on the Path
 Reference: https://help.salesforce.com/s/articleView?id=sf.path_key_fields.htm&type=5
     `,
         explanation_pt: `
-Path Key Fields permitem destacar campos e orientacoes especificas de cada estágio no componente Path, focando os usuários em dados criticos por estágio.
+Path Key Fields permitem destacar campos e orientações específicas de cada estágio no componente Path, focando os usuários em dados críticos por estágio.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.path_key_fields.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.path_key_fields.htm&type=5
     `
     },
     {
@@ -3631,9 +3631,9 @@ A Screen Flow on the Account page can prompt reps to select which open Orders to
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_build_screen.htm&type=5
     `,
         explanation_pt: `
-Um Screen Flow na página de Account pode solicitar que os reps selecionem quais Orders em aberto atualizar com o novo endereco de envio, oferecendo controle e clareza.
+Um Screen Flow na página de Account pode solicitar que os reps selecionem quais Orders em aberto atualizar com o novo endereço de envio, oferecendo controle e clareza.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_build_screen.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_build_screen.htm&type=5
     `
     },
     {
@@ -3654,9 +3654,9 @@ https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screen_compone
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screen_components_conditional_visibility.htm&type=5
     `,
         explanation_pt: `
-Use visibilidade condicional no componente picklist para que ele apareca apenas quando Lead Source for 'Search Engine', e marque-o como obrigatório nessa tela.
+Use visibilidade condicional no componente picklist para que ele apa reça apenas quando Lead Source for 'Search Engine', e marque-o como obrigatório nessa tela.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screen_components_picklist.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screen_components_conditional_visibility.htm&type=5
     `
@@ -3679,9 +3679,9 @@ https://help.salesforce.com/s/articleView?id=sf.flow_ref_variables.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_debugging.htm&type=5
     `,
         explanation_pt: `
-Se uma variavel não tiver "Available for Input" marcada, não aparecera na tela de Debug para definir valores de teste. Habilite essa opcao para visualiza-la.
+Se uma variável não tiver "Available for Input" marcada, não aparecerá na tela de Debug para definir valores de teste. Habilite essa opção para visualizá-la.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.flow_ref_variables.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.flow_debugging.htm&type=5
     `
@@ -3704,7 +3704,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.forecasts3_expected_r
         explanation_pt: `
 Expected Revenue = Amount x Probability. Expected Revenue incorreto indica que os valores de Probabilidade por estágio devem ser ajustados para refletir a probabilidade real de fechamento.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.forecasts3_expected_revenue.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.forecasts3_expected_revenue.htm&type=5
     `
     },
     {
@@ -3724,10 +3724,10 @@ C: Add the "Create Recurring Series of Tasks" checkbox field to Task layouts so 
 Reference: https://help.salesforce.com/s/articleView?id=sf.tasks_repeating.htm&type=5
     `,
         explanation_pt: `
-A: Habilite Tarefas Recorrentes em Configuracao > Activity Settings.
-C: Adicione o campo "Create Recurring Series of Tasks" nos layouts de Task para permitir a recorrencia.
+A: Habilite Tarefas Recorrentes em Configuração > Activity Settings.
+C: Adicione o campo "Create Recurring Series of Tasks" nos layouts de Task para permitir a recorrência.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.tasks_repeating.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.tasks_repeating.htm&type=5
     `
     },
     {
@@ -3746,9 +3746,9 @@ Usernames must be globally unique across all Salesforce orgs. If the desired use
 Reference: https://help.salesforce.com/s/articleView?id=sf.users_add.htm&type=5
     `,
         explanation_pt: `
-Usernames devem ser unicos globalmente em todas as orgs Salesforce. Se o username ja estiver em uso, não sera possível criar um novo usuario com ele.
+Usernames devem ser únicos globalmente em todas as orgs Salesforce. Se o username já estiver em uso, não será possível criar um novo usuário com ele.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.users_add.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.users_add.htm&type=5
     `
     },
     {
@@ -3767,9 +3767,9 @@ Roll-up Summary fields on the master can COUNT child records. Use COUNT of Visit
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
     `,
         explanation_pt: `
-Campos Roll-up Summary no objeto mestre podem CONTAR registros filhos. Use COUNT de Visitors em Open House para exibir o numero de registros filhos.
+Campos Roll-up Summary no objeto mestre podem CONTAR registros filhos. Use COUNT de Visitors em Open House para exibir o número de registros filhos.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_roll_up_summary_fields.htm&type=5
     `
     },
     {
@@ -3788,9 +3788,9 @@ Undeleting within 15 days restores the custom field and its data, but Field Hist
 Reference: https://help.salesforce.com/s/articleView?id=sf.custom_field_delete.htm&type=5
     `,
         explanation_pt: `
-Reverter a exclusao dentro de 15 dias recupera o campo e seus dados, mas o historico de campo desse campo permanece perdido.
+Reverter a exclusão dentro de 15 dias recupera o campo e seus dados, mas o histórico de campo desse campo permanece perdido.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.custom_field_delete.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.custom_field_delete.htm&type=5
     `
     },
     {
@@ -3809,9 +3809,9 @@ Lookup relationships create one-to-many links while respecting sharing and acces
 Reference: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
     `,
         explanation_pt: `
-Lookup cria relacionamentos 1:N mantendo controle de acesso pelos padroes de compartilhamento - visibilidade dos registros filhos continua obedecendo OWD e regras de compartilhamento.
+Lookup cria relacionamentos 1:N mantendo controle de acesso pelos padrões de compartilhamento - visibilidade dos registros filhos continua obedecendo OWD e regras de compartilhamento.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
     `
     },
     {
@@ -3830,9 +3830,9 @@ Contact Hierarchy shows only contacts the user has permission to view - record-l
 Reference: https://help.salesforce.com/s/articleView?id=sf.contacts_hierarchy.htm&type=5
     `,
         explanation_pt: `
-A Hierarquia de Contatos exibe apenas os contatos que o usuario tem permissao de ver - compartilhamento em nivel de registro e aplicado.
+A Hierarquia de Contatos exibe apenas os contatos que o usuário tem permissão de ver - compartilhamento em nível de registro e aplicado.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.contacts_hierarchy.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.contacts_hierarchy.htm&type=5
     `
     },
     {
@@ -3854,10 +3854,10 @@ https://help.salesforce.com/s/articleView?id=sf.reports_builder_custom_report_ty
 https://help.salesforce.com/s/articleView?id=sf.reports_builder_folders.htm&type=5
     `,
         explanation_pt: `
-A: Report Types em "In Development" não ficam disponiveis para todos ate serem implantados.
-D: Relatórios em pasta privada so são visiveis ao proprietário.
+A: Report Types em "In Development" não ficam disponíveis para todos ate serem implantados.
+D: Relatórios em pasta privada são visíveis ao proprietário.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.reports_builder_custom_report_types.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.reports_builder_folders.htm&type=5
     `
@@ -3878,9 +3878,9 @@ Einstein Opportunity Scoring uses AI to assign a win probability score to each O
 Reference: https://help.salesforce.com/s/articleView?id=sf.einstein_sales_oppty_scoring.htm&type=5
     `,
         explanation_pt: `
-Einstein Opportunity Scoring usa IA para atribuir uma pontuacao de probabilidade de sucesso a cada Opportunity, ajudando reps a focar em negocios de alto valor.
+Einstein Opportunity Scoring usa IA para atribuir uma pontuação de probabilidade de sucesso a cada Opportunity, ajudando reps a focar em negócios de alto valor.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.einstein_sales_oppty_scoring.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.einstein_sales_oppty_scoring.htm&type=5
     `
     },
     {
@@ -3899,9 +3899,9 @@ Login History shows failed login attempts, error messages, IP, and timestamp - i
 Reference: https://help.salesforce.com/s/articleView?id=sf.monitoring_login_history.htm&type=5
     `,
         explanation_pt: `
-O Login History exibe tentativas de login falhas, mensagens de erro, IP e horarios - ideal para solucionar falhas de login.
+O Login History exibe tentativas de login falhas, mensagens de erro, IP e horários - ideal para solucionar falhas de login.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.monitoring_login_history.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.monitoring_login_history.htm&type=5
     `
     },
     {
@@ -3922,7 +3922,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.validation_rules_over
         explanation_pt: `
 Use uma Validation Rule: IF(StageName='Negotiation' && ISBLANK(Amount) && $Profile.Name <> 'Sales Manager') ERRO. Isso exige Amount apenas para Sales Users.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
     `
     },
     {
@@ -3941,9 +3941,9 @@ Record Types let users select a type on creation. Assigning interns a special Le
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `,
         explanation_pt: `
-Record Types permitem que usuários selecionem um tipo ao criar. Atribuir aos interns um record type especifico diferencia suas entradas.
+Record Types permitem que usuários selecionem um tipo ao criar. Atribuir aos interns um record type específico diferencia suas entradas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `
     },
     {
@@ -3966,10 +3966,10 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.home_components.htm&t
     `,
         explanation_pt: `
 A: Activities exibe tarefas/eventos do dia.
-C: Assistant apresenta recomendacoes baseadas em IA.
-D: Key Deals destaca as Opportunities com maior pontuacao.
+C: Assistant apresenta recomendações baseadas em IA.
+D: Key Deals destaca as Opportunities com maior pontuação.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.home_components.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.home_components.htm&type=5
     `
     },
     {
@@ -3994,11 +3994,11 @@ https://help.salesforce.com/s/articleView?id=sf.approvals_email.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.approvals_one_click.htm&type=5
     `,
         explanation_pt: `
-A: Permite aprovacoes em um clique via Chatter feeds.
+A: Permite aprovações em um clique via Chatter feeds.
 B: Permite APPROVE/REJECT em respostas de e-mail.
-D: O componente Items to Approve lista solicitacoes pendentes na página inicial.
+D: O componente Items to Approve lista solicitações pendentes na página inicial.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.approvals_considerations.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.approvals_email.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.approvals_one_click.htm&type=5
@@ -4020,9 +4020,9 @@ Lead Assignment Rules automatically route new Leads to users or queues based on 
 Reference: https://help.salesforce.com/s/articleView?id=sf.leads_assignment_rules.htm&type=5
     `,
         explanation_pt: `
-Lead Assignment Rules roteiam automaticamente novos Leads para usuários ou filas com base em criterios de endereco (cidade, estado, pais).
+Lead Assignment Rules roteiam automaticamente novos Leads para usuários ou filas com base em critérios de endereço (cidade, estado, país).
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.leads_assignment_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.leads_assignment_rules.htm&type=5
     `
     },
     {
@@ -4041,9 +4041,9 @@ Omni-Channel routes work items based on agent capacity and skills, ensuring prop
 Reference: https://help.salesforce.com/s/articleView?id=sf.omnichannel_overview.htm&type=5
     `,
         explanation_pt: `
-Omni-Channel direciona tarefas com base na capacidade e habilidades do agente, garantindo distribuicao adequada.
+Omni-Channel direciona tarefas com base na capacidade e habilidades do agente, garantindo distribuição adequada.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.omnichannel_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.omnichannel_overview.htm&type=5
     `
     },
     {
@@ -4064,9 +4064,9 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.app_builder_page_visi
     `,
         explanation_pt: `
 A: Restrinja ao Profile = Sales User.
-B: Restrinja Form Factor para Phone para exibir apenas em dispositivos moveis.
+B: Restrinja Form Factor para Phone para exibir apenas em dispositivos móveis.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.app_builder_page_visibility_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.app_builder_page_visibility_rules.htm&type=5
     `
     },
     {
@@ -4087,7 +4087,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.flow_build_overview.h
         explanation_pt: `
 Use um Flow autoiniciado acionado em Closed Won para iterar pelos Opportunity Products e atualizar automaticamente os campos de desconto.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_build_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_build_overview.htm&type=5
     `
     },
     {
@@ -4106,9 +4106,9 @@ Use an Approval Process on Campaigns (used for events) to let agents submit date
 Reference: https://help.salesforce.com/s/articleView?id=sf.campaigns_overview.htm&type=5
     `,
         explanation_pt: `
-Use um Approval Process em Campaigns (usado para eventos) para que agents submetam solicitacoes de data, sejam roteados para aprovacao e impeçam double booking.
+Use um Approval Process em Campaigns (usado para eventos) para que agents submetam solicitações de data, sejam roteados para aprovação e impeçam double booking.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.campaigns_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.campaigns_overview.htm&type=5
     `
     },
     {
@@ -4128,10 +4128,10 @@ D: Metadata is not included - use Metadata API or change sets separately for met
 Reference: https://help.salesforce.com/s/articleView?id=sf.data_export.htm&type=5
     `,
         explanation_pt: `
-B: O Data Export Service executa apenas semanalmente (ou mensalmente em algumas edicoes).
-D: Metadata não e incluido - use Metadata API ou change sets separadamente para backups de metadata.
+B: O Data Export Service executa apenas semanalmente (ou mensalmente em algumas edições).
+D: Metadata não é incluído - use Metadata API ou change sets separadamente para backups de metadata.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.data_export.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.data_export.htm&type=5
     `
     },
     {
@@ -4150,9 +4150,9 @@ Case Escalation Rules can reassign Cases based on time triggers (e.g., open >7 d
 Reference: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `,
         explanation_pt: `
-Case Escalation Rules podem reatribuir Cases com gatilhos de tempo (ex: >7 dias abertos) e enviar notificacoes.
+Case Escalation Rules podem reatribuir Cases com gatilhos de tempo (ex: >7 dias abertos) e enviar notificações.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `
     },
     {
@@ -4173,7 +4173,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_formulas
         explanation_pt: `
 Um campo formula com IF(Status='Audited', TODAY(), null) exibe dinamicamente a data de hoje quando o status for 'Audited'.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_formulas.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_formulas.htm&type=5
     `
     },
     {
@@ -4196,9 +4196,9 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&
         explanation_pt: `
 Validation Rule:
 AND( OR(AnnualRevenue < 0, AnnualRevenue > 100000000000), ISCHANGED(AnnualRevenue) )
-gera um erro para impor faixas validas.
+gera um erro para impor faixas válidas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.validation_rules.htm&type=5
     `
     },
     {
@@ -4217,9 +4217,9 @@ Flow Solutions are prebuilt Screen Flows and automations on AppExchange - ideal 
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_solutions.htm&type=5
     `,
         explanation_pt: `
-Flow Solutions são Screen Flows e automacoes pre-construidas no AppExchange - ideais para calculadoras de hipoteca e templates de geracao de leads.
+Flow Solutions são Screen Flows e automações pré-construídas no AppExchange - ideais para calculadoras de hipoteca e templates de geração de leads.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_solutions.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_solutions.htm&type=5
     `
     },
     {
@@ -4240,7 +4240,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.dashboards_filters.ht
         explanation_pt: `
 Adicione Dashboard Filters para Origin, Status e Owner - permitindo que usuários detalhem qualquer componente por esses campos sem alterar relatórios.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.dashboards_filters.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.dashboards_filters.htm&type=5
     `
     },
     {
@@ -4261,9 +4261,9 @@ https://help.salesforce.com/s/articleView?id=sf.users_profiles_permissions.htm&t
 https://help.salesforce.com/s/articleView?id=sf.customize_tabs.htm&type=5
     `,
         explanation_pt: `
-Para bloquear totalmente o acesso, remova o CRUD do objeto via Perfis ou Permission Sets (Permissões) e oculte a guia Deal (Visibilidade da Guia). Sem visibilidade da guia e permissões de objeto, a pesquisa não retornara esses registros.
+Para bloquear totalmente o acesso, remova o CRUD do objeto via Perfis ou Permission Sets (Permissões) e oculte a guia Deal (Visibilidade da Guia). Sem visibilidade da guia e permissões de objeto, a pesquisa não retornará esses registros.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.users_profiles_permissions.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.customize_tabs.htm&type=5
     `
@@ -4288,7 +4288,7 @@ https://help.salesforce.com/s/articleView?id=sf.public_groups.htm&type=5
         explanation_pt: `
 Use uma Criteria-Based Sharing Rule em Opportunity onde Type = 'Cross-Sell', compartilhada com um Public Group de especialistas.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.sharing_criteria_rules.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.public_groups.htm&type=5
     `
@@ -4309,9 +4309,9 @@ Conditional Visibility on Screen components can show or hide individual question
 Reference: https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screencmp.htm&type=5
     `,
         explanation_pt: `
-Visibilidade Condicional em componentes de tela permite exibir ou ocultar perguntas individuais com base em respostas anteriores, sem dividir em varias telas ou versoes.
+Visibilidade Condicional em componentes de tela permite exibir ou ocultar perguntas individuais com base em respostas anteriores, sem dividir em várias telas ou versões.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screencmp.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.flow_ref_elements_screencmp.htm&type=5
     `
     },
     {
@@ -4336,7 +4336,7 @@ https://help.salesforce.com/s/articleView?id=sf.lightning_page_components_rich_t
 B: Related Record permite visualizar/editar campos do registro pai (Account Status) inline na página de Case.
 D: Rich Text suporta texto formatado (negrito) e visibilidade condicional para tipos de registro Critical.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.lightning_page_components_related_record.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.lightning_page_components_rich_text.htm&type=5
     `
@@ -4361,7 +4361,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.themes_overview.htm&t
 A: Apenas um tema ativo por vez, aplicado em toda a org.
 D: Chatter External users não veem temas personalizados; permanecem no tema Lightning padrão.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.themes_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.themes_overview.htm&type=5
     `
     },
     {
@@ -4383,10 +4383,10 @@ https://help.salesforce.com/s/articleView?id=sf.admin_supported_languages.htm&ty
 https://help.salesforce.com/s/articleView?id=sf.admin_supported_currencies.htm&type=5
     `,
         explanation_pt: `
-C: Default Language define o idioma da UI na org (substituivel por usuario).
-D: Currency Locale controla formatos numericos e de moeda globalmente.
+C: Default Language define o idioma da UI na org (substituível por usuário).
+D: Currency Locale controla formatos numéricos e de moeda globalmente.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.admin_supported_languages.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.admin_supported_currencies.htm&type=5
     `
@@ -4407,9 +4407,9 @@ Case Assignment Rules evaluate new Cases (via UI, email, web, API) and assign th
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
     `,
         explanation_pt: `
-Case Assignment Rules avaliam novos Cases (UI, email, web, API) e os atribuem a filas ou usuários com base em criterios de Priority.
+Case Assignment Rules avaliam novos Cases (UI, email, web, API) e os atribuem a filas ou usuários com base em critérios de Priority.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
     `
     },
     {
@@ -4431,10 +4431,10 @@ https://help.salesforce.com/s/articleView?id=sf.fields_about_dependent_picklists
 https://help.salesforce.com/s/articleView?id=sf.picklist_global_picklists.htm&type=5
     `,
         explanation_pt: `
-A: Dependent Picklists ajustam valores disponiveis conforme Record Type.
-B: Global Picklist Value Sets garantem consistencia entre objetos.
+A: Dependent Picklists ajustam valores disponíveis conforme Record Type.
+B: Global Picklist Value Sets garantem consistência entre objetos.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.fields_about_dependent_picklists.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.picklist_global_picklists.htm&type=5
     `
@@ -4457,7 +4457,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.leads_customize_map.h
         explanation_pt: `
 Crie um campo customizado no Opportunity correspondente e mapear o Product Category do Lead para ele em Lead Field Mapping no Setup.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.leads_customize_map.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.leads_customize_map.htm&type=5
     `
     },
     {
@@ -4479,11 +4479,11 @@ E: Forces periodic password changes.
 Reference: https://help.salesforce.com/s/articleView?id=sf.security_password_policies.htm&type=5
     `,
         explanation_pt: `
-A: Limita tentativas de login invalidas antes de bloquear.
+A: Limita tentativas de login inválidas antes de bloquear.
 D: Aplica requisitos de comprimento e caracteres.
-E: Obriga mudancas periodicas de senha.
+E: Obriga mudanças periódicas de senha.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.security_password_policies.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.security_password_policies.htm&type=5
     `
     },
     {
@@ -4506,7 +4506,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.reports_builder_folde
 B: Conceda View a Agents na Helpdesk.
 C: Conceda Edit a Managers na pasta pai Support Reports para herdarem acesso a todas as subpastas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.reports_builder_folders_sharing.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.reports_builder_folders_sharing.htm&type=5
     `
     },
     {
@@ -4527,9 +4527,9 @@ https://help.salesforce.com/s/articleView?id=sf.lex_list_views.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.kanban_view.htm&type=5
     `,
         explanation_pt: `
-Uma List View de Opportunity filtrada em Close Date nos proximos 90 dias, com Kanban habilitado, permite que reps arrastem cards entre estágios para atualizacao rapida.
+Uma List View de Opportunity filtrada em Close Date nos próximos 90 dias, com Kanban habilitado, permite que reps arrastem cards entre estágios para atualização rápida.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.lex_list_views.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.kanban_view.htm&type=5
     `
@@ -4550,9 +4550,9 @@ The Stage Setup Flow guides admins to configure Stages for Leads and Opportuniti
 Reference: https://help.salesforce.com/s/articleView?id=sf.stages_setup_flow_overview.htm&type=5
     `,
         explanation_pt: `
-O Stage Setup Flow orienta admins na configuracao de Stages para Leads e Opportunities.
+O Stage Setup Flow orienta admins na configuração de Stages para Leads e Opportunities.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.stages_setup_flow_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.stages_setup_flow_overview.htm&type=5
     `
     },
     {
@@ -4571,9 +4571,9 @@ Three lines of business -> three Record Types; Sales vs. Service layouts -> two 
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `,
         explanation_pt: `
-Três linhas de negocios -> três Record Types; layouts Sales vs. Service -> dois Page Layouts por Record Type -> total de seis layouts em três tipos.
+Três linhas de negócios -> três Record Types; layouts Sales vs. Service -> dois Page Layouts por Record Type -> total de seis layouts em três tipos.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `
     },
     {
@@ -4594,9 +4594,9 @@ https://help.salesforce.com/s/articleView?id=sf.queues_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.sharing_criteria.htm&type=5
     `,
         explanation_pt: `
-Uma queue armazena Cases; use uma Assignment Rule para direcionar novos Cases com o produto para essa queue, e os engenheiros nela atribuidos recebem acesso de leitura/escrita.
+Uma queue armazena Cases; use uma Assignment Rule para direcionar novos Cases com o produto para essa queue, e os engenheiros nela atribuídos recebem acesso de leitura/escrita.
 
-Referencias:
+Referências:
 https://help.salesforce.com/s/articleView?id=sf.queues_overview.htm&type=5
 https://help.salesforce.com/s/articleView?id=sf.sharing_criteria.htm&type=5
     `
@@ -4617,9 +4617,9 @@ Use "Redirect with a Warning" so users hitting login.salesforce.com are sent to 
 Reference: https://help.salesforce.com/s/articleView?id=sf.domain_mgmt_redirect.htm&type=5
     `,
         explanation_pt: `
-Use "Redirect with a Warning" para que usuários acessando login.salesforce.com sejam levados a URL My Domain com aviso para atualizar os favoritos antes da aplicacao total.
+Use "Redirect with a Warning" para que usuários acessando login.salesforce.com sejam levados a URL My Domain com aviso para atualizar os favoritos antes da aplicação total.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.domain_mgmt_redirect.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.domain_mgmt_redirect.htm&type=5
     `
     },
     {
@@ -4638,9 +4638,9 @@ Case Escalation Rules allow you to automatically change the owner (or queue) of 
 Reference: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `,
         explanation_pt: `
-Regras de Escalonamento de Caso permitem alterar automaticamente o proprietário (ou fila) de casos que atendem criterios baseados em tempo, como ultrapassar um SLA de 24 horas, e notificar a equipe de suporte do proximo nivel.
+Regras de Escalonamento de Caso permitem alterar automaticamente o proprietário (ou fila) de casos que atendem critérios baseados em tempo, como ultrapassar um SLA de 24 horas, e notificar a equipe de suporte do próximo nível.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `
     },
     {
@@ -4660,10 +4660,10 @@ D: A lookup field on Shoe Design linking to Product allows many designs per prod
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_object_relationships_overview.htm&type=5
     `,
         explanation_pt: `
-B: Criar um objeto customizado Shoe Design permite armazenar varios registros de design independentemente do Product.
-D: Um campo de pesquisa (lookup) em Shoe Design ligado a Product permite multiplos designs por produto. Use regras de validação ou remova permissao de exclusao para impedir delecoes.
+B: Criar um objeto customizado Shoe Design permite armazenar vários registros de design independentemente do Product.
+D: Um campo de pesquisa (lookup) em Shoe Design ligado a Product permite múltiplos designs por produto. Use regras de validação ou remova permissão de exclusão para impedir deleções.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_object_relationships_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_object_relationships_overview.htm&type=5
     `
     },
     {
@@ -4682,9 +4682,9 @@ Einstein Opportunity Scoring uses AI to assign each opportunity a win probabilit
 Reference: https://help.salesforce.com/s/articleView?id=sf.einstein_sales_oppty_scoring.htm&type=5
     `,
         explanation_pt: `
-Einstein Opportunity Scoring usa IA para atribuir a cada oportunidade uma pontuacao de probabilidade de vitoria (1-99), ajudando os reps a focar em negocios de alto valor.
+Einstein Opportunity Scoring usa IA para atribuir a cada oportunidade uma pontuação de probabilidade de vitória (1-99), ajudando os reps a focar em negócios de alto valor.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.einstein_sales_oppty_scoring.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.einstein_sales_oppty_scoring.htm&type=5
     `
     },
     {
@@ -4703,9 +4703,9 @@ Defining a distinct Record Type for interns lets them select that type when crea
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `,
         explanation_pt: `
-Definir um Record Type distinto para estagiarios permite que eles selecionem esse tipo ao criar leads, facilitando filtrar e identificar registros inseridos por eles.
+Definir um Record Type distinto para estagiários permite que eles selecionem esse tipo ao criar leads, facilitando filtrar e identificar registros inseridos por eles.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `
     },
     {
@@ -4724,9 +4724,9 @@ Validation Rules can compare the prior and new Status values and block changes t
 Reference: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
     `,
         explanation_pt: `
-Regras de Validação podem comparar os valores anterior e novo de Status e bloquear alterações que revertam ao longo da sequencia definida no Path.
+Regras de Validação podem comparar os valores anterior e novo de Status e bloquear alterações que revertam ao longo da sequência definida no Path.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
     `
     },
     {
@@ -4745,9 +4745,9 @@ Usernames must be globally unique across all Salesforce orgs. If the chosen user
 Reference: https://help.salesforce.com/s/articleView?id=sf.admin_usermgmt_add.htm&type=5
     `,
         explanation_pt: `
-Usernames devem ser globalmente unicos em todas as orgs Salesforce. Se o nome de usuario ja existir em outra org, não poderá ser reutilizado.
+Usernames devem ser globalmente únicos em todas as orgs Salesforce. Se o nome de usuário já existir em outra org, não poderá ser reutilizado.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.admin_usermgmt_add.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.admin_usermgmt_add.htm&type=5
     `
     },
     {
@@ -4767,10 +4767,10 @@ C: Enforce Login IP Ranges on Every Request ensures API calls and UI logins resp
 Reference: https://help.salesforce.com/s/articleView?id=sf.security_networkaccess.htm&type=5
     `,
         explanation_pt: `
-A: Faixas de IP podem ser definidas no nivel de perfil (ou globalmente em Session Settings) para delimitar redes confiaveis.
+A: Faixas de IP podem ser definidas no nível de perfil (ou globalmente em Session Settings) para delimitar redes confiáveis.
 C: "Enforce Login IP Ranges on Every Request" garante que chamadas API e logins UI respeitem essas faixas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.security_networkaccess.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.security_networkaccess.htm&type=5
     `
     },
     {
@@ -4790,10 +4790,10 @@ C: Error Message Location specifies where the user sees the validation error on 
 Reference: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
     `,
         explanation_pt: `
-B: A Formula de Condicao de Erro define quando a regra dispara (TRUE bloqueia o salvamento).
-C: A Localizacao da Mensagem de Erro indica onde o usuario ve o erro de validação na página.
+B: A Fórmula de Condição de Erro define quando a regra dispara (TRUE bloqueia o salvamento).
+C: A Localização da Mensagem de Erro indica onde o usuário vê o erro de validação na página.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.validation_rules_overview.htm&type=5
     `
     },
     {
@@ -4812,9 +4812,9 @@ When logging in via Data Loader from an untrusted IP, you must append your perso
 Reference: https://help.salesforce.com/s/articleView?id=sf.data_loader.htm&type=5
     `,
         explanation_pt: `
-Ao fazer login via Data Loader de um IP não confiavel, e necessario concatenar seu security token pessoal ao final da senha.
+Ao fazer login via Data Loader de um IP não coniavel, é necessário concatenar seu security token pessoal ao final da senha.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.data_loader.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.data_loader.htm&type=5
     `
     },
     {
@@ -4835,7 +4835,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.customize_tabs.htm&ty
         explanation_pt: `
 Configurações de Aba (Tab Settings) no perfil podem ser definidas como Oculto, removendo a aba da UI mas sem afetar permissões de objeto - usuários ainda acessam registros via pesquisa ou listas relacionadas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_tabs.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_tabs.htm&type=5
     `
     },
     {
@@ -4856,7 +4856,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.monitoring_login_hist
         explanation_pt: `
 Login History exibe tentativas de login recentes, status (sucesso/falha), IP e motivos de erro - essencial para solucionar problemas de login.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.monitoring_login_history.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.monitoring_login_history.htm&type=5
     `
     },
     {
@@ -4876,10 +4876,10 @@ D: The Unlock button immediately clears the lockout without changing the passwor
 Reference: https://help.salesforce.com/s/articleView?id=sf.users_unlock.htm&type=5
     `,
         explanation_pt: `
-C: Redefinir senha envia uma senha temporaria ao e-mail do usuario.
-D: O botao Desbloquear remove imediatamente o bloqueio sem alterar a senha.
+C: Redefinir senha envia uma senha temporária ao e-mail do usuário.
+D: O botão Desbloquear remove imediatamente o bloqueio sem alterar a senha.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.users_unlock.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.users_unlock.htm&type=5
     `
     },
     {
@@ -4900,7 +4900,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.campaigns_enable.htm&
         explanation_pt: `
 A checkbox Marketing User concede acesso para criar/editar campanhas e gerenciar membros de campanha. Sem ela, usuários não podem modificar registros de Campaign Member.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.campaigns_enable.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.campaigns_enable.htm&type=5
     `
     },
     {
@@ -4919,9 +4919,9 @@ A default value formula (e.g. DATE(YEAR(Installation_Date__c)+1, MONTH(Installat
 Reference: https://help.salesforce.com/s/articleView?id=sf.formula_using_date_datetime.htm&type=5
     `,
         explanation_pt: `
-Um valor padrão com formula (ex.: DATE(YEAR(Installation_Date__c)+1, MONTH(Installation_Date__c), DAY(Installation_Date__c))) define Data de Expiracao um ano após a instalacao.
+Um valor padrão com fórmula (ex.: DATE(YEAR(Installation_Date__c)+1, MONTH(Installation_Date__c), DAY(Installation_Date__c))) define Data de Expiração um ano após a instalação.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.formula_using_date_datetime.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.formula_using_date_datetime.htm&type=5
     `
     },
     {
@@ -4940,9 +4940,9 @@ Health Check compares your security settings against the Salesforce Baseline Sta
 Reference: https://help.salesforce.com/s/articleView?id=sf.security_health_check.htm&type=5
     `,
         explanation_pt: `
-Health Check compara suas configurações de segurança com o Salesforce Baseline Standard e destaca incompatibilidades, fornecendo pontuacao geral e recomendacoes.
+Health Check compara suas configurações de segurança com o Salesforce Baseline Standard e destaca incompatibilidades, fornecendo pontuação geral e recomendações.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.security_health_check.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.security_health_check.htm&type=5
     `
     },
     {
@@ -4961,9 +4961,9 @@ The Parent Campaign field lets you build a campaign hierarchy. Child campaigns (
 Reference: https://help.salesforce.com/s/articleView?id=sf.campaigns_parent.htm&type=5
     `,
         explanation_pt: `
-O campo Parent Campaign permite criar hierarquia de campanhas. Campanhas-filhas (TV, radio, print, social) agregam metricas na campanha pai 'New Runners'.
+O campo Parent Campaign permite criar hierarquia de campanhas. Campanhas-filhas (TV, radio, print, social) agregam métricas na campanha pai 'New Runners'.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.campaigns_parent.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.campaigns_parent.htm&type=5
     `
     },
     {
@@ -4982,9 +4982,9 @@ Use Lead Field Mapping in Setup -> Lead Settings to map custom Lead fields to co
 Reference: https://help.salesforce.com/s/articleView?id=sf.leads_customize_map.htm&type=5
     `,
         explanation_pt: `
-Use Lead Field Mapping em Setup -> Lead Settings para mapear campos customizados de Lead aos campos correspondentes de Account, Contact ou Opportunity para transferencia automatica na conversao.
+Use Lead Field Mapping em Setup -> Lead Settings para mapear campos customizados de Lead aos campos correspondentes de Account, Contact ou Opportunity para transferência automática na conversão.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.leads_customize_map.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.leads_customize_map.htm&type=5
     `
     },
     {
@@ -5003,9 +5003,9 @@ Path Key Fields let you display and inline-edit up to five fields per stage on t
 Reference: https://help.salesforce.com/s/articleView?id=sf.path_key_fields.htm&type=5
     `,
         explanation_pt: `
-Path Key Fields permitem exibir e editar inline ate cinco campos por estágio no componente Opportunity Path, orientando usuários a atualizar dados criticos em cada estágio.
+Path Key Fields permitem exibir e editar inline até cinco campos por estágio no componente Opportunity Path, orientando usuários a atualizar dados críticos em cada estágio.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.path_key_fields.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.path_key_fields.htm&type=5
     `
     },
     {
@@ -5024,9 +5024,9 @@ Support Processes define which Status values are available per Case record type.
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_support_process.htm&type=5
     `,
         explanation_pt: `
-Support Processes definem quais valores de Status estao disponiveis por tipo de registro de Case. Se 'Closed' não estiver no Support Process selecionado, usuários não o verão na picklist.
+Support Processes definem quais valores de Status estão disponíveis por tipo de registro de Case. Se 'Closed' não estiver no Support Process selecionado, usuários não o verão na picklist.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_support_process.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_support_process.htm&type=5
     `
     },
     {
@@ -5045,9 +5045,9 @@ When a user is deactivated, any scheduled (pending) Chatter posts they created a
 Reference: https://help.salesforce.com/s/articleView?id=sf.collab_scheduled_posts.htm&type=5
     `,
         explanation_pt: `
-Quando um usuario e desativado, quaisquer postagens agendadas (pendentes) que ele criou são canceladas e não são publicadas.
+Quando um usuário é desativado, quaisquer postagens agendadas (pendentes) que ele criou são canceladas e não são publicadas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.collab_scheduled_posts.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.collab_scheduled_posts.htm&type=5
     `
     },
     {
@@ -5066,9 +5066,9 @@ Object Permissions on the profile (Read/Edit) are required to view or interact w
 Reference: https://help.salesforce.com/s/articleView?id=sf.users_profiles_permissions.htm&type=5
     `,
         explanation_pt: `
-Permissões de Objeto no perfil (Read/Edit) são necessarias para visualizar ou interagir com a guia e registros de Account. Sem permissao de objeto, usuários não acessam Accounts.
+Permissões de Objeto no perfil (Read/Edit) são necessárias para visualizar ou interagir com a guia e registros de Account. Sem permissão de objeto, usuários não acessam Accounts.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.users_profiles_permissions.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.users_profiles_permissions.htm&type=5
     `
     },
     {
@@ -5087,9 +5087,9 @@ A Junction Object between Contact and Merchandise allows a many-to-many relation
 Reference: https://help.salesforce.com/s/articleView?id=sf.relationships_manytomany.htm&type=5
     `,
         explanation_pt: `
-Um Junction Object entre Contact e Merchandise permite uma relacao muitos-para-muitos, para que cada Contact se ligue a varios Merchandise e vice-versa.
+Um Junction Object entre Contact e Merchandise permite uma relação muitos-para-muitos, para que cada Contact se ligue a vários Merchandise e vice-versa.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.relationships_manytomany.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.relationships_manytomany.htm&type=5
     `
     },
     {
@@ -5108,9 +5108,9 @@ A Lookup relationship on Purchase__c to Containers__c lets each Purchase record 
 Reference: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
     `,
         explanation_pt: `
-Uma relacao Lookup em Purchase__c para Containers__c permite que cada Purchase referencie varios Containers via lista relacionada.
+Uma relação Lookup em Purchase__c para Containers__c permite que cada Purchase referencie vários Containers via lista relacionada.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.relationships_lookup.htm&type=5
     `
     },
     {
@@ -5130,10 +5130,10 @@ D: Edit permission on Campaigns allows them to modify the Campaign Member Status
 Reference: https://help.salesforce.com/s/articleView?id=sf.campaigns_enable.htm&type=5
     `,
         explanation_pt: `
-B: A licenca Marketing User habilita criacao de campanhas e gerenciamento de membros.
-D: Permissao de Edit em Campaigns permite alterar valores de Campaign Member Status vinculados a cada campanha.
+B: A licença Marketing User habilita criação de campanhas e gerenciamento de membros.
+D: Permissão de Edit em Campaigns permite alterar valores de Campaign Member Status vinculados a cada campanha.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.campaigns_enable.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.campaigns_enable.htm&type=5
     `
     },
     {
@@ -5154,7 +5154,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.pricebook_overview.ht
         explanation_pt: `
 Um Price Book separado com precos com desconto para parceiros permite atribui-lo aos revendedores, garantindo que eles vejam apenas suas tarifas especiais.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.pricebook_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.pricebook_overview.htm&type=5
     `
     },
     {
@@ -5173,9 +5173,9 @@ Assignment Rules let you automatically route cases to different queues based on 
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
     `,
         explanation_pt: `
-Regras de Atribuicao permitem rotear casos automaticamente para diferentes filas com base em criterios como nivel de conta. Crie entradas para Silver/Gold -> Regular Support e Platinum -> Priority Support.
+Regras de Atribuição permitem rotear casos automaticamente para diferentes filas com base em critérios como nível de conta. Crie entradas para Silver/Gold -> Regular Support e Platinum -> Priority Support.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
     `
     },
     {
@@ -5194,9 +5194,9 @@ When a picklist's "Restrict picklist to the values defined in the value set" box
 Reference: https://help.salesforce.com/s/articleView?id=sf.picklist_limitations.htm&type=5
     `,
         explanation_pt: `
-Quando a opcao "Restrict picklist to the values defined in the value set" não esta marcada, importacoes podem incluir valores não definidos (como "Unrated") sem erro.
+Quando a opção "Restrict picklist to the values defined in the value set" não está marcada, importações podem incluir valores não definidos (como "Unrated") sem erro.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.picklist_limitations.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.picklist_limitations.htm&type=5
     `
     },
     {
@@ -5215,9 +5215,9 @@ If a picklist is referenced in a formula field, Salesforce prevents changing its
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_formulas.htm&type=5
     `,
         explanation_pt: `
-Se um picklist for referenciado em um campo de formula, o Salesforce impede a mudanca de tipo para não quebrar a formula. Remova essas referencias primeiro.
+Se um picklist for referenciado em um campo de fórmula, o Salesforce impede a mudança de tipo para não quebrar a fórmula. Remova essas referências primeiro.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_formulas.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_formulas.htm&type=5
     `
     },
     {
@@ -5238,9 +5238,9 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.fields_changing_type_
     `,
         explanation_pt: `
 B: Regras que referenciam valores de texto podem falhar se esses valores não existirem no picklist.
-D: Visualizacoes de lista que usam o campo de texto são excluidas quando ele se torna um picklist.
+D: Visualizações de lista que usam o campo de texto são excluídas quando ele se torna um picklist.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_changing_type_considerations.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_changing_type_considerations.htm&type=5
     `
     },
     {
@@ -5260,10 +5260,10 @@ C: You can build a Lead list view filtering on Status = Qualified (converted lea
 Reference: https://help.salesforce.com/s/articleView?id=sf.leads_view_converted.htm&type=5
     `,
         explanation_pt: `
-A: Leads convertidos aparecem na pesquisa global quando o usuario tem permissao.
-C: Crie uma lista de visualizacao de Lead com Filtro Status = Qualified (leads convertidos mantem esse status).
+A: Leads convertidos aparecem na pesquisa global quando o usuário tem permissão.
+C: Crie uma lista de visualização de Lead com Filtro Status = Qualified (leads convertidos mantém esse status).
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.leads_view_converted.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.leads_view_converted.htm&type=5
     `
     },
     {
@@ -5282,9 +5282,9 @@ Manual sharing entries are deleted when a user is deactivated. Reactivating does
 Reference: https://help.salesforce.com/s/articleView?id=sf.sharing_manual.htm&type=5
     `,
         explanation_pt: `
-Entradas de compartilhamento manual são excluidas quando um usuario e desativado. Reactivar não as restaura, entao o usuario perde acesso a esses registros.
+Entradas de compartilhamento manual são excluídas quando um usuário é desativado. Reativar não as restaura, então o usuário perde acesso a esses registros.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.sharing_manual.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.sharing_manual.htm&type=5
     `
     },
     {
@@ -5306,9 +5306,9 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.lightning_page_compon
     `,
         explanation_pt: `
 A: Um Componente Lightning Customizado pode exibir um badge ou alerta com base em um indicador de alto perfil.
-D: Filtros de Visibilidade de Componente mostram esse componente apenas quando o registro atender ao criterio de alto perfil.
+D: Filtros de Visibilidade de Componente mostram esse componente apenas quando o registro atender ao critério de alto perfil.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.lightning_page_components_dynamic.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.lightning_page_components_dynamic.htm&type=5
     `
     },
     {
@@ -5327,9 +5327,9 @@ External ID fields are custom fields marked for upsert matching during data impo
 Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_field_types.htm&type=5
     `,
         explanation_pt: `
-Campos External ID são campos personalizados marcados para correspondencia em upsert durante importacao de dados. Permitem usar identificadores de negocio em vez de Record IDs.
+Campos External ID são campos personalizados marcados para correspondência em upsert durante importação de dados. Permitem usar identificadores de negócio em vez de Record IDs.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_field_types.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_field_types.htm&type=5
     `
     },
     {
@@ -5348,9 +5348,9 @@ Use Auto-Response Rules for immediate email acknowledgment, Queues for assignmen
 Reference: https://help.salesforce.com/s/articleView?id=sf.case_autoresponse.htm&type=5
     `,
         explanation_pt: `
-Use Regras de Auto-Resposta para reconhecimento imediato por e-mail, Filas para atribuicao ao grupo correto de agentes e Regras de Escalonamento para casos em New após 4 horas.
+Use Regras de Auto-Resposta para reconhecimento imediato por e-mail, Filas para atribuição ao grupo correto de agentes e Regras de Escalonamento para casos em New após 4 horas.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.case_autoresponse.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.case_autoresponse.htm&type=5
     `
     },
     {
@@ -5369,9 +5369,9 @@ Picklist Dependencies let you show Lead Source values dynamically based on the s
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_dependent.htm&type=5
     `,
         explanation_pt: `
-Dependencias de Picklist permitem exibir valores de Lead Source dinamicamente com base no Product Category selecionado.
+Dependências de Picklist permitem exibir valores de Lead Source dinamicamente com base no Product Category selecionado.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_dependent.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_dependent.htm&type=5
     `
     },
     {
@@ -5391,10 +5391,10 @@ D: Sandboxes reset to production metadata on refresh - any managed packages inst
 Reference: https://help.salesforce.com/s/articleView?id=sf.distribution_installing_packages.htm&type=5
     `,
         explanation_pt: `
-B: Use a URL de instalacao de sandbox (test.salesforce.com), não login.salesforce.com da producao.
-D: Sandboxes são substituidos pela producao ao refresh - pacotes gerenciados instalados somente no sandbox são removidos.
+B: Use a URL de instalação de sandbox (test.salesforce.com), não login.salesforce.com da produção.
+D: Sandboxes são substituídos pela produção ao refresh - pacotes gerenciados instalados somente no sandbox são removidos.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.distribution_installing_packages.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.distribution_installing_packages.htm&type=5
     `
     },
     {
@@ -5413,9 +5413,9 @@ The standard "User" report type lets you report on user records, including field
 Reference: https://help.salesforce.com/s/articleView?id=sf.reports_report_types_standard_user.htm&type=5
     `,
         explanation_pt: `
-O tipo de relatório padrão "User" permite relatórios sobre usuários, incluindo Perfil, Tipo de Licenca, Atribuicoes de Licenca de Conjunto de Permissões e Conjunto de Permissões.
+O tipo de relatório padrão "User" permite relatórios sobre usuários, incluindo Perfil, Tipo de Licença, Atribuições de Licença de Conjunto de Permissões e Conjunto de Permissões.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.reports_report_types_standard_user.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.reports_report_types_standard_user.htm&type=5
     `
     },
     {
@@ -5436,7 +5436,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.knowledge_related_lis
         explanation_pt: `
 A Lista Relacionada de Knowledge no layout exibe artigos vinculados ao caso em qualquer UI (console ou padrão).
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.knowledge_related_list.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.knowledge_related_list.htm&type=5
     `
     },
     {
@@ -5457,9 +5457,9 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.lex_related_lists_com
     `,
         explanation_pt: `
 B: No Lightning App Builder, certifique-se de usar o componente "Related List" corretamente.
-D: No layout de página de Contato, edite a lista relacionada de Casos e adicione colunas para Nome, ID, Cliente (Nome da Conta), Motivo, Status e Data de Criacao.
+D: No layout de página de Contato, edite a lista relacionada de Casos e adicione colunas para Nome, ID, Cliente (Nome da Conta), Motivo, Status e Data de Criação.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.lex_related_lists_component.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.lex_related_lists_component.htm&type=5
     `
     },
     {
@@ -5480,7 +5480,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_validati
         explanation_pt: `
 Uma Regra de Validação comparando YEAR(Showing_Date__c) com YEAR(TODAY()) garante que a data esteja no ano corrente.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
     `
     },
     {
@@ -5499,9 +5499,9 @@ When manually creating cases, if "Assign using active assignment rules" is check
 Reference: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
     `,
         explanation_pt: `
-Ao criar casos manualmente, se "Assign using active assignment rules" estiver marcado por padrão, as regras de atribuicao se aplicam tambem. Desmarque esse padrão.
+Ao criar casos manualmente, se "Assign using active assignment rules" estiver marcado por padrão, as regras de atribuição se aplicam também. Desmarque esse padrão.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_casesupport_assign.htm&type=5
     `
     },
     {
@@ -5522,7 +5522,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.fields_about_validati
         explanation_pt: `
 Uma Regra de Validação com formula ISBLANK(Product_Type__c) && NOT(Needs_Review__c) impede o salvamento a menos que um seja preenchido.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.fields_about_validation_rules.htm&type=5
     `
     },
     {
@@ -5541,9 +5541,9 @@ Split views are available only on standard object home pages (e.g., Cases, Conta
 Reference: https://help.salesforce.com/s/articleView?id=sf.lex_split_view.htm&type=5
     `,
         explanation_pt: `
-Split views estao disponiveis apenas em paginas iniciais de objetos padrão (por ex., Cases, Contacts). Objetos personalizados como Shipments não suportam split view.
+Split views estão disponíveis apenas em páginas iniciais de objetos padrão (por ex., Cases, Contacts). Objetos personalizados como Shipments não suportam split view.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.lex_split_view.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.lex_split_view.htm&type=5
     `
     },
     {
@@ -5564,7 +5564,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.
         explanation_pt: `
 Use Record Types (Casa vs. Condo) + Business Processes para definir picklists diferentes e atribua dois layouts de página, com etapas de HOA apenas no layout de Condo.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.customize_recordtype.htm&type=5
     `
     },
     {
@@ -5585,9 +5585,9 @@ Reference: https://appexchange.salesforce.com/
     `,
         explanation_pt: `
 A: Você pode encontrar consultores certificados no AppExchange.
-C: Você pode instalar templates de solucao especificos para industrias (Managed Packages).
+C: Você pode instalar templates de solução específicos para indústrias (Managed Packages).
 
-Referencia: https://appexchange.salesforce.com/
+Referência: https://appexchange.salesforce.com/
     `
     },
     {
@@ -5608,7 +5608,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.domain_name_overview.
         explanation_pt: `
 Habilitar My Domain muda as URLs de login para <suaDomain>.my.salesforce.com para todos os usuários (internos e externos).
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.domain_name_overview.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.domain_name_overview.htm&type=5
     `
     },
     {
@@ -5629,7 +5629,7 @@ Reference: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&t
         explanation_pt: `
 Regras de Escalonamento podem reatribuir casos quando limites de tempo (ex.: 24 horas) são atingidos, movendo-os para filas seguintes.
 
-Referencia: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
+Referência: https://help.salesforce.com/s/articleView?id=sf.case_escalation.htm&type=5
     `
     }
 ];
