@@ -142,4 +142,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
->Bons estudos e sucesso na certificação!!! 🚀
+>Bons estudos e sucesso na certificação! 🚀
