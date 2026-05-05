@@ -1,8 +1,8 @@
-# 📚 Quiz – Salesforce Certified Administrator 🤓
+# 📚 Quiz – Salesforce Certifications 🤓
 
 ![Versão](https://img.shields.io/badge/version-1.0.0-blue) ![Licença](https://img.shields.io/badge/license-MIT-green)
 
-> Um quiz interativo para praticar para a certificação Salesforce Certified Administrator, com modo livre e modo avaliação cronometrada.
+> Um quiz interativo para praticar para as certificações Salesforce, com modo livre e modo avaliação cronometrada.
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## 🌟 Visão Geral
 
-Este projeto é um **quiz interativo** de perguntas sobre Salesforce Certified Administrator. Foi desenvolvido em **JavaScript puro** (ES6), sem frameworks, e organizado por pastas para facilitar manutenção:
+Este projeto é um **quiz interativo** com perguntas sobre múltiplas certificações Salesforce (Administrator, Developer e App Builder). Foi desenvolvido em **JavaScript puro** (ES6), sem frameworks, e organizado por pastas para facilitar manutenção:
 
 * `index.html` — marcação básica e containers de quiz, placar e avaliação.
 * `assets/css/style.css` — estilos modernos com CSS Grid, variáveis e animações.
@@ -117,7 +117,7 @@ Este projeto é um **quiz interativo** de perguntas sobre Salesforce Certified A
 
 * **Editar questões:** atualize os arquivos em `assets/js/data/` conforme a prova desejada.
 * **Temas e cores:** altere variáveis CSS em `:root` no `assets/css/style.css`.
-* **Tempo de avaliação:** ajuste `evaluationDuration` (em segundos) em `assets/js/evaluation.js`.
+* **Tempo de avaliação:** ajuste `evaluationDuration` (em segundos) em `assets/js/evaluation.js`. Atualmente configurado para 105 minutos (1h45min).
 * **Número de questões:** modifique `slice(0, 60)` na função `generateEvaluationQuestions()`.
 
 ---
