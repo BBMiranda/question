@@ -170,7 +170,10 @@ function loadQuestion() {
     // 3) Enunciado
     const questionEl = document.createElement("div");
     questionEl.className = "question";
-    questionEl.innerHTML = `<strong>Pergunta ${q.number}:</strong> ${q.question}`;
+    const strongEl = document.createElement('strong');
+    strongEl.textContent = `Pergunta ${q.number}:`;
+    questionEl.appendChild(strongEl);
+    questionEl.appendChild(document.createTextNode(` ${q.question || ''}`));
     quizContent.appendChild(questionEl);
 
     // 4) Lista de opções
@@ -180,12 +183,15 @@ function loadQuestion() {
 
     for (const [key, value] of Object.entries(q.options)) {
         const li = document.createElement("li");
-        li.innerHTML = `
-      <label>
-        <input type="${type}" name="option" value="${key}">
-        ${value}
-      </label>
-    `;
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        input.type = type;
+        input.name = 'option';
+        input.value = key;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(` ${value ?? ''}`));
+        li.appendChild(label);
         optionsList.appendChild(li);
     }
     quizContent.appendChild(optionsList);
@@ -311,7 +317,8 @@ function checkAnswer() {
 
     const explanation = document.createElement('div');
     explanation.className = 'explanation';
-    explanation.innerHTML = `<em>Explicação:</em>${linkify(q.explanation_pt)}`;
+    const explanationText = (q.explanation_pt || '').trim();
+    explanation.innerHTML = `<em>Explicação:</em><br>${linkify(explanationText)}`;
 
     wrapper.append(badge, explanation);
     document.getElementById('quizContent').appendChild(wrapper);
@@ -459,7 +466,9 @@ function loadEvaluationQuestion() {
     // 1) Enunciado
     const questionEl = document.createElement("div");
     questionEl.className = "question";
-    questionEl.innerHTML = `<strong>${q.question}</strong>`;
+    const strongEl = document.createElement('strong');
+    strongEl.textContent = q.question || '';
+    questionEl.appendChild(strongEl);
     evalContent.appendChild(questionEl);
 
     // 2) Opções
@@ -467,14 +476,15 @@ function loadEvaluationQuestion() {
     optionsList.className = "options";
     Object.entries(q.options).forEach(([key, text]) => {
         const li = document.createElement("li");
-        li.innerHTML = `
-      <label>
-        <input
-          type="${inputType}"
-          name="evalOption"
-          value="${key}">
-        ${text}
-      </label>`;
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        input.type = inputType;
+        input.name = 'evalOption';
+        input.value = key;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(` ${text ?? ''}`));
+        li.appendChild(label);
         optionsList.appendChild(li);
     });
     evalContent.appendChild(optionsList);
@@ -954,7 +964,15 @@ function showSimpleToast(message, type = 'default', duration = 3000, extraClass 
 }
 
 function linkify(text) {
-    return text
+    const raw = String(text ?? '');
+    const escaped = raw
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+
+    return escaped
         // transformar URLs em <a href="" target="_blank">…
         .replace(
             /(https?:\/\/[^\s]+)/g,

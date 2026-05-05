@@ -30,21 +30,24 @@ function loadEvaluationQuestion() {
 
     const questionEl = document.createElement("div");
     questionEl.className = "question";
-    questionEl.innerHTML = `<strong>${q.question}</strong>`;
+    const strongEl = document.createElement('strong');
+    strongEl.textContent = q.question || '';
+    questionEl.appendChild(strongEl);
     evalContent.appendChild(questionEl);
 
     const optionsList = document.createElement("ul");
     optionsList.className = "options";
     Object.entries(q.options).forEach(([key, text]) => {
         const li = document.createElement("li");
-        li.innerHTML = `
-      <label>
-        <input
-          type="${inputType}"
-          name="evalOption"
-          value="${key}">
-        ${text}
-      </label>`;
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        input.type = inputType;
+        input.name = 'evalOption';
+        input.value = key;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(` ${text ?? ''}`));
+        li.appendChild(label);
         optionsList.appendChild(li);
     });
     evalContent.appendChild(optionsList);

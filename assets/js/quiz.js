@@ -22,7 +22,10 @@ function loadQuestion() {
 
     const questionEl = document.createElement("div");
     questionEl.className = "question";
-    questionEl.innerHTML = `<strong>Pergunta ${q.number}:</strong> ${q.question}`;
+    const strongEl = document.createElement('strong');
+    strongEl.textContent = `Pergunta ${q.number}:`;
+    questionEl.appendChild(strongEl);
+    questionEl.appendChild(document.createTextNode(` ${q.question || ''}`));
     quizContent.appendChild(questionEl);
 
     const optionsList = document.createElement("ul");
@@ -31,12 +34,15 @@ function loadQuestion() {
 
     for (const [key, value] of Object.entries(q.options)) {
         const li = document.createElement("li");
-        li.innerHTML = `
-      <label>
-        <input type="${type}" name="option" value="${key}">
-        ${value}
-      </label>
-    `;
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        input.type = type;
+        input.name = 'option';
+        input.value = key;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(` ${value ?? ''}`));
+        li.appendChild(label);
         optionsList.appendChild(li);
     }
     quizContent.appendChild(optionsList);
@@ -143,7 +149,8 @@ function checkAnswer() {
 
     const explanation = document.createElement('div');
     explanation.className = 'explanation';
-    explanation.innerHTML = `<em>Explicação:</em>${linkify(q.explanation_pt)}`;
+    const explanationText = (q.explanation_pt || '').trim();
+    explanation.innerHTML = `<em>Explicação:</em><br>${linkify(explanationText)}`;
 
     wrapper.append(badge, explanation);
     document.getElementById('quizContent').appendChild(wrapper);

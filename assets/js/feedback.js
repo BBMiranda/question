@@ -134,7 +134,15 @@ function showSimpleToast(message, type = 'default', duration = 3000, extraClass 
 }
 
 function linkify(text) {
-    return text
+    const raw = String(text ?? '');
+    const escaped = raw
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+
+    return escaped
         .replace(
             /(https?:\/\/[^\s]+)/g,
             '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
