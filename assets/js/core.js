@@ -57,6 +57,74 @@ function shuffleOptions(question) {
     question.correct = newCorrectKeys.join(', ');
 }
 
+/**
+ * Helper: Valida se a resposta do usuário está correta.
+ * @param {string} correctAnswer - Resposta correta (ex: "C" ou "B, D")
+ * @param {string|string[]} userAnswer - Resposta do usuário
+ * @returns {boolean} true se correto
+ */
+function isAnswerCorrect(correctAnswer, userAnswer) {
+    const correctList = correctAnswer.split(',').map(s => s.trim());
+    const isMultiple = correctList.length > 1;
+    const selected = Array.isArray(userAnswer) ? userAnswer : [userAnswer];
+
+    if (isMultiple) {
+        return correctList.length === selected.length && 
+               correctList.every(c => selected.includes(c));
+    }
+    return selected[0] === correctList[0];
+}
+
+/**
+ * Renderiza lista de opções para uma questão.
+ * @param {Object} question - Objeto da questão
+ * @param {string} inputName - Nome do input (para diferenciar quiz/eval)
+ * @param {Function} onChangeCallback - Callback ao mudar seleção
+ * @returns {HTMLUListElement} Lista de opções renderizada
+ */
+function renderQuestionOptions(question, inputName = 'option', onChangeCallback = null) {
+    const correctList = question.correct.split(',').map(s => s.trim());
+    const isMultiple = correctList.length > 1;
+    const inputType = isMultiple ? 'checkbox' : 'radio';
+    const maxSelect = correctList.length;
+
+    const optionsList = document.createElement("ul");
+    optionsList.className = "options";
+
+    Object.entries(question.options).forEach(([key, text]) => {
+        const li = document.createElement("li");
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        input.type = inputType;
+        input.name = inputName;
+        input.value = key;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(` ${text ?? ''}`));
+        li.appendChild(label);
+        optionsList.appendChild(li);
+    });
+
+    const inputs = optionsList.querySelectorAll('input');
+    inputs.forEach(input => {
+        input.addEventListener('change', () => {
+            if (isMultiple) {
+                input.closest("li").classList.toggle("selected", input.checked);
+                const checkedCount = Array.from(inputs).filter(i => i.checked).length;
+                inputs.forEach(i => {
+                    if (!i.checked) i.disabled = (checkedCount >= maxSelect);
+                });
+            } else {
+                inputs.forEach(i => i.closest("li").classList.remove("selected"));
+                input.closest("li").classList.add("selected");
+            }
+            if (onChangeCallback) onChangeCallback();
+        });
+    });
+
+    return optionsList;
+}
+
 function cloneQuestion(question) {
     return {
         ...question,

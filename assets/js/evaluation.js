@@ -25,8 +25,6 @@ function loadEvaluationQuestion() {
     const q = evaluationQuestions[evaluationCurrentQuestion];
     const correctList = q.correct.split(',').map(s => s.trim());
     const isMultiple = correctList.length > 1;
-    const inputType = isMultiple ? 'checkbox' : 'radio';
-    const maxSelect = correctList.length;
 
     const questionEl = document.createElement("div");
     questionEl.className = "question";
@@ -35,21 +33,7 @@ function loadEvaluationQuestion() {
     questionEl.appendChild(strongEl);
     evalContent.appendChild(questionEl);
 
-    const optionsList = document.createElement("ul");
-    optionsList.className = "options";
-    Object.entries(q.options).forEach(([key, text]) => {
-        const li = document.createElement("li");
-        const label = document.createElement('label');
-        const input = document.createElement('input');
-        input.type = inputType;
-        input.name = 'evalOption';
-        input.value = key;
-
-        label.appendChild(input);
-        label.appendChild(document.createTextNode(` ${text ?? ''}`));
-        li.appendChild(label);
-        optionsList.appendChild(li);
-    });
+    const optionsList = renderQuestionOptions(q, 'evalOption');
     evalContent.appendChild(optionsList);
 
     const btn = document.createElement("button");
@@ -90,23 +74,6 @@ function loadEvaluationQuestion() {
     evalContent.appendChild(nav);
 
     const inputs = optionsList.querySelectorAll('input[name="evalOption"]');
-    inputs.forEach(i => {
-        i.checked = false;
-        i.disabled = false;
-        i.closest("li").classList.remove("selected");
-        i.addEventListener("change", () => {
-            if (isMultiple) {
-                i.closest("li").classList.toggle("selected", i.checked);
-                const cnt = Array.from(inputs).filter(x => x.checked).length;
-                inputs.forEach(x => {
-                    if (!x.checked) x.disabled = (cnt >= maxSelect);
-                });
-            } else {
-                inputs.forEach(x => x.closest("li").classList.remove("selected"));
-                i.closest("li").classList.add("selected");
-            }
-        });
-    });
 
     if (q.userAnswer !== undefined) {
         const answered = Array.isArray(q.userAnswer)
@@ -122,6 +89,12 @@ function loadEvaluationQuestion() {
         });
 
         document.getElementById("evalResponderBtn").disabled = true;
+    } else {
+        inputs.forEach(i => {
+            i.checked = false;
+            i.disabled = false;
+            i.closest("li").classList.remove("selected");
+        });
     }
 }
 
@@ -146,13 +119,8 @@ function checkEvaluationAnswer() {
     }
 
     const selectedValues = selectedInputs.map(i => i.value);
-    let isCorrect;
-    if (isMultiple) {
-        isCorrect = selectedValues.length === correctList.length
-            && correctList.every(c => selectedValues.includes(c));
-    } else {
-        isCorrect = selectedValues[0] === correctList[0];
-    }
+    const isCorrect = isAnswerCorrect(q.correct, selectedValues);
+    
     if (isCorrect) {
         evaluationScore++;
     }

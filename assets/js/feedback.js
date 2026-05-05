@@ -82,7 +82,9 @@ function showConfirmToast(message) {
 
         const btnNo = document.createElement('button');
         btnNo.classList.add('btn-no');
-    btnNo.textContent = 'Não';
+        btnNo.textContent = 'Não';
+
+        const btnYes = document.createElement('button');
         btnYes.classList.add('btn-yes');
         btnYes.textContent = 'Sim';
 

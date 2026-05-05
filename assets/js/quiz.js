@@ -18,7 +18,6 @@ function loadQuestion() {
     const q = questions[currentQuestion];
     const correctList = q.correct.split(',').map(s => s.trim());
     const isMultiple = correctList.length > 1;
-    const maxSelect = correctList.length;
 
     const questionEl = document.createElement("div");
     questionEl.className = "question";
@@ -28,37 +27,8 @@ function loadQuestion() {
     questionEl.appendChild(document.createTextNode(` ${q.question || ''}`));
     quizContent.appendChild(questionEl);
 
-    const optionsList = document.createElement("ul");
-    optionsList.className = "options";
-    const type = isMultiple ? 'checkbox' : 'radio';
-
-    for (const [key, value] of Object.entries(q.options)) {
-        const li = document.createElement("li");
-        const label = document.createElement('label');
-        const input = document.createElement('input');
-        input.type = type;
-        input.name = 'option';
-        input.value = key;
-
-        label.appendChild(input);
-        label.appendChild(document.createTextNode(` ${value ?? ''}`));
-        li.appendChild(label);
-        optionsList.appendChild(li);
-    }
+    const optionsList = renderQuestionOptions(q, 'option');
     quizContent.appendChild(optionsList);
-
-    const inputs = optionsList.querySelectorAll('input[name="option"]');
-
-    if (isMultiple) {
-        inputs.forEach(input => {
-            input.addEventListener('change', () => {
-                const checkedCount = Array.from(inputs).filter(i => i.checked).length;
-                inputs.forEach(i => {
-                    i.disabled = (!i.checked && checkedCount >= maxSelect);
-                });
-            });
-        });
-    }
 
     const buttonContainer = document.createElement("div");
     buttonContainer.id = "buttonContainer";
@@ -113,20 +83,15 @@ function checkAnswer() {
     q.userAnswer = selected.length > 1 ? selected : selected[0];
     totalAnswered++;
 
-    const correctList = q.correct.split(',').map(s => s.trim());
-    const isMultiple = correctList.length > 1;
-    const isCorrect = isMultiple
-        ? (correctList.length === selected.length && correctList.every(c => selected.includes(c)))
-        : selected[0] === q.correct;
-
-    if (!isMultiple && isCorrect) score++;
-    if (isMultiple && isCorrect) score++;
+    const isCorrect = isAnswerCorrect(q.correct, selected);
+    if (isCorrect) score++;
 
     lis.forEach(li => {
         li.style.backgroundColor = '';
         li.classList.remove('correct', 'wrong');
     });
 
+    const correctList = q.correct.split(',').map(s => s.trim());
     lis.forEach(li => {
         const val = li.querySelector('input').value;
         const wasChecked = selected.includes(val);

@@ -1,4 +1,4 @@
-# 📚 Quiz – Salesforce Certified Administrator
+# 📚 Quiz – Salesforce Certified Administrator 🤓
 
 ![Versão](https://img.shields.io/badge/version-1.0.0-blue) ![Licença](https://img.shields.io/badge/license-MIT-green)
 
