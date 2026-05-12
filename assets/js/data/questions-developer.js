@@ -260,7 +260,7 @@ window.questionBanks.developer = [
     "correct": "A",
     "explanation_en": "",
     "explanation_pt": ""
-  }
+  },
   {
     "number": 21,
     "question": "The following Apex method is part of the ContactService class that is called from a trigger:\npublic static void setBusinessUnitToEMEA (Contact thisContact) {\n    thisContact. Business Unit c = 'EMEA';\n    update thisContact;\n}\nHow should the developer modify the code to ensure best practices are met?",
