@@ -29,8 +29,12 @@ function loadEvaluationQuestion() {
     const questionEl = document.createElement("div");
     questionEl.className = "question";
     const strongEl = document.createElement('strong');
-    strongEl.textContent = q.question || '';
+    strongEl.textContent = `Pergunta ${q.number}:`;
     questionEl.appendChild(strongEl);
+    const questionText = document.createElement('span');
+    questionText.className = 'question-text';
+    questionText.innerHTML = sanitizeCodeBlocks(` ${q.question || ''}`);
+    questionEl.appendChild(questionText);
     evalContent.appendChild(questionEl);
 
     const optionsList = renderQuestionOptions(q, 'evalOption');

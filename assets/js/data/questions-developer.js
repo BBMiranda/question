@@ -55,7 +55,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 5,
-    "question": "A developer identifies the following triggers on the Expense_c object: \ndeleteExpense, \napplyDefaultsToExpense, \nvalidateExpenseUpdate; The triggers process before delete, before insert, and before update events respectively. Which two techniques should the developer implement to to ensure trigger best practices are followed? Choose 2 answers",
+    "question": "A developer identifies the following triggers on the Expense_c object:<br><br><pre><code>deleteExpense,\napplyDefaultsToExpense,\nvalidateExpenseUpdate;</code></pre><br>The triggers process before delete, before insert, and before update events respectively. Which two techniques should the developer implement to to ensure trigger best practices are followed? Choose 2 answers",
     "options": {
       "A": "Unity all three triggers In a single trigger on the Expense_c object that Includes all events.",
       "B": "Unify the before insert and before update triggers and use Flow for the delete action.",
@@ -70,10 +70,10 @@ window.questionBanks.developer = [
     "number": 6,
     "question": "Which statement generates a list of Leads and Contacts that have a field with the phrase 'ACME'?",
     "options": {
-      "A": "Option A: List<List <sobject>> searchList = [SELECT Name, ID FROM Contact, Lead WHERE Name like '%ACME%'];",
-      "B": "Option B: List List <sobject>> searchList = [FIND 'ACME' IN ALL FIELDS RETURNING Contact, Lead];",
-      "C": "Option C: Map <sObject> searchList = [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];",
-      "D": "Option D: List <sobject> searchList [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];"
+      "A": "<pre><code>List<List <sobject>> searchList = [SELECT Name, ID FROM Contact, Lead WHERE Name like '%ACME%'];</code></pre>",
+      "B": "<pre><code>List List <sobject>> searchList = [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];</code></pre>",
+      "C": "<pre><code>Map <sObject> searchList = [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];</code></pre>",
+      "D": "<pre><code>List <sobject> searchList [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];</code></pre>"
     },
     "correct": "B",
     "explanation_en": "Correct Syntax for SOSL Query: Option B uses SOSL (Salesforce Object Search Language) to find records where the phrase 'ACME' appears in any field across multiple objects (Contact and Lead). Syntax used in Option B: List<List<SObject>> searchList = [FIND 'ACME' IN ALL FIELDS RETURNING Contact, Lead]; This query retrieves a list of SObject lists, where each inner list contains the results for a specific object (e.g., Contact or Lead). Why not the other options? A. Option A: This uses SOQL (Salesforce Object Query Language), not SOSL. SOQL cannot search across multiple objects or fields. The syntax provided is invalid because SOQL doesn't support \"multi-object WHERE conditions.\" C. Option C: The Map<SObject> syntax is incorrect for SOSL queries. SOSL queries return a List<List<SObject>>, not a Map<SObject>. D. Option D: The syntax List<SObject> for SOSL is incorrect. SOSL must return List<List<SObject>> since the results are grouped by object types. Reference: SOSL Queries in Apex SOQL vs SOSL",
@@ -145,8 +145,8 @@ window.questionBanks.developer = [
     "explanation_pt": ""
   },
 {
-    "number": 12,
-    "question": "Given the following Anonymous block:\nList<Case> casesToUpdate = new List<Case>();\nfor(Case thisCase : [SELECT Id, Status FROM Case LIMIT 50000]){\n    thisCase.Status = 'Working';\n    casesToUpdate.add(thisCase);\n}\ntry{\n    Database.update(casesToUpdate,false);\n}catch(Exception e){\n    System.debug(e.getMessage());\n}\nWhat should a developer consider for an environment that has over 10,000 Case records?\n\n    casesToUpdate.add(thisCase);\n}\ntry{\n    Database.update(casesToUpdate, false);\n}catch(Exception e){\n    System.debug(e.getMessage());\n}\nWhat should a developer consider for an environment that has over 10,000 Case records?",
+  "number": 12,
+  "question": "Given the following Anonymous block:<br><pre><code>List<Case> casesToUpdate = new List<Case>();\nfor (Case thisCase : [SELECT Id, Status FROM Case LIMIT 50000]) {\n    thisCase.Status = 'Working';\n    casesToUpdate.add(thisCase);\n}\ntry {\n    Database.update(casesToUpdate, false);\n} catch (Exception e) {\n    System.debug(e.getMessage());\n}</code></pre><br>What should a developer consider for an environment that has over 10,000 Case records?",
     "options": {
       "A": "The transaction will succeed and changes will be committed.",
       "B": "The try-catch block will handle exceptions thrown by governor limits.",
@@ -186,12 +186,12 @@ window.questionBanks.developer = [
   },
   {
     "number": 15,
-    "question": "A developer must create a DrawList class that provides capabilities defined in the Sortable and Drawable interfaces.\npublic interfaces Sortable{\nvoid sort();} \npublic interface Drawable {\nvoid draw()};\nWhich is the correct implementation?",
+    "question": "A developer must create a DrawList class that provides capabilities defined in the Sortable and Drawable interfaces.<br><pre><code>public interface Sortable {\n    void sort();\n}\n\npublic interface Drawable {\n    void draw();\n}</code></pre><br>Which is the correct implementation?",
     "options": {
-      "A": "Option A: public void sort() { /*implementation*\"/) public void draw() { /*implementation\"/)",
-      "B": "Option B: public class DrawList implements Sortable, Drawable ( public void sort() { /*implementation*/ public void draw() /*implementation*/)",
-      "C": "Option C: public class Drawlist extends Sortable, Drawable ( public void sort()  /*implementation\"/ public void draw() { /*implementation\"/)",
-      "D": "Option D: public class Drawlist extends Sortable, extends Drawable public void sort()  /*implementation*/) public void draw() { /*implementation /)"
+      "A": "<pre><code>public void sort() { /*implementation*/ }\npublic void draw() { /*implementation*/ }\n</code></pre>",
+      "B": "<pre><code>public class DrawList implements Sortable, Drawable {\n    public void sort() { /*implementation*/ }\n    public void draw() { /*implementation*/ }\n}</code></pre>",
+      "C": "<pre><code>public class Drawlist extends Sortable, Drawable {\n    public void sort() { /*implementation*/ }\n    public void draw() { /*implementation*/ }\n}</code></pre>",
+      "D": "<pre><code>public class Drawlist extends Sortable, extends Drawable {\n    public void sort() { /*implementation*/ }\n    public void draw() { /*implementation*/ }\n}</code></pre>"
     },
     "correct": "B",
     "explanation_en": "",
@@ -212,7 +212,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 17,
-    "question": "The following code snippet is executed by a Lightning web component in an environment with more than 2,000 lead records:\n@AuraEnabled\npublic void static updateLeads() {\nfor (Lead thisLead: [SELECT Origin_c FROM Lead])\nthisLead.LeadSource update thisLead;\nthisLead.Origin_c;\nupdate thisLead;}}\nWhich governor limit will likely be exceeded within the Apex transaction?",
+    "question": "The following code snippet is executed by a Lightning web component in an environment with more than 2,000 lead records:<br><pre><code>@AuraEnabled\npublic void static updateLeads() {\n    for (Lead thisLead : [SELECT Origin_c FROM Lead]) {\n        thisLead.LeadSource = thisLead.Origin_c;\n        update thisLead;\n    }\n}</code></pre><br>Which governor limit will likely be exceeded within the Apex transaction?",
     "options": {
       "A": "Total number of SOOL quires issued",
       "B": "Total number of DML statements issued",
@@ -224,7 +224,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 18,
-    "question": "A developer is asked to write helper methods that create test data for unit tests.\n01: public TestUtils {\n03: public static Account createAccount() {\n04: Account act = new Account();\n05: //...set some fields on acct...\n06: return act;\n07: }\n08: //...other methods...\n09: )\nWhat should be changed in the Testutils class so that its methods are only usable by unit test methods?",
+    "question": "A developer is asked to write helper methods that create test data for unit tests.<br><pre><code>01: public TestUtils {\n03: public static Account createAccount() {\n04:     Account act = new Account();\n05:     //...set some fields on acct...\n06:     return act;\n07: }\n08: //...other methods...\n09: )</code></pre><br>What should be changed in the Testutils class so that its methods are only usable by unit test methods?",
     "options": {
       "A": "@isTest above line 03.",
       "B": "Add @istest above line 01.",
@@ -237,7 +237,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 19,
-    "question": "Universal Containers recently transitioned from Classic to Lightning Experience. One of its business processes requires certain values from the Opportunity object to be sent via an HTTP REST callout to its external order management system when the user presses a custom button on the Opportunity detail page. Example values are as follows:\n- Name\n- Amount\n- Account\nWhich two methods should the developer implement to fulfill the business requirement? Choose 2 answers",
+    "question": "Universal Containers recently transitioned from Classic to Lightning Experience. One of its business processes requires certain values from the Opportunity object to be sent via an HTTP REST callout to its external order management system when the user presses a custom button on the Opportunity detail page. Example values are as follows:<br>* Name<br>* Amount<br>* Account<br>Which two methods should the developer implement to fulfill the business requirement? Choose 2 answers",
     "options": {
       "A": "Create a custom Visualforce quick action that performs the HTTP REST callout, and use a Visualforce quick action to expose the component on the Opportunity detail page.",
       "B": "Create a Remote Action on the Opportunity object that executes an Apex immediate action to perform the HTTP REST callout whenever the Opportunity is updated.",
@@ -263,12 +263,11 @@ window.questionBanks.developer = [
   },
   {
     "number": 21,
-    "question": "The following Apex method is part of the ContactService class that is called from a trigger:\npublic static void setBusinessUnitToEMEA (Contact thisContact) {\n    thisContact. Business Unit c = 'EMEA';\n    update thisContact;\n}\nHow should the developer modify the code to ensure best practices are met?",
+    "question": "The following Apex method is part of the ContactService class that is called from a trigger:<br><pre><code>public static void setBusinessUnitToEMEA(Contact thisContact) {\n    thisContact.Business_Unit__c = 'EMEA';\n    update thisContact;\n}</code></pre><br>How should the developer modify the code to ensure best practices are met?",
     "options": {
-      "A": "public stapic void setBusinessUnitToENEA BusinessOnSTEMEA ( <Contact contact (Contact shiacontars contacta)( thisContact Business Unit_cΕΜΕΑ update contacts:",
-      "B": "public static void setBusinessUnitToEMEA (Contact thisContact List<Contact contacts new List Contact   : contacts.add(thisContact Business_Unit EMEA update contactea",
-      "C": "public static void antBusinessUnitToENEA (List<Contact> contacts) for Contact thisContact contacta) thisContact.Business Unit EMEA update contacts1012",
-      "D": ""
+      "A": "<pre><code>public static void setBusinessUnitToEMEA(List<Contact> contacts) {\n    for (Contact thisContact : contacts) {\n        thisContact.Business_Unit__c = 'EMEA';\n    }\n    update contacts;\n}</code></pre>",
+      "B": "<pre><code>public static void setBusinessUnitToEMEA(Contact thisContact) {\n    List<Contact> contacts = new List<Contact>();\n    contacts.add(thisContact.Business_Unit__c = 'EMEA');\n    update contacts;\n}</code></pre>",
+      "C": "<pre><code>public static void setBusinessUnitToEMEA(List<Contact> contacts) {\n    for (Contact thisContact : contacts) {\n        thisContact.Business_Unit__c = 'EMEA';\n        update contacts[0];\n    }\n}</code></pre>"
     },
     "correct": "A",
     "explanation_en": "",
@@ -276,7 +275,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 22,
-    "question": "A developer deployed a trigger to update the status_c of Assets related to an Account when the Account's status changes and a nightly integration that updates Accounts in bulk has started to fail with limit failures.\n01: trigger AccountTrigger on Account (after update) {\n02:     List<Asset> assetsToUpdate = new List<Asset>();\n03:     for (Account newA: Trigger.new) {\n04:         Account oldA = Trigger.oldMap.get(newA.Id);\n05:         if (oldA.Status__c != newA.Status__c) {\n06:             assetsToUpdate.addAll(AccountHelper.getAssetsToUpdate(newA));\n07:         }\n08:     }\n09:     update assetsToUpdate;\n10: }\nWhat should the developer change about the code to address the failure while still having the code update all of the Assets correctly?",
+    "question": "A developer deployed a trigger to update the status_c of Assets related to an Account when the Account's status changes and a nightly integration that updates Accounts in bulk has started to fail with limit failures.<br><pre><code>01: trigger AccountTrigger on Account (after update) {\n02:     List<Asset> assetsToUpdate = new List<Asset>();\n03:     for (Account newA : Trigger.new) {\n04:         Account oldA = Trigger.oldMap.get(newA.Id);\n05:         if (oldA.Status__c != newA.Status__c) {\n06:             assetsToUpdate.addAll( AccountHelper.getAssetsToUpdate(newA) );\n07:         }\n08:     }\n09:     update assetsToUpdate;\n10: }\n\n25:     }\n26: }</code></pre><br>What should the developer change about the code to address the failure while still having the code update all of the Assets correctly?",
     "options": {
       "A": "Move all of the logic to a Queveable class that queries for and updates the Assets and call it from the trigger.",
       "B": "Add List<asset> assets = [SELECT id, Status_C FROM WHERE AccountId : acctld] to line 14 and iterate over the assets list in the for loop on line 15.",
@@ -393,7 +392,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 31,
-    "question": "Provide question feedback here (optional):\nBoolean isok;\ninteger x:\nString theString = 'Hello';\nif (isok == false && theString == 'Hello') {\n    x=1;\n} else if (isOK == true && theString ===> Hello') {\n    x=2,\n} else if (isOK != null && theStri == 'Hello') {\n    x=3;\n} else {\n    x=4;\n}\nBased on this code, what is the value of x?",
+    "question": "Provide question feedback here (optional):<br><pre><code>Boolean isOK;\nInteger x;\nString theString = 'Hello';\n\nif (isOK == false && theString == 'Hello') {\n    x = 1;\n} else if (isOK == true && theString == 'Hello') {\n    x = 2;\n} else if (isOK != null && theString == 'Hello') {\n    x = 3;\n} else {\n    x = 4;\n}</code></pre><br>Based on this code, what is the value of x?",
     "options": {
       "A": "4",
       "B": "1",
@@ -406,7 +405,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 32,
-    "question": "A developer completed modifications feature that is comprised of two elements:\n* Apex trigger\n* Trigger handler Apex class\nWhat are two factors that the developer must take into account to properly deploy them to the production environment? Choose 2 answers",
+    "question": "A developer completed modifications feature that is comprised of two elements:<br>* Apex trigger<br>* Trigger handler Apex class<br>What are two factors that the developer must take into account to properly deploy them to the production environment?<br>Choose 2 answers",
     "options": {
       "A": "Apex classes must have at least 75% code coverage org-wide.",
       "B": "All methods in the test classes must use @istest.",
@@ -486,10 +485,10 @@ window.questionBanks.developer = [
     "number": 38,
     "question": "Which code displays the contents of a Visualforce page as a PDF?",
     "options": {
-      "A": "<apex:page contentTyp<<-\"applic*ticn/pdf\">",
-      "B": "<apex:page contentType \"pdf\">",
-      "C": "<apex:page renderAs-wpdf\">",
-      "D": "<apex:page renderAs=\"application/pdf\">"
+      "A": "<pre><code><apex:page contentType=\"application/pdf\"></code></pre>",
+      "B": "<pre><code><apex:page contentType=\"pdf\"></code></pre>",
+      "C": "<pre><code><apex:page renderAs=\"pdf\"></code></pre>",
+      "D": "<pre><code><apex:page renderAs=\"application/pdf\"></code></pre>"
     },
     "correct": "C",
     "explanation_en": "",
@@ -704,7 +703,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 55,
-    "question": "Refer to the following Apex code:\nInteger x=0 ;\ndo {\nx=1;\nx++;\n} while (x < 1);\nSystem.debug(x);\nWhat is the value of x when it is written to the debug log?",
+    "question": "Refer to the following Apex code:<br><pre><code>Integer x=0 ;\ndo {\n    x=1;\n    x++;\n} while (x < 1);\nSystem.debug(x);</code></pre><br>What is the value of x when it is written to the debug log?",
     "options": {
       "A": "0",
       "B": "1",
@@ -795,7 +794,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 62,
-    "question": "Consider the following code snippet for a Visualforce page that is launched using a Custom Button on the Account detail page layout.\n<apex:page standardController=\"Account\">\n\n<apex:commandButton action=\"{!save}\" value=\"Save\"/>\n</apex:page>\nWhen the Save button is pressed the developer must perform a complex validation that involves multiple objects and, upon success, redirect the user to another Visualforce page. What can the developer use to meet this business requirement?",
+    "question": "Consider the following code snippet for a Visualforce page that is launched using a Custom Button on the Account detail page layout.<br><pre><code><apex:page standardController=\"Account\">\n\n<apex:commandButton action=\"{!save}\" value=\"Save\"/>\n</apex:page></code></pre><br>When the Save button is pressed the developer must perform a complex validation that involves multiple objects and, upon success, redirect the user to another Visualforce page. What can the developer use to meet this business requirement?",
     "options": {
       "A": "Apex trigger",
       "B": "Controller extension",
@@ -821,7 +820,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 64,
-    "question": "A developer creates a custom exception as shown below:\npublic class ParityException extends Exception {}\nWhat are two ways the developer can fire the exception in Apex?",
+    "question": "A developer creates a custom exception as shown below:<br><pre><code>public class ParityException extends Exception {}</code></pre><br>What are two ways the developer can fire the exception in Apex?",
     "options": {
       "A": "throw new ParityException ();",
       "B": "throw new parityException ('parity does not match');",
@@ -873,7 +872,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 68,
-    "question": "Consider the following code snippet:\npublic class with sharing AccountController {\n    @AuraEnabled\n    public List<Account> getAllAccounts() {\n        return [Select Id, Name, Industry FROM Account];\n    }\n}\nAs part of the deployment cycle, a developer creates the following test class:\n@isTest\nprivate class AccountControllerTest {\n    @isTest\n    static void testGetAllAccounts() {\n        // implementation\n    }\n}\nWhen the test class runs, the assertion fails. Which change should the developer implement in the Apex test method to ensure the test executes successfully?",
+    "question": "Consider the following code snippet:<br><pre><code>public class with sharing AccountController {\n    @AuraEnabled\n    public List<Account> getAllAccounts() {\n        return [Select Id, Name, Industry FROM Account];\n    }\n}\n\n@isTest\nprivate class AccountControllerTest {\n    @isTest\n    static void testGetAllAccounts() {\n        // implementation\n    }\n}</code></pre><br>When the test class runs, the assertion fails. Which change should the developer implement in the Apex test method to ensure the test executes successfully?",
     "options": {
       "A": "Query the Administrator use into memory and enclose lines within the system.runAs(user); method.",
       "B": "Query the Standard User into memory and enclose lines within the method test.startTest(); and system.runAs();",
@@ -886,7 +885,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 69,
-    "question": "Refer to the component code and requirements below:\n<lightning:layout multipleRows=\"true\">\n    <lightning:layoutItem size=\"12\">\n        {!v.account.Name}\n    </lightning:layoutItem>\n    <lightning:layoutItem size=\"12\">\n        {!v.account.AccountNumber}\n    </lightning:layoutItem>\n    <lightning:layoutItem size=\"12\">\n        {!v.account.Industry}\n    </lightning:layoutItem>\n</lightning:layout>\nRequirements\n* For mobile devices, the information should display in three rows.\n* For desktops and tablets, the information should display in a single row.\nRequirement 2 is not displaying as desired. Which option has the correct component code to meet the requirements for desktops and tablets?",
+    "question": "Refer to the component code and requirements below:<br><pre><code><lightning:layout multipleRows=\"true\">\n    <lightning:layoutItem size=\"12\">\n        {!v.account.Name}\n    </lightning:layoutItem>\n    <lightning:layoutItem size=\"12\">\n        {!v.account.AccountNumber}\n    </lightning:layoutItem>\n    <lightning:layoutItem size=\"12\">\n        {!v.account.Industry}\n    </lightning:layoutItem>\n</lightning:layout></code></pre><br>Requirements\n* For mobile devices, the information should display in three rows.\n* For desktops and tablets, the information should display in a single row.\nRequirement 2 is not displaying as desired. Which option has the correct component code to meet the requirements for desktops and tablets?",
     "options": {
       "A": "Option A (Using largeDeviceSize=\"4\" and mediumDeviceSize=\"4\")",
       "B": "Option B (Using mediumDeviceSize=\"12\")",
@@ -1003,7 +1002,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 78,
-    "question": "A developer created this Apex trigger that calls MyClass.myStaticMethod:\ntrigger myTrigger on Contact (before insert) {\n    MyClass.myStaticMethod (trigger.new); \n}\nThe developer creates a test class with a test method that calls MyClass.myStaticMethod directly, resulting in 81% overall code coverage. What happens when the developer tries to deploy the trigger and two classes to production, assuming no other code exists?",
+    "question": "A developer created this Apex trigger that calls MyClass.myStaticMethod:<br><pre><code>trigger myTrigger on Contact (before insert) {\n    MyClass.myStaticMethod (trigger.new); \n}</code></pre><br>The developer creates a test class with a test method that calls MyClass.myStaticMethod directly, resulting in 81% overall code coverage. What happens when the developer tries to deploy the trigger and two classes to production, assuming no other code exists?",
     "options": {
       "A": "The deployment passes because both classes and the trigger were included in the deployment.",
       "B": "The deployment fails because no assertions were made in the test method.",
@@ -1133,7 +1132,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 88,
-    "question": "Refer to the following Apex code:\nInteger x=0;\ndo {\nx=1;\nx++;\n} while (x<1);\nSystem.debug(x);\nWhat is the value of x when it is written to the debug log?",
+    "question": "Refer to the following Apex code:<br><pre><code>Integer x=0;\ndo {\n    x=1;\n    x++;\n} while (x<1);\nSystem.debug(x);</code></pre><br>What is the value of x when it is written to the debug log?",
     "options": {
       "A": "0",
       "B": "1",
@@ -1185,7 +1184,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 92,
-    "question": "How many Accounts will be inserted by the following block of code?\nfor (Integer i=0 ; i < 500; i++) {\n    Account a = new Account (Name = 'New Account' + i);\n    insert a;\n}",
+    "question": "How many Accounts will be inserted by the following block of code?<br><pre><code>for (Integer i=0 ; i < 500; i++) {\n    Account a = new Account (Name = 'New Account' + i);\n    insert a;\n}</code></pre>",
     "options": {
       "A": "100",
       "B": "0",
@@ -1237,7 +1236,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 96,
-    "question": "A lead developer creates a virtual class called \"OrderRequest\". Consider the following code snippet:\npublic class CustomerOrder{\n    //code implementation\n}\nHow can a developer use the OrderRequest class within the CustomerOrder class?",
+    "question": "A lead developer creates a virtual class called \"OrderRequest\". Consider the following code snippet:<br><pre><code>public class CustomerOrder{\n    //code implementation\n}</code></pre><br>How can a developer use the OrderRequest class within the CustomerOrder class?",
     "options": {
       "A": "Extends (class=\"OrderRequest\") public class CustomerOrder",
       "B": "public class CustomerOrder implements Order",
@@ -1263,7 +1262,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 98,
-    "question": "public static void insertAccounts(List<Account> theseAccounts) {\n    for (Account thisAccount : theseAccounts) {\n        if (thisAccount.website == null) {\n            thisAccount.website = 'https://www.demo.com';\n        }\n    }\n    update theseAccounts;\n}\nWhen the code executes, a DML exception is thrown. How should a developer modify the code to ensure exceptions are handled gracefully?",
+    "question": "<pre><code>public static void insertAccounts(List<Account> theseAccounts) {\n    for (Account thisAccount : theseAccounts) {\n        if (thisAccount.website == null) {\n            thisAccount.website = 'https://www.demo.com';\n        }\n    }\n    update theseAccounts;\n}</code></pre><br>When the code executes, a DML exception is thrown. How should a developer modify the code to ensure exceptions are handled gracefully?",
     "options": {
       "A": "Implement the upsert DML statement.",
       "B": "Implement Change Data Capture.",
@@ -1328,7 +1327,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 103,
-    "question": "In the following example, which sharing context will myMethod execute when it is invoked?\npublic Class myClass {\n    public void myMethod() { /* implementation */ }\n}",
+    "question": "In the following example, which sharing context will myMethod execute when it is invoked?<br><pre><code>public Class myClass {\n    public void myMethod() { /* implementation */ }\n}</code></pre>",
     "options": {
       "A": "Sharing rules will be enforced by the instantiating class.",
       "B": "Sharing rules will be enforced for the running user.",
@@ -1786,7 +1785,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 138,
-    "question": "A Developer Edition org has five existing accounts. A developer wants to add 10 more accounts for testing purposes. The following code is executed in the Developer Console using the Execute Anonymous window:\nAccount myAccount = new Account (Name = 'MyAccount');\ninsert myAccount;\nInteger x=1;\nList<Account> newAccounts = new List<Account>();\ndo {\n    Account acct = new Account (Name = 'New Account' + x);\n    newAccounts.add(acct);\n    x++;\n} while (x<10);\ninsert newAccounts;\nHow many total accounts will be in the org after this code is executed?",
+    "question": "A Developer Edition org has five existing accounts. A developer wants to add 10 more accounts for testing purposes. The following code is executed in the Developer Console using the Execute Anonymous window:<br><pre><code>Account myAccount = new Account (Name = 'MyAccount');\ninsert myAccount;\nInteger x=1;\nList<Account> newAccounts = new List<Account>();\ndo {\n    Account acct = new Account (Name = 'New Account' + x);\n    newAccounts.add(acct);\n    x++;\n} while (x<10);\ninsert newAccounts;</code></pre><br>How many total accounts will be in the org after this code is executed?",
     "options": {
       "A": "5",
       "B": "6",
@@ -1825,7 +1824,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 141,
-    "question": "What is the result of the following code snippet?\npublic void doWork(Account acct) {\n    for (Integer i = 0; i <= 200; i++) {\n        insert acct;\n    }\n}",
+    "question": "What is the result of the following code snippet?<br><pre><code>public void doWork(Account acct) {\n    for (Integer i = 0; i <= 200; i++) {\n        insert acct;\n    }\n}</code></pre>",
     "options": {
       "A": "Accounts are inserted.",
       "B": "Account is inserted.",
@@ -2101,7 +2100,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 162,
-    "question": "What is the result of the following code?\nAccount a = new Account();\nDatabase.insert(a, false);",
+    "question": "What is the result of the following code?<br><pre><code>Account a = new Account();\nDatabase.insert(a, false);</code></pre>",
     "options": {
       "A": "The record will not be created and an exception will be thrown.",
       "B": "The record will not be created and no error will be reported.",
@@ -2154,7 +2153,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 166,
-    "question": "Given the following Apex statement:\nAccount myAccount = [SELECT Id, Name FROM Account];\nWhat occurs when more than one Account is returned by the SOQL query?",
+    "question": "Given the following Apex statement:<br><pre><code>Account myAccount = [SELECT Id, Name FROM Account];</code></pre><br>What occurs when more than one Account is returned by the SOQL query?",
     "options": {
       "A": "The variable, myAccount, is automatically cast to the List data type.",
       "B": "An unhandled exception is thrown and the code terminates.",
@@ -2193,7 +2192,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 169,
-    "question": "A lead developer creates an Apex interface called Laptop. Consider the following code snippet:\npublic class SilverLaptop {\n    //code implementation\n}\nHow can a developer use the Laptop interface within the SilverLaptop class?",
+    "question": "A lead developer creates an Apex interface called Laptop. Consider the following code snippet:<br><pre><code>public class SilverLaptop {\n    //code implementation\n}</code></pre><br>How can a developer use the Laptop interface within the SilverLaptop class?",
     "options": {
       "A": "public class SilverLaptop implements Laptop",
       "B": "public class SilverLaptop extends Laptop",
@@ -2258,7 +2257,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 174,
-    "question": "A developer considers the following snippet of code:\nBoolean isOK;\nInteger x;\nString theString = 'Hello';\nif (isOK == false && theString == 'Hello') {\n    x = 1;\n} else if (isOK == true && theString == 'Hello') {\n    x = 2;\n} else if (isOK != null && theString == 'Hello') {\n    x = 3;\n} else {\n    x = 4;\n}\nBased on this code, what is the value of x?",
+    "question": "A developer considers the following snippet of code:<br><pre><code>Boolean isOK;\nInteger x;\nString theString = 'Hello';\nif (isOK == false && theString == 'Hello') {\n    x = 1;\n} else if (isOK == true && theString == 'Hello') {\n    x = 2;\n} else if (isOK != null && theString == 'Hello') {\n    x = 3;\n} else {\n    x = 4;\n}</code></pre><br>Based on this code, what is the value of x?",
     "options": {
       "A": "1",
       "B": "2",
@@ -2297,7 +2296,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 177,
-    "question": "A developer must implement a CheckPaymentProcessor class that provides check processing payment capabilities that adhere to what is defined for payments in the PaymentProcessor interface.\npublic interface PaymentProcessor {\n    void pay(Decimal amount);\n}\nWhich implementation is correct to use the PaymentProcessor interface class?",
+    "question": "A developer must implement a CheckPaymentProcessor class that provides check processing payment capabilities that adhere to what is defined for payments in the PaymentProcessor interface.<br><pre><code>public interface PaymentProcessor {\n    void pay(Decimal amount);\n}</code></pre><br>Which implementation is correct to use the PaymentProcessor interface class?",
     "options": {
       "A": "public class CheckPaymentProcessor implements PaymentProcessor { public void pay(Decimal amount); }",
       "B": "public class CheckPaymentProcessor extends PaymentProcessor { public void pay (Decimal amount) { // functional code here } }",
@@ -2389,7 +2388,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 184,
-    "question": "The OrderHelper class is a utility class that contains business logic for processing orders. Consider the following code snippet:\npublic class without sharing OrderHelper{\n    //code implementation\n}\nA developer needs to create a constant named DELIVERY_MULTIPLIER with a value of 4.15. The value of the constant should not change at any time in the code. How should the developer declare the delivery multiplier constant to meet the business objectives?",
+    "question": "The OrderHelper class is a utility class that contains business logic for processing orders. Consider the following code snippet:<br><pre><code>public class without sharing OrderHelper{\n    //code implementation\n}</code></pre><br>A developer needs to create a constant named DELIVERY_MULTIPLIER with a value of 4.15. The value of the constant should not change at any time in the code. How should the developer declare the delivery multiplier constant to meet the business objectives?",
     "options": {
       "A": "static decimal DELIVERY_MULTIPLIER = 4.15;",
       "B": "constant decimal DELIVERY_MULTIPLIER = 4.15;",
@@ -2402,7 +2401,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 185,
-    "question": "Consider the following code snippet:\npublic static List<Lead> obtainAllFields (Set<Id> leadIds) {\n    List<Lead> result = new List<Lead>();\n    for (Id leadId: leadIds) {\n        result.add([SELECT FIELDS(STANDARD) FROM Lead WHERE Id = :leadId]);\n    }\n    return result;\n}\nGiven the multi-tenant architecture of the Salesforce platform, what is a best practice a developer should implement and ensure successful execution of the method?",
+    "question": "Consider the following code snippet:<br><pre><code>public static List<Lead> obtainAllFields (Set<Id> leadIds) {\n    List<Lead> result = new List<Lead>();\n    for (Id leadId: leadIds) {\n        result.add([SELECT FIELDS(STANDARD) FROM Lead WHERE Id = :leadId]);\n    }\n    return result;\n}</code></pre><br>Given the multi-tenant architecture of the Salesforce platform, what is a best practice a developer should implement and ensure successful execution of the method?",
     "options": {
       "A": "Avoid using variables as query filters.",
       "B": "Avoid returning an empty List of records.",
@@ -2521,7 +2520,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 194,
-    "question": "Management asked for opportunities to be automatically created for accounts with annual revenue greater than $1,000,000. A developer created the following trigger on the Account object to satisfy this requirement.\nfor (Account a : Trigger.new) {\n    if(a.AnnualRevenue > 1000000) {\n        List<Opportunity> opplist = [SELECT Id FROM Opportunity WHERE accountId = :a.Id];\n        if (opplist.size() == 0) {\n            Opportunity oppty = new Opportunity(Name = a.Name, StageName = 'Prospecting', CloseDate = System.today().addDays(30));\n            insert oppty;\n        }\n    }\n}\nUsers are able to update the account records via the UI and can see an opportunity created for high annual revenue accounts. However, when the administrator tries to upload a list of 179 accounts using Data Loader, it fails with system.Exception errors. Which two actions should the developer take to fix the code segment shown above? Choose 2 answers",
+    "question": "Management asked for opportunities to be automatically created for accounts with annual revenue greater than $1,000,000. A developer created the following trigger on the Account object to satisfy this requirement.<br><pre><code>for (Account a : Trigger.new) {\n    if(a.AnnualRevenue > 1000000) {\n        List<Opportunity> opplist = [SELECT Id FROM Opportunity WHERE accountId = :a.Id];\n        if (opplist.size() == 0) {\n            Opportunity oppty = new Opportunity(Name = a.Name, StageName = 'Prospecting', CloseDate = System.today().addDays(30));\n            insert oppty;\n        }\n    }\n}</code></pre><br>Users are able to update the account records via the UI and can see an opportunity created for high annual revenue accounts. However, when the administrator tries to upload a list of 179 accounts using Data Loader, it fails with system.Exception errors. Which two actions should the developer take to fix the code segment shown above? Choose 2 answers",
     "options": {
       "A": "Query for existing opportunities outside the for loop.",
       "B": "Check if all the required fields for Opportunity are being added on creation.",

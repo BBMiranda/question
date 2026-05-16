@@ -24,7 +24,10 @@ function loadQuestion() {
     const strongEl = document.createElement('strong');
     strongEl.textContent = `Pergunta ${q.number}:`;
     questionEl.appendChild(strongEl);
-    questionEl.appendChild(document.createTextNode(` ${q.question || ''}`));
+    const questionText = document.createElement('span');
+    questionText.className = 'question-text';
+    questionText.innerHTML = sanitizeCodeBlocks(` ${q.question || ''}`);
+    questionEl.appendChild(questionText);
     quizContent.appendChild(questionEl);
 
     const optionsList = renderQuestionOptions(q, 'option');
@@ -48,6 +51,7 @@ function loadQuestion() {
             ? q.userAnswer
             : [q.userAnswer];
 
+        const inputs = Array.from(optionsList.querySelectorAll('input[name="option"]'));
         inputs.forEach(input => {
             const li = input.closest('li');
             if (answered.includes(input.value)) {
@@ -95,11 +99,12 @@ function checkAnswer() {
     lis.forEach(li => {
         const val = li.querySelector('input').value;
         const wasChecked = selected.includes(val);
+        const isCorrectOption = correctList.includes(val);
 
         if (wasChecked) {
-            li.classList.add(isCorrect ? 'correct' : 'wrong');
+            li.classList.add(isCorrectOption ? 'correct' : 'wrong');
         }
-        if (!wasChecked && correctList.includes(val)) {
+        if (!wasChecked && isCorrectOption) {
             li.style.backgroundColor = 'yellow';
         }
         li.querySelector('input').disabled = true;
@@ -271,7 +276,7 @@ function renderQuestionNav() {
 
         const q = questions[i - 1];
         if (q.userAnswer !== undefined) {
-            btn.style.backgroundColor = (q.userAnswer === q.correct) ? "lightgreen" : "lightcoral";
+            btn.style.backgroundColor = isAnswerCorrect(q.correct, q.userAnswer) ? "lightgreen" : "lightcoral";
         }
 
         if (i === questions[currentQuestion].number) {

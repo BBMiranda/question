@@ -271,6 +271,38 @@ h2 {
     line-height: 1.5;
 }
 
+.question pre {
+    margin: var(--spacing-sm) 0;
+    padding: 12px 14px;
+    border-radius: var(--border-radius);
+    background: #f7f9fc;
+    border: 1px solid #e2e8f3;
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.question code {
+    white-space: inherit;
+}
+
+.options pre {
+    margin: 6px 0 0;
+    padding: 10px 12px;
+    border-radius: var(--border-radius);
+    background: #f7f9fc;
+    border: 1px solid #e2e8f3;
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.options code {
+    white-space: inherit;
+}
+
 /* ==========================================
     QUIZ EMPTY STATE
 ========================================== */

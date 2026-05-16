@@ -12,6 +12,17 @@ window.questionBanks = questionBanks;
 
 let questions = [];
 
+function sanitizeCodeBlocks(html) {
+    if (!html) return '';
+    return String(html).replace(/<pre><code>([\s\S]*?)<\/code><\/pre>/g, (_, code) => {
+        const escaped = code
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+        return `<pre><code>${escaped}</code></pre>`;
+    });
+}
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -100,7 +111,10 @@ function renderQuestionOptions(question, inputName = 'option', onChangeCallback 
         input.value = key;
 
         label.appendChild(input);
-        label.appendChild(document.createTextNode(` ${text ?? ''}`));
+        const optionText = document.createElement('span');
+        optionText.className = 'option-text';
+        optionText.innerHTML = sanitizeCodeBlocks(` ${text ?? ''}`);
+        label.appendChild(optionText);
         li.appendChild(label);
         optionsList.appendChild(li);
     });
