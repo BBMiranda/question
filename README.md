@@ -1,4 +1,4 @@
-# 📚 Quiz – Salesforce Certifications 🤓
+# 📚 Quiz – Salesforce Certifications - 🤓
 
 ![Versão](https://img.shields.io/badge/version-1.0.0-blue) ![Licença](https://img.shields.io/badge/license-MIT-green)
 
