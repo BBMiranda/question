@@ -109,10 +109,10 @@ window.questionBanks.developer = [
     "number": 9,
     "question": "A developer created a Lightning web component called statuscomponent to be Inserted into the Account record page. Which two things should the developer do to make this component available? Choose 2 answers",
     "options": {
-      "A": "Add <targer>lightning_Recordpage</target> to the statuscomponent. js file,",
-      "B": "Add <target>lightning RecordPage</target> to the statusComp.js-meta.xml file.",
+      "A": "Add &lt;target&gt;lightning_Recordpage&lt;/target&gt; to the statuscomponent .js file,",
+      "B": "Add &lt;target&gt;lightning RecordPage&lt;/target&gt; to the statusComp .js-meta.xml file.",
       "C": "Set isExposes to true In the statuscomponent.js-meta.xml file.",
-      "D": "Add <mastertabel>Account</masterLabel> to the statusComponent. js-meta.xm1 file."
+      "D": "Add &lt;mastertabel&gt;Account&lt;/masterLabel&gt; to the statusComponent. js-meta.xml file."
     },
     "correct": "B, D",
     "explanation_en": "",
