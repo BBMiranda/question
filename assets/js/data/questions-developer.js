@@ -71,7 +71,7 @@ window.questionBanks.developer = [
     "question": "Which statement generates a list of Leads and Contacts that have a field with the phrase 'ACME'?",
     "options": {
       "A": "<pre><code>List<List <sobject>> searchList = [SELECT Name, ID FROM Contact, Lead WHERE Name like '%ACME%'];</code></pre>",
-      "B": "<pre><code>List List <sobject>> searchList = [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];</code></pre>",
+      "B": "<pre><code>List <List <sobject>> searchList = [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];</code></pre>",
       "C": "<pre><code>Map <sObject> searchList = [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];</code></pre>",
       "D": "<pre><code>List <sobject> searchList [FIND '*ACME*' IN ALL FIELDS RETURNING Contact, Lead];</code></pre>"
     },
