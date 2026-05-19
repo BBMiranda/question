@@ -524,10 +524,10 @@ window.questionBanks.developer = [
     "number": 41,
     "question": "Which code in a Visualforce page and/or controller might present a security vulnerability?",
     "options": {
-      "A": "<apex:outputText value=\"(  CurrentPage.parameters.userInput)\" />",
-      "B": "<apex:outputText escape=\"false\" value=\"(  CurrentPage.parameters.userInput)\" />",
-      "C": "<apex:outputField value=\"(Ictrl.userInput)\" />",
-      "D": "<apex:outputField value=\" lctrl.userInput)\" rendered-\"(lisEditable\" />"
+      "A": "<pre><code><apex:outputText value=\"{!$CurrentPage.parameters.userInput}\" /></code></pre>",
+      "B": "<pre><code><apex:outputText escape=\"false\" value=\"{!$CurrentPage.parameters.userInput}\" /></code></pre>",
+      "C": "<pre><code><apex:outputField value=\"{!ctrl.userInput}\" /></code></pre>",
+      "D": "<pre><code><apex:outputField value=\"{!ctrl.userInput}\" rendered=\"{!isEditable}\" /></code></pre>"
     },
     "correct": "B",
     "explanation_en": "",
@@ -548,12 +548,12 @@ window.questionBanks.developer = [
   },
   {
     "number": 43,
-    "question": "The Job_Application_c custom object has a field that is a master-detail relationship to the Contact object, where the Contact object is the master. As part of a feature implementation, a developer needs to retrieve a list containing all Contact records where the related Account Industry is 'Technology', while also retrieving the Contact's Job_Application_c records. Based on the object's relationships, what is the most efficient statement to retrieve the list of Contacts?",
+    "question": "The Job_Application_c custom object has a field that is a master-detail relationship to the Contact object, where the Contact object is the master. As part of a feature implementation, a developer needs to retrieve a list containing all Contact records where the related Account Industry is 'Technology', while also retrieving the Contact's Job_Application_c records.<br>Based on the object's relationships, what is the most efficient statement to retrieve the list of Contacts?",
     "options": {
-      "A": "SELECT id, (SELECT id FROM Job_Applications_2) FROM Contact WHERE Account.Industry -> \"Technology'l",
-      "B": "(SELECT Ed, (SELECT IS FROM Job Applications c) FROM Contact WHERE Accounts. Industry- \"Technology'l",
-      "C": "[SELECT id, (SELECT id FROM Job_Applications_2) FROM Contact WHERE Accounts. Industry 'Technology 1",
-      "D": "(SELECT  , (SELECT Id FROM Job_Application c) FROM Contact WHERE Account. Industry 'Technology'];"
+      "A": "<pre><code>[SELECT Id, (SELECT Id FROM Job_Applications__r) FROM Contact WHERE Account.Industry = 'Technology']</code></pre>",
+      "B": "<pre><code>[SELECT Id, (SELECT Id FROM Job_Applications__c) FROM Contact WHERE Accounts.Industry = 'Technology']</code></pre>",
+      "C": "<pre><code>[SELECT Id, (SELECT Id FROM Job_Applications__r) FROM Contact WHERE Accounts.Industry = 'Technology']</code></pre>",
+      "D": "<pre><code>[SELECT Id, (SELECT Id FROM Job_Application__c) FROM Contact WHERE Account.Industry = 'Technology']</code></pre>"
     },
     "correct": "A",
     "explanation_en": "",
@@ -651,7 +651,7 @@ window.questionBanks.developer = [
   },
   {
     "number": 51,
-    "question": "A developer created these three Rollup Summary fields in the custom object, Project_c:\nTotal_Timesheets_c\nTotal_Approved_Timesheets_c\nTotal_Rejected_Timesheet_c\nThe developer is asked to create a new field that shows the ratio between rejected and approved timesheets for a given project. Which should the developer use to implement the business requirement in order to minimize maintenance overhead?",
+    "question": "A developer created these three Rollup Summary fields in the custom object, Project_c:<br><pre><code>Total_Timesheets_c\nTotal_Approved_Timesheets_c\nTotal_Rejected_Timesheet_c</code></pre><br>The developer is asked to create a new field that shows the ratio between rejected and approved timesheets for a given project. Which should the developer use to implement the business requirement in order to minimize maintenance overhead?",
     "options": {
       "A": "Formula field",
       "B": "Record-triggered flow",
@@ -744,10 +744,10 @@ window.questionBanks.developer = [
     "number": 58,
     "question": "Which annotation should a developer use on an Apex method to make it available to be wired to a property in a Lightning web component?",
     "options": {
-      "A": "@AuraEnabled(cacneable=true)",
-      "B": "@RemoteAction (cacheable-true)",
-      "C": "@RemoteAction",
-      "D": "@AuraEnabled"
+      "A": "<pre><code>@AuraEnabled(cacheable=true)</code></pre>",
+      "B": "<pre><code>@RemoteAction (cacheable-true)</code></pre>",
+      "C": "<pre><code>@RemoteAction</code></pre>",
+      "D": "<pre><code>@AuraEnabled</code></pre>"
     },
     "correct": "A",
     "explanation_en": "",
@@ -770,10 +770,10 @@ window.questionBanks.developer = [
     "number": 60,
     "question": "An Apex method, getAccounts, that returns a list of Accounts given a searchTerm, is available for Lightning Web Components to use. What is the correct definition of a Lightning Web Component property that uses the getAccounts method?",
     "options": {
-      "A": "@wire (getAccounts, ' searchTerm\") accountList;",
-      "B": "@AuraEnabled(getAccounts, ' searchTerm\") accountList",
-      "C": "AuraEnabled(getAccounts, ( searchTerm: ' searchTerm accountList;",
-      "D": "@wire(getAccounts, (searchTerm: \"SearchTerm\" }} accountList;"
+      "A": "<pre><code>@wire(getAccounts, 'searchTerm')\naccountList;</code></pre>",
+      "B": "<pre><code>@AuraEnabled(getAccounts, 'searchTerm')\naccountList;</code></pre>",
+      "C": "<pre><code>@AuraEnabled(getAccounts, { searchTerm: '$searchTerm' })\naccountList;</code></pre>",
+      "D": "<pre><code>@wire(getAccounts, { searchTerm: '$searchTerm' })\naccountList;</code></pre>"
     },
     "correct": "D",
     "explanation_en": "",
